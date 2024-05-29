@@ -1,0 +1,18 @@
+version: "3"
+services:
+  drupal:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html:cached
+    environment:
+      PHP_MAIL_MIXED_LF_AND_CRLF: On
+      DB_HOST: $DB_HOST
+      DB_PORT: $DB_PORT
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_NAME: $DB_NAME
+      DB_DRIVER: $DB_DRIVER
+volumes:
+  files:
