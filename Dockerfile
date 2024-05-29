@@ -11,4 +11,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html
 
+COPY web .
+COPY composer.* .
+
+RUN composer install
+
 EXPOSE 80
