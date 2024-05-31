@@ -17,8 +17,8 @@ RUN rm -rf /var/www/html/*
 COPY web .
 COPY composer.* .
 
-# RUN composer install
+RUN composer install
 
-# RUN chown -R www-data:www-data /var/www/html/sites/default/ && chmod -R 755 /var/www/html/sites/default/
+RUN chown -R www-data:www-data /var/www/html/sites/default/ && chmod -R 755 /var/www/html/sites/default/
 
 EXPOSE 80
