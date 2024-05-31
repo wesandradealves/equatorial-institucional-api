@@ -33,6 +33,7 @@ docker/database/data/*
 
 # Ignore ddev and local server
 .ddev
+.ddev/*/**
 
 # Ignore docker override.yml
 docker-compose.override.yml
