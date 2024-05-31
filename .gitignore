@@ -31,6 +31,9 @@
 docker/database/data/*
 !docker/database/data/.keep
 
+# Ignore ddev and local server
+.ddev
+
 # Ignore docker override.yml
 docker-compose.override.yml
 /.editorconfig
