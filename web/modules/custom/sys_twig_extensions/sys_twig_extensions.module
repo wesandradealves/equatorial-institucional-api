@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+function sys_twig_extensions_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'sys_twig_extensions/admin';
+}
