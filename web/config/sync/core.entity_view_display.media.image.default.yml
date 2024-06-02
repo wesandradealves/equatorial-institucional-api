@@ -1,5 +1,5 @@
 uuid: aa207fdf-253b-465a-a227-39794450b1b1
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -19,8 +19,8 @@ content:
     type: image
     label: visually_hidden
     settings:
-      image_style: large
       image_link: ''
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -1,5 +1,5 @@
 uuid: c43f1b21-2e8d-484a-9625-8f4d94a2f6b2
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   module:
@@ -13,14 +13,14 @@ field_name: field_media_svg
 entity_type: media
 type: svg_image_field
 settings:
-  default_image:
-    uuid: null
-    alt: ''
-    title: ''
   target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
 module: svg_image_field
 locked: false
 cardinality: 1

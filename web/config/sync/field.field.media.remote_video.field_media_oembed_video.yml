@@ -1,5 +1,5 @@
 uuid: 8265526c-c0e0-4b61-aefa-ffaf2b31b3f4
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: media.remote_video.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media
 bundle: remote_video
-label: 'Video URL'
+label: 'URL do vídeo'
 description: ''
 required: true
 translatable: true
