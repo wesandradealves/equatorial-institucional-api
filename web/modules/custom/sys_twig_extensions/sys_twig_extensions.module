@@ -1,9 +1,26 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * @file
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 function sys_twig_extensions_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'sys_twig_extensions/admin';
+}
+
+function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['footer'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Footer',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );   
+
+  $form['footer']['copyright'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Copyright',
+      '#default_value' => theme_get_setting('copyright')
+  );    
 }

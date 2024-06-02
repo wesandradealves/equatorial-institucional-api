@@ -30,60 +30,14 @@ class CustomResource extends ResourceBase {
    *
    */
   public function get() {
-    // /session/token/
-    // $query = \Drupal::request()->query;
-    // $params = json_decode($query->get('params'));
-    // $action = $params->action;
-    // $field = $params->field;
-    // $id = $params->id;
-
-    // $response = json_encode($params);
-
-    // if ($action == 'trash') {
-    //   $node = \Drupal::entityTypeManager()->getStorage("empresa")->load($id);
-    //   $file = $node->get($field)->entity;
-    //   $response = [
-    //     "status" => $file ? 200 : 404,
-    //   ];
-    //   if ($file) {
-    //     $file->delete();
-    //     $node->get($field)->removeItem(0);
-    //     $node->save();
-    //   }
-    // }
-
-    return (new ResourceResponse(['message' => 'Hello, this is a rest service']))->addCacheableDependency([
+    return (new ResourceResponse([
+      'copyright' => theme_get_setting('copyright'),
+      'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
+      'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
+    ]))->addCacheableDependency([
       '#cache' => [
         'max-age' => 0,
       ],
     ]);
   }
-
-  /**
-   *
-   */
-  // public function post($data) {
-  //   $json = json_decode(json_encode($data[1]));
-
-  //   if ($json && $fid = $data[0]) {
-  //     $id = $json->id;
-  //     $field = $json->field;
-  //     $file = File::load($fid);
-  //     $file->setPermanent();
-  //     $file->status = FILE_STATUS_PERMANENT;
-  //     if ($file->save()) {
-  //       $node = \Drupal::entityTypeManager()->getStorage('empresa')->load($id);
-  //       $node->set($field, ['target_id' => $fid]);
-  //       $node->save();
-  //     }
-  //   }
-  //   return (new ResourceResponse([
-  //     "status" => $file ? 200 : 404,
-  //   ]))->addCacheableDependency([
-  //         '#cache' => [
-  //           'max-age' => 0,
-  //         ],
-  //       ]);
-  // }
-
 }
