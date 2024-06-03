@@ -17,7 +17,7 @@ use Drupal\rest\ResourceResponse;
  *   }
  * )
  */
-class CustomResource extends ResourceBase {
+class ConfigResource extends ResourceBase {
 
   /**
    *
@@ -31,9 +31,11 @@ class CustomResource extends ResourceBase {
    */
   public function get() {
     return (new ResourceResponse([
-      'copyright' => theme_get_setting('copyright'),
-      'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
-      'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
+      'data' => [
+        'copyright' => theme_get_setting('copyright'),
+        'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
+        'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
+      ] 
     ]))->addCacheableDependency([
       '#cache' => [
         'max-age' => 0,

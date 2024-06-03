@@ -12,7 +12,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: 'public://image 73_0.png'
   url: null
-  use_default: true
+  use_default: false
 copyright: 'Equatorial © 2024. Todos os direiros reservados'
