@@ -1,0 +1,19 @@
+uuid: 8cf482f2-1a3d-4bc2-81ff-0bc252f2c555
+langcode: pt-br
+status: false
+dependencies:
+  module:
+    - basic_auth
+    - rest_menu_tree
+    - serialization
+    - user
+id: menu_tree
+plugin_id: menu_tree
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

@@ -10,17 +10,123 @@ function sys_twig_extensions_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'sys_twig_extensions/admin';
 }
 
+function sys_twig_extensions_tariff_bands() {
+  return array(
+    'Verde' => t('Verde'),
+    'Amarela' => t('Amarela'),
+    'Vermelha' => t('Vermelha'),
+  );
+}
+
 function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['header'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Header',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['tariff_band'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Bandeira Tarifária',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['header']['tariff_band']['label'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Label',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['tariff_band']['label']['tariff_band_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('tariff_band_label')
+  );  
+  
+  $form['header']['tariff_band']['label']['tariff_band_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('tariff_band_label_en')
+  );   
+
+  $form['header']['tariff_band']['band'] = array(
+    '#type' => 'select', 
+    '#title' => t('Bandeira'), 
+    '#options' => sys_twig_extensions_tariff_bands(),
+    '#default_value' => theme_get_setting('band')
+  );
+
+  $form['header']['text'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Texto',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );      
+
+  $form['header']['text']['text'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('text')
+  );  
+  
+  $form['header']['text']['text_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('text_en')
+  );    
+
+  $form['header']['navigation'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Navegação',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['header']['navigation']['search'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Busca',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['navigation']['search']['searchbar'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('searchbar')
+  );  
+  
+  $form['header']['navigation']['search']['searchbar_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('searchbar_en')
+  );      
+  
   $form['footer'] = array(
     '#type' => 'fieldset',
     '#title' => 'Footer',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );   
-
+  );  
+  
   $form['footer']['copyright'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Copyright',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+
+  $form['footer']['copyright']['copyright'] = array(
       '#type' => 'textarea',
-      '#title' => 'Copyright',
+      '#title' => 'Default',
       '#default_value' => theme_get_setting('copyright')
+  );  
+  
+  $form['footer']['copyright']['copyright_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('copyright_en')
   );    
 }

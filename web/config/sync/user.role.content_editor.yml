@@ -12,6 +12,7 @@ dependencies:
     - file
     - node
     - path
+    - rest_menu_items
     - system
     - taxonomy
     - toolbar
@@ -27,6 +28,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'administer rest menu items'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'
