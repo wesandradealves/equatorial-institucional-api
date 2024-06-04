@@ -17,7 +17,7 @@ RUN rm -rf /var/www/html/*
 COPY web .
 COPY composer.* .
 
-RUN composer install
+RUN composer install --working-dir /opt/drupal
 
 RUN chown -R www-data:www-data /var/www/html/sites/default/ && chmod -R 755 /var/www/html/sites/default/
 
