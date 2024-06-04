@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20f68b3f44bec34a5911659ba1be87ea",
+    "content-hash": "6de7231b4e698ee02508ac49d2e72774",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -863,6 +863,54 @@
                 "source": "https://github.com/consolidation/site-process/tree/5.4.0"
             },
             "time": "2024-04-06T00:00:28+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.3"
+            },
+            "time": "2022-12-20T22:53:13+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -3388,6 +3436,14 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
+                    "name": "emartoni",
+                    "homepage": "https://www.drupal.org/user/3225331"
+                },
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                },
+                {
                     "name": "Les Lim",
                     "homepage": "https://www.drupal.org/user/84263"
                 },
@@ -3406,6 +3462,14 @@
                 {
                     "name": "pillarsdotnet",
                     "homepage": "https://www.drupal.org/user/36148"
+                },
+                {
+                    "name": "renatog",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
                 }
             ],
             "description": "Mail System",
@@ -3517,6 +3581,14 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
                 {
                     "name": "jcnventura",
                     "homepage": "https://www.drupal.org/user/122464"
@@ -4277,6 +4349,62 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/rest_views",
                 "issues": "https://www.drupal.org/project/issues/rest_views"
+            }
+        },
+        {
+            "name": "drupal/restui",
+            "version": "1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/restui.git",
+                "reference": "8.x-1.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "2a67dc2c1953dced0bddaff25e5c60784ee0178c"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.21",
+                    "datestamp": "1659086914",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "-enzo-",
+                    "homepage": "https://www.drupal.org/user/294937"
+                },
+                {
+                    "name": "clemens.tolboom",
+                    "homepage": "https://www.drupal.org/user/125814"
+                },
+                {
+                    "name": "juampynr",
+                    "homepage": "https://www.drupal.org/user/682736"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "Provides a user interface to manage REST resources.",
+            "homepage": "https://www.drupal.org/project/restui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/restui"
             }
         },
         {

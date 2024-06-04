@@ -1,5 +1,5 @@
 uuid: 9b45549d-4f4b-4b1d-b584-03e0cd14fd70
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   enforced:
@@ -9,6 +9,6 @@ _core:
   default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
 id: translations
 label: Translations
-category: Language
+category: Idioma
 likert: false
 options: ''

@@ -1,5 +1,5 @@
 uuid: 496a4c77-fbfd-4517-91f4-79ac98fdcd61
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: media.document.field_media_document
 field_name: field_media_document
 entity_type: media
 bundle: document
-label: Document
+label: Documento
 description: ''
 required: true
 translatable: true

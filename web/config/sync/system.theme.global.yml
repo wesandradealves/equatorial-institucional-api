@@ -2,16 +2,17 @@ _core:
   default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
 langcode: pt-br
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
+  mimetype: image/jpeg
+  path: 'public://images.jpeg'
   url: ''
-  use_default: true
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: 'public://image 73_0.png'
   url: null
-  use_default: true
+  use_default: false
+copyright: 'Equatorial © 2024. Todos os direiros reservados'
