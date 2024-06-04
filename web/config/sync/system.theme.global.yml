@@ -16,3 +16,11 @@ logo:
   url: null
   use_default: false
 copyright: 'Equatorial © 2024. Todos os direiros reservados'
+copyright_en: 'Equatorial © 2024. All rights reserved'
+text: 'Desligamento programado'
+text_en: 'Scheduled shutdown'
+tariff_band_label: 'Bandeira tarifária'
+tariff_band_label_en: 'Tariff band'
+band: Amarela
+searchbar: 'Digite sua busca'
+searchbar_en: Keywords

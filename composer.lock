@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6de7231b4e698ee02508ac49d2e72774",
+    "content-hash": "c7c8dedc4a1e9aa4f38656846f99428e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3399,6 +3399,128 @@
             }
         },
         {
+            "name": "drupal/jsonapi_menu_items",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_menu_items.git",
+                "reference": "1.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_menu_items-1.2.5.zip",
+                "reference": "1.2.5",
+                "shasum": "a3cb689d4495e259a36b252787c02d4431d1d5ee"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/jsonapi_resources": "^1.0"
+            },
+            "require-dev": {
+                "drupal/jsonapi_hypermedia": "^1.6",
+                "drupal/menu_item_extras": "^3.0",
+                "drupal/menu_link_config": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.5",
+                    "datestamp": "1714592115",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "Adds a JSON API resource for menu items.",
+            "homepage": "https://www.drupal.org/project/jsonapi_menu_items",
+            "keywords": [
+                "Drupal",
+                "JSON API"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_menu_items"
+            }
+        },
+        {
+            "name": "drupal/jsonapi_resources",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_resources.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_resources-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "c3dbcdbd96acc9671182b5eb861625ead4880646"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1714670127",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "API-First Initiative",
+                    "homepage": "https://www.drupal.org/user/3616626"
+                },
+                {
+                    "name": "gabesullice",
+                    "homepage": "https://www.drupal.org/user/2287430"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "This module let's you define custom resources at routes of your choice that use existing resource types.",
+            "homepage": "https://www.drupal.org/project/jsonapi_resources",
+            "keywords": [
+                "Drupal",
+                "JSON API"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_resources"
+            }
+        },
+        {
             "name": "drupal/mailsystem",
             "version": "4.4.0",
             "source": {
@@ -3606,6 +3728,59 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/menu_link_attributes",
                 "issues": "http://drupal.org/project/issues/menu_link_attributes"
+            }
+        },
+        {
+            "name": "drupal/menu_normalizer",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_normalizer.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_normalizer-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "e56a9ef803e3f2a9950f77c77ec82e57ff93dda7"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1663604740",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "davidwbarratt",
+                    "homepage": "https://www.drupal.org/user/411675"
+                },
+                {
+                    "name": "wells",
+                    "homepage": "https://www.drupal.org/user/2452278"
+                }
+            ],
+            "description": "Menu Normalizer provides normalizers for various menu objects that are missing from Drupal core.",
+            "homepage": "https://drupal.org/project/menu_normalizer",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_normalizer",
+                "issues": "https://drupal.org/project/issues/menu_normalizer"
             }
         },
         {
@@ -4289,6 +4464,122 @@
             "homepage": "https://drupal.org/project/redirect_after_login",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect_after_login"
+            }
+        },
+        {
+            "name": "drupal/rest_menu_items",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rest_menu_items.git",
+                "reference": "3.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rest_menu_items-3.0.3.zip",
+                "reference": "3.0.3",
+                "shasum": "c1b78212bcae000d34a4a1cbd881904b6d597d47"
+            },
+            "require": {
+                "drupal/core": "^8.8.4 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.3",
+                    "datestamp": "1668502571",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian de Rijk (fabianderijk)",
+                    "homepage": "https://www.drupal.org/u/fabianderijk",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "fabianderijk",
+                    "homepage": "https://www.drupal.org/user/278745"
+                },
+                {
+                    "name": "immoreel",
+                    "homepage": "https://www.drupal.org/user/1695422"
+                },
+                {
+                    "name": "tomvv",
+                    "homepage": "https://www.drupal.org/user/2748021"
+                }
+            ],
+            "description": "This module provides a REST endpoint to retrieve menu items based on the menu name.",
+            "homepage": "https://drupal.org/project/rest_menu_items",
+            "support": {
+                "source": "https://cgit.drupalcode.org/rest_menu_items",
+                "issues": "https://drupal.org/project/issues/rest_menu_items",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/rest_menu_tree",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rest_menu_tree.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rest_menu_tree-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "0567eb847fe6b6f27da236c7000ba3ce7d56b5d1"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/menu_normalizer": "^2.0"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "suggest": {
+                "drupal/restui": "Provides a UI to easily enable and configure the route."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1663604889",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "davidwbarratt",
+                    "homepage": "https://www.drupal.org/user/411675"
+                },
+                {
+                    "name": "wells",
+                    "homepage": "https://www.drupal.org/user/2452278"
+                }
+            ],
+            "description": "Retrieve an entire menu tree in a single endpoint.",
+            "homepage": "https://drupal.org/project/rest_menu_tree",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rest_menu_tree",
+                "issues": "https://drupal.org/project/issues/rest_menu_tree"
             }
         },
         {

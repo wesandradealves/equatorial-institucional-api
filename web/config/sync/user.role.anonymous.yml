@@ -4,11 +4,16 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - rest.resource.menu_tree
+    - rest.resource.rest_menu_item
   module:
     - comment
     - contact
     - filter
     - media
+    - openapi
+    - rest
+    - rest_menu_items
     - search
     - system
 _core:
@@ -20,7 +25,12 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access openapi api docs'
   - 'access site-wide contact form'
+  - 'administer rest menu items'
+  - 'administer rest resources'
+  - 'restful get menu_tree'
+  - 'restful get rest_menu_item'
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'

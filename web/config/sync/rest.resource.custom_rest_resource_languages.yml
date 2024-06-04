@@ -1,4 +1,4 @@
-uuid: 005ab1cd-405a-45f4-b376-ff54c90112c0
+uuid: 2be198a5-9289-4979-9183-f7e02e4fa577
 langcode: pt-br
 status: true
 dependencies:
@@ -7,8 +7,8 @@ dependencies:
     - serialization
     - sys_twig_extensions
     - user
-id: custom_rest_resource
-plugin_id: custom_rest_resource
+id: custom_rest_resource_languages
+plugin_id: custom_rest_resource_languages
 granularity: method
 configuration:
   GET:

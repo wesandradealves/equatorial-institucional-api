@@ -1,0 +1,19 @@
+uuid: 08094246-0de9-487f-80e1-edc157752a14
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - system
+    - user
+id: entity.menu
+plugin_id: 'entity:menu'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
