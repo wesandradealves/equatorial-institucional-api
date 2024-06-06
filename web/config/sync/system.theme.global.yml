@@ -24,3 +24,26 @@ tariff_band_label_en: 'Tariff band'
 band: Amarela
 searchbar: 'Digite sua busca'
 searchbar_en: Keywords
+social_networks_label: 'Fale com a Equatorial nas redes sociais'
+social_networks_label_en: 'Talk to Equatorial on social media'
+facebook: 'https://facebook.com/'
+twitter: 'https://twitter.com/'
+instagram: 'https://instagram.com/'
+youtube: 'https://youtube.com/'
+linkedin: 'https://linkedin.com/'
+google_play_img:
+  - '4'
+google_play_url: 'http://institucional-drupal.ddev.site/'
+app_store_img:
+  - '5'
+app_store_url: 'http://institucional-drupal.ddev.site/'
+phone: "Atendimento Equatorial  116\r\nGrandes Clientes  0800 098 2997\r\nNegociação Equatorial  0800 098 2997\r\nOuvidoria  0800 098 2997"
+phone_en: "Equatorial Service 116\r\nLarge Customers 0800 098 2997\r\nEquatorial Trading 0800 098 2997\r\nOmbudsman 0800 098 2997"
+talk: "Precisa tirar dúvidas, solicitar informações, fazer denúncias ou reclamações?\_"
+talk_en: 'Do you need to ask questions, request information, make reports or complaints?'
+talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
+talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
+talk_to_clara_img:
+  - '6'
+talk_url: 'http://institucional-drupal.ddev.site/'
+talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
