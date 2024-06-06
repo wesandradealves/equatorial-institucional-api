@@ -386,18 +386,15 @@ function sys_twig_extensions_form_system_theme_settings_submit(&$form, FormState
 
   if($google_play_img) {
       $google_play_img->setPermanent();
-      $google_play_img->setPermanent();
       $google_play_img->save();      
   }   
 
   if($app_store_img) {
       $app_store_img->setPermanent();
-      $app_store_img->setPermanent();
       $app_store_img->save();      
   }    
   
   if($talk_to_clara_img) {
-      $talk_to_clara_img->setPermanent();
       $talk_to_clara_img->setPermanent();
       $talk_to_clara_img->save();      
   }      
