@@ -198,6 +198,25 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );   
+
+  $form['footer']['app']['app_label'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Label',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['app']['app_label']['app_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('app_label')
+  ); 
+  
+  $form['footer']['app']['app_label']['app_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'En',
+      '#default_value' => theme_get_setting('app_label_en')
+  );   
   
   $form['footer']['app']['google_play'] = array(
     '#type' => 'fieldset',

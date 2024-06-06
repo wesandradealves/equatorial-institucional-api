@@ -47,3 +47,5 @@ talk_to_clara_img:
   - '6'
 talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
+app_label: 'Baixe nosso app'
+app_label_en: 'Download our app'

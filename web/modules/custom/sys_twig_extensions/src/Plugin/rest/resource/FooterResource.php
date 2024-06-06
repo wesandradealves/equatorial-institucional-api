@@ -50,20 +50,32 @@ class FooterResource extends ResourceBase {
     return (new ResourceResponse([
       'data' => [
         'social_networks' => [
-            'facebook' => theme_get_setting('facebook'),
-            'twitter' => theme_get_setting('twitter'),
-            'instagram' => theme_get_setting('instagram'),
-            'youtube' => theme_get_setting('youtube')
+            'links' => [
+              'facebook' => theme_get_setting('facebook'),
+              'twitter' => theme_get_setting('twitter'),
+              'instagram' => theme_get_setting('instagram'),
+              'youtube' => theme_get_setting('youtube'),
+            ],
+            'label' => [
+                'pt' => theme_get_setting('social_networks_label'),
+                'en' => theme_get_setting('social_networks_label_en')
+            ],            
         ],
         'store' => [
-            'appstore' => [
-                'img' => isset($app_store_img) ? $app_store_img : null,
-                'url' => theme_get_setting('app_store_url'),
+            'links' => [
+              'appstore' => [
+                  'img' => isset($app_store_img) ? $app_store_img : null,
+                  'url' => theme_get_setting('app_store_url'),
+              ],
+              'googleplay' => [
+                  'img' => isset($google_play_img) ? $google_play_img : null,
+                  'url' => theme_get_setting('google_play_url'),
+              ]   
             ],
-            'googleplay' => [
-                'img' => isset($google_play_img) ? $google_play_img : null,
-                'url' => theme_get_setting('google_play_url'),
-            ]                
+            'label' => [
+                'pt' => theme_get_setting('app_label'),
+                'en' => theme_get_setting('app_label_en')
+            ],                          
         ],
         'contact' => [
             'phone' => [
