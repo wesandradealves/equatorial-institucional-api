@@ -1,0 +1,21 @@
+uuid: 5bc54a0b-9a4c-40b4-ab0b-74f9c44ec575
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_cta_label
+field_name: field_cta_label
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

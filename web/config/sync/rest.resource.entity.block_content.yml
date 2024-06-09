@@ -1,0 +1,25 @@
+uuid: b57790dc-d555-4e15-875d-a823f3a34db2
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - block_content
+    - serialization
+    - user
+id: entity.block_content
+plugin_id: 'entity:block_content'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
