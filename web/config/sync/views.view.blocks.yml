@@ -15,8 +15,9 @@ dependencies:
     - serialization
     - text
     - views_better_rest
+    - views_data_export
 id: blocks
-label: Blocks
+label: 'Basic Blocks'
 module: views
 description: ''
 tag: ''
@@ -552,11 +553,20 @@ display:
           offset: 0
           items_per_page: 10
       style:
-        type: better_rest_resources_serializer
+        type: data_export
         options:
-          uses_fields: true
+          uses_fields: 1
           formats:
             json: json
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+            utf8_bom: 0
+            use_serializer_encode_only: 0
       row:
         type: data_field
         options:
@@ -632,8 +642,6 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
-        - url.path
-        - url.query_args
       tags:
         - 'config:field.storage.block_content.body'
         - 'config:field.storage.block_content.field_cta_label'
