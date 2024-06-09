@@ -1,0 +1,45 @@
+uuid: be26acdb-6c34-4117-a9be-b5fde4273a68
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.v.field_thumbnail
+    - field.field.node.v.field_url
+    - field.field.node.v.field_video
+    - node.type.v
+  module:
+    - file
+    - image
+    - user
+id: node.v.teaser
+targetEntityType: node
+bundle: v
+mode: teaser
+content:
+  field_thumbnail:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  links: true

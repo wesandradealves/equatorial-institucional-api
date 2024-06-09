@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7c8dedc4a1e9aa4f38656846f99428e",
+    "content-hash": "e672c9b74c62595e588dbafc503d3681",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5466,6 +5466,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/views_argument_token",
                 "issues": "https://www.drupal.org/project/issues/views_argument_token"
+            }
+        },
+        {
+            "name": "drupal/views_better_rest",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_better_rest.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_better_rest-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "88f1ed71442b7248263552e0642f51f3f9775b5b"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1695066594",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "zviryatko",
+                    "homepage": "https://www.drupal.org/user/1592776"
+                }
+            ],
+            "description": "Provides support of JSONAPI Specification for views output format.",
+            "homepage": "https://www.drupal.org/project/views_better_rest",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_better_rest"
             }
         },
         {
