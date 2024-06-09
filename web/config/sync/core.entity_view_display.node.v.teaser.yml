@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.v.field_categoria
     - field.field.node.v.field_thumbnail
     - field.field.node.v.field_url
     - field.field.node.v.field_video
@@ -17,6 +18,13 @@ targetEntityType: node
 bundle: v
 mode: teaser
 content:
+  field_categoria:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_thumbnail:
     type: image_url
     label: hidden
