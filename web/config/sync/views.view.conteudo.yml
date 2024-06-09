@@ -390,10 +390,11 @@ display:
         - 'config:field.storage.node.field_video'
   rest_export_1:
     id: rest_export_1
-    display_title: 'Vídeos REST '
+    display_title: 'Videos REST '
     display_plugin: rest_export
     position: 2
     display_options:
+      title: 'Videos REST '
       pager:
         type: full
         options:
@@ -438,6 +439,7 @@ display:
               alias: video
               raw_output: false
       defaults:
+        title: false
         style: false
         row: false
       display_description: ''
@@ -459,11 +461,11 @@ display:
         - 'config:field.storage.node.field_video'
   rest_export_2:
     id: rest_export_2
-    display_title: 'Vídeos REST  (By TAX)'
+    display_title: 'Videos REST  (By TAX)'
     display_plugin: rest_export
     position: 2
     display_options:
-      title: 'Vídeos REST  (By TAX)'
+      title: 'Videos REST  (By TAX)'
       pager:
         type: full
         options:
@@ -553,7 +555,7 @@ display:
         arguments: false
       display_description: ''
       display_extenders: {  }
-      path: api/videos
+      path: api/videos/%
     cache_metadata:
       max-age: -1
       contexts:
