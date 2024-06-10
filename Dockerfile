@@ -1,5 +1,7 @@
 FROM drupal:10.2.6-php8.2-apache-bookworm
 
+COPY ob.ini /usr/local/etc/php/conf.d/ob.ini
+
 RUN apt-get update -y
 
 RUN apt-get update -y && apt-get install -y \
@@ -9,6 +11,8 @@ RUN apt-get update -y && apt-get install -y \
     default-mysql-client
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN docker-php-ext-install mysqli
 
 WORKDIR /var/www/html
 

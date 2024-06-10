@@ -5,11 +5,14 @@ services:
     build: .
     ports:
       - 8080:80
+    volumes:
+      - ./:/var/www/html
     environment:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_PORT=${MYSQL_PORT}
     networks:
       - drupal_network
   mariadb:
