@@ -1,0 +1,25 @@
+uuid: 111e4223-ef54-4907-9e0b-384af402a2bc
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d467118-2c7c-45ed-900e-d8b9118e9778'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_dicasdeeconomiaefacilidades
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
+settings:
+  id: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
+  label: 'Dicas de economia e facilidades'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

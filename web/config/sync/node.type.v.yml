@@ -1,0 +1,18 @@
+uuid: abe3db16-3180-46b8-8d40-a3d8dfdaca4e
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - admin
+    parent: 'admin:system.admin_content'
+name: Vídeos
+type: v
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

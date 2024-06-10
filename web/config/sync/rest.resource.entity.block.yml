@@ -1,0 +1,19 @@
+uuid: c84e37fe-3bcf-4813-8f20-2927b681dfdc
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - block
+    - serialization
+    - user
+id: entity.block
+plugin_id: 'entity:block'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
