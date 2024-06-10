@@ -1,0 +1,24 @@
+uuid: fc867eb6-956d-47ea-8045-000a11c7eff9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.iniciativas
+  module:
+    - text
+id: node.iniciativas.body
+field_name: body
+entity_type: node
+bundle: iniciativas
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

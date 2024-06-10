@@ -1,0 +1,25 @@
+uuid: c65db7eb-d120-49ae-9e44-dde2804d5f56
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9640268c-48d9-4b39-8728-ceaad52e6256'
+  module:
+    - block_content
+  theme:
+    - bootstrap_barrio
+id: iniciativas_equatorial
+theme: bootstrap_barrio
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:9640268c-48d9-4b39-8728-ceaad52e6256'
+settings:
+  id: 'block_content:9640268c-48d9-4b39-8728-ceaad52e6256'
+  label: 'O amanhã vai ser bem melhor se a gente fizer algo hoje'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

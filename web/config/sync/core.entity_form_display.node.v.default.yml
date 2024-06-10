@@ -18,6 +18,12 @@ targetEntityType: node
 bundle: v
 mode: default
 content:
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_categoria:
     type: entity_reference_autocomplete
     weight: 4
@@ -93,9 +99,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  created: true
   path: true
   promote: true
   sticky: true
-  uid: true
