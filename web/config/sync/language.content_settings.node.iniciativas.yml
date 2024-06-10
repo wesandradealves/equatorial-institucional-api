@@ -1,0 +1,11 @@
+uuid: 11fb9bdb-4c59-4b8c-b807-4c14b241382e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.iniciativas
+id: node.iniciativas
+target_entity_type_id: node
+target_bundle: iniciativas
+default_langcode: site_default
+language_alterable: false
