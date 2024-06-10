@@ -1,0 +1,29 @@
+uuid: 6339e9cf-c010-425c-bb5a-b6fef9918335
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria
+    - node.type.solucoes
+    - taxonomy.vocabulary.solucoes
+id: node.solucoes.field_categoria
+field_name: field_categoria
+entity_type: node
+bundle: solucoes
+label: Categoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      solucoes: solucoes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
