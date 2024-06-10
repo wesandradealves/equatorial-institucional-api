@@ -1,0 +1,19 @@
+uuid: f0185e7b-0b6b-4ff8-a216-41b0eef6bb95
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_texto
+field_name: field_texto
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

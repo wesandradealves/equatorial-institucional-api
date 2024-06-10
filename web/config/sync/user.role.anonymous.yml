@@ -3,12 +3,16 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - filter.format.restricted_html
     - rest.resource.menu_tree
     - rest.resource.rest_menu_item
   module:
+    - block
+    - block_content
     - comment
     - contact
+    - entity_reference_revisions
     - filter
     - media
     - openapi
@@ -23,14 +27,25 @@ label: 'Usuário anônimo'
 weight: 0
 is_admin: false
 permissions:
+  - 'access block library'
   - 'access comments'
   - 'access content'
   - 'access openapi api docs'
   - 'access site-wide contact form'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer blocks'
   - 'administer rest menu items'
   - 'administer rest resources'
+  - 'create basic block content'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete orphan revisions'
+  - 'edit any basic block content'
   - 'restful get menu_tree'
   - 'restful get rest_menu_item'
+  - 'revert any basic block content revisions'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view any basic block content history'
   - 'view media'

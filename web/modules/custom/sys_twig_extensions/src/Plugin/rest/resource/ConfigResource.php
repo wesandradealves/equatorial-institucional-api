@@ -33,7 +33,7 @@ class ConfigResource extends ResourceBase {
       'data' => [
         'copyright' => [
           'en' => theme_get_setting('copyright_en'),
-          'pt' => theme_get_setting('copyright')
+          'pt-br' => theme_get_setting('copyright')
         ],
         'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
         'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))

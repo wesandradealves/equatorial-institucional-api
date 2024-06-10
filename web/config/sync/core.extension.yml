@@ -29,6 +29,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  entity_rest_extra: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -87,6 +88,7 @@ module:
   user: 0
   viewfield: 0
   views_argument_token: 0
+  views_better_rest: 0
   views_data_export: 0
   views_ui: 0
   webform: 0
