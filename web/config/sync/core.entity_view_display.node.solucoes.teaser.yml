@@ -1,0 +1,49 @@
+uuid: c4641659-f6ae-4a19-ba92-50ebb045a904
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.solucoes.body
+    - field.field.node.solucoes.field_categoria
+    - field.field.node.solucoes.field_image
+    - image.style.medium
+    - node.type.solucoes
+  module:
+    - image
+    - text
+    - user
+id: node.solucoes.teaser
+targetEntityType: node
+bundle: solucoes
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_categoria:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

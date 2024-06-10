@@ -1,0 +1,25 @@
+uuid: f0ac62d2-78af-4697-a9c5-6a824bf2f64e
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2fa5747c-f0f3-4e7b-b6a8-966880b7d4f7'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_solucoesdiversasparavoceesuaempresa
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:2fa5747c-f0f3-4e7b-b6a8-966880b7d4f7'
+settings:
+  id: 'block_content:2fa5747c-f0f3-4e7b-b6a8-966880b7d4f7'
+  label: 'Soluções diversas para você e sua empresa'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

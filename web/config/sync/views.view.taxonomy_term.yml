@@ -6,8 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
   module:
     - node
+    - rest
+    - serialization
     - taxonomy
     - user
+    - views_better_rest
+    - views_data_export
 _core:
   default_config_hash: z9csC6m3M65M2JczdNul_lMUrVg8ZO66pbSq8jPCBKs
 id: taxonomy_term
@@ -89,47 +93,7 @@ display:
             field_identifier: created
           exposed: false
           granularity: second
-      arguments:
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          default_action: 'not found'
-          exception:
-            value: ''
-            title_enable: false
-            title: Tudo
-          title_enable: true
-          title: '{{ arguments.tid }}'
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: true
-          validate:
-            type: 'entity:taxonomy_term'
-            fail: 'not found'
-          validate_options:
-            bundles: {  }
-            access: true
-            operation: view
-            multiple: 0
-          break_phrase: false
-          add_table: false
-          require_value: false
-          reduce_duplicates: false
+      arguments: {  }
       filters:
         langcode:
           id: langcode
@@ -253,7 +217,6 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -292,7 +255,6 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -311,7 +273,6 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
