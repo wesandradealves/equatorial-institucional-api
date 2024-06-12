@@ -1,29 +1,20 @@
-uuid: 0b40fc9c-c751-453f-8794-42f21507aefc
+uuid: d180bebc-f428-414a-8da0-01f8561a366e
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_categoria
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
-    - node.type.article
+    - field.field.node.faq.body
+    - node.type.faq
   module:
-    - image
-    - path
     - text
-_core:
-  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
-id: node.article.default
+id: node.faq.default
 targetEntityType: node
-bundle: article
+bundle: faq
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 1
     region: content
     settings:
       rows: 9
@@ -33,44 +24,20 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_categoria:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 2
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 4
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  path:
-    type: path
     weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 3
     region: content
     settings:
       display_label: true
@@ -85,7 +52,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -94,7 +61,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  comment: true
-  field_tags: true
+  path: true
   promote: true
   sticky: true

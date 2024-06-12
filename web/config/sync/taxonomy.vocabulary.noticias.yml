@@ -1,0 +1,8 @@
+uuid: 37bb0fa9-33ef-43dc-a10c-10846028a7f1
+langcode: pt-br
+status: true
+dependencies: {  }
+name: Notícias
+vid: noticias
+description: ''
+weight: 0
