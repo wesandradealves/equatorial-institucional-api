@@ -5,7 +5,6 @@ RUN apt-get update -y
 RUN apt-get update -y && apt-get install -y \
     git \
     unzip \
-    vim \
     libpng-dev \
     default-mysql-client
 
