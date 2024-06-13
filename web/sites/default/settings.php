@@ -844,22 +844,22 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_private_path'] = '';
 
 // Automatically generated include for settings managed by ddev.
-// if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
-//   include __DIR__ . '/settings.ddev.php';
-// } else {
-//   $databases['default']['default'] = array(
-//     'database' => $_ENV['MYSQL_DATABASE'],
-//     'username' => $_ENV['MYSQL_USER'],
-//     'password' => $_ENV['MYSQL_PASSWORD'],
-//     'prefix' => '',
-//     'host' => $_ENV['MYSQL_HOST'],
-//     'port' => $_ENV['MYSQL_PORT'],
-//     'isolation_level' => 'READ COMMITTED',
-//     'driver' => 'mysql',
-//     'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-//     'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-//   );
-// }
+if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
+  include __DIR__ . '/settings.ddev.php';
+} else {
+  $databases['default']['default'] = array(
+    'database' => $_ENV['MYSQL_DATABASE'],
+    'username' => $_ENV['MYSQL_USER'],
+    'password' => $_ENV['MYSQL_PASSWORD'],
+    'prefix' => '',
+    'host' => $_ENV['MYSQL_HOST'],
+    'port' => $_ENV['MYSQL_PORT'],
+    'isolation_level' => 'READ COMMITTED',
+    'driver' => 'mysql',
+    'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+    'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+  );
+}
 
 /**
  * Load local development override configuration, if available.
@@ -881,19 +881,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 $settings['config_sync_directory'] = 'config/sync';
 
-$config['system.logging']['error_level'] = 'verbose';
-
-print_r($_ENV['MYSQL_PASSWORD']);
-
-$databases['default']['default'] = array(
-  'database' => $_ENV['MYSQL_DATABASE'],
-  'username' => $_ENV['MYSQL_USER'],
-  'password' => $_ENV['MYSQL_PASSWORD'],
-  'prefix' => '',
-  'host' => $_ENV['MYSQL_HOST'],
-  'port' => $_ENV['MYSQL_PORT'],
-  'isolation_level' => 'READ COMMITTED',
-  'driver' => 'mysql',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
+// $databases['default']['default'] = array(
+//   'database' => $_ENV['MYSQL_DATABASE'],
+//   'username' => $_ENV['MYSQL_USER'],
+//   'password' => $_ENV['MYSQL_PASSWORD'],
+//   'prefix' => '',
+//   'host' => $_ENV['MYSQL_HOST'],
+//   'port' => $_ENV['MYSQL_PORT'],
+//   'isolation_level' => 'READ COMMITTED',
+//   'driver' => 'mysql',
+//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+//   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+// );
