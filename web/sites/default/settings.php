@@ -884,18 +884,16 @@ $settings['config_sync_directory'] = 'config/sync';
 $config['system.logging']['error_level'] = 'verbose';
 
 print_r($_ENV['MYSQL_PASSWORD']);
-print_r($_ENV);
 
-
-// $databases['default']['default'] = array(
-//   'database' => $_ENV['MYSQL_DATABASE'],
-//   'username' => $_ENV['MYSQL_USER'],
-//   'password' => $_ENV['MYSQL_PASSWORD'],
-//   'prefix' => '',
-//   'host' => $_ENV['MYSQL_HOST'],
-//   'port' => $_ENV['MYSQL_PORT'],
-//   'isolation_level' => 'READ COMMITTED',
-//   'driver' => 'mysql',
-//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-//   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-// );
+$databases['default']['default'] = array(
+  'database' => $_ENV['MYSQL_DATABASE'],
+  'username' => $_ENV['MYSQL_USER'],
+  'password' => $_ENV['MYSQL_PASSWORD'],
+  'prefix' => '',
+  'host' => $_ENV['MYSQL_HOST'],
+  'port' => $_ENV['MYSQL_PORT'],
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
