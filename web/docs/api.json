@@ -37,33 +37,7 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "example": "drupal-developer"
-                  },
-                  "pass": {
-                    "type": "string",
-                    "example": "admin"
-                  }
-                }
-              },
-              "examples": {
-                "Login": {
-                  "value": {
-                    "name": "drupal-developer",
-                    "pass": "admin"
-                  }
-                }
-              }
-            }
-          }
-        },
+
         "responses": {
           "200": {
             "description": ""
@@ -86,33 +60,7 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "example": "drupal-developer"
-                  },
-                  "pass": {
-                    "type": "string",
-                    "example": "admin"
-                  }
-                }
-              },
-              "examples": {
-                "Logout": {
-                  "value": {
-                    "name": "drupal-developer",
-                    "pass": "admin"
-                  }
-                }
-              }
-            }
-          }
-        },
+
         "responses": {
           "200": {
             "description": ""
@@ -218,28 +166,7 @@
         "summary": "Taxonomias",
         "description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada. Pode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada",
         "operationId": "taxonomias",
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string",
-                    "example": "5"
-                  }
-                }
-              },
-              "examples": {
-                "Taxonomias": {
-                  "value": {
-                    "id": "5"
-                  }
-                }
-              }
-            }
-          }
-        },
+
         "responses": {
           "200": {
             "description": ""
