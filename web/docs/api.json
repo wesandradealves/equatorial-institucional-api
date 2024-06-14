@@ -216,7 +216,7 @@
     "/api/taxonomy/5": {
       "get": {
         "summary": "Taxonomias",
-        "description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada\n\nPode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada",
+        "description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada. Pode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada",
         "operationId": "taxonomias",
         "requestBody": {
           "content": {
@@ -311,7 +311,7 @@
       "get": {
         "summary": "Soluções",
         "description": "Soluções",
-        "operationId": "soluEs",
+        "operationId": "solucoes",
         "parameters": [
           {
             "name": "items_per_page",
@@ -333,7 +333,7 @@
       "get": {
         "summary": "Soluções (Por categoria)",
         "description": "Soluções (Por categoria)",
-        "operationId": "soluEsPorCategoria",
+        "operationId": "solucoesPorCategoria",
         "parameters": [
           {
             "name": "items_per_page",
@@ -400,18 +400,6 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api/blocks/9640268c-48d9-4b39-8728-ceaad52e6256": {
-      "get": {
-        "summary": "Block Fields",
-        "description": "Passar na URL o id de configuração retornado no endpoint de Block",
-        "operationId": "blockFields",
         "responses": {
           "200": {
             "description": ""
