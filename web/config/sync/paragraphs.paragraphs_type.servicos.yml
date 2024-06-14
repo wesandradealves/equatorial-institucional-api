@@ -1,0 +1,10 @@
+uuid: ba9b257d-19ba-44c6-9139-b2f163894823
+langcode: pt-br
+status: true
+dependencies: {  }
+id: servicos
+label: Serviços
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

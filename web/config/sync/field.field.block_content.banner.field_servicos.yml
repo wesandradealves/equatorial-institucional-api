@@ -1,0 +1,31 @@
+uuid: c40f58d3-eba3-43d8-8ff9-5940752e59e9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_servicos
+    - paragraphs.paragraphs_type.servicos
+  module:
+    - entity_reference_revisions
+id: block_content.banner.field_servicos
+field_name: field_servicos
+entity_type: block_content
+bundle: banner
+label: Serviços
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      servicos: servicos
+    negate: 0
+    target_bundles_drag_drop:
+      servicos:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

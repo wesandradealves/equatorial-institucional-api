@@ -1,22 +1,22 @@
-uuid: 5314f3a2-4d5d-4d6e-b2a7-42fcd5961884
+uuid: f37d7ba9-a3c4-4434-87a2-ced54ab45c70
 langcode: pt-br
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5d467118-2c7c-45ed-900e-d8b9118e9778'
+    - 'block_content:banner:af7b1516-4650-4a68-bc36-4b10f1b312b9'
   module:
     - block_content
   theme:
     - bootstrap_barrio
-id: video_shorts
+id: banner_principal
 theme: bootstrap_barrio
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
+plugin: 'block_content:af7b1516-4650-4a68-bc36-4b10f1b312b9'
 settings:
-  id: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
-  label: 'Dicas de economia e facilidades'
+  id: 'block_content:af7b1516-4650-4a68-bc36-4b10f1b312b9'
+  label: 'Como podemos te ajudar hoje?'
   label_display: visible
   provider: block_content
   status: true

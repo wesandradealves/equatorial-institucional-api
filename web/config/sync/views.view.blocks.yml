@@ -3,21 +3,27 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - block_content.type.banner
     - block_content.type.basic
     - field.storage.block_content.body
+    - field.storage.block_content.field_atalho_clara
     - field.storage.block_content.field_cta_label
     - field.storage.block_content.field_cta_url
+    - field.storage.block_content.field_imagem
+    - field.storage.block_content.field_servicos
     - field.storage.block_content.field_texto
     - field.storage.block_content.field_titulo
   module:
     - block_content
+    - entity_reference_revisions
+    - image
     - rest
     - serialization
     - text
     - views_better_rest
     - views_data_export
 id: blocks
-label: 'Basic Blocks'
+label: Blocks
 module: views
 description: ''
 tag: ''
@@ -572,23 +578,23 @@ display:
         options:
           field_options:
             field_titulo:
-              alias: titulo
-              raw_output: false
+              alias: title
+              raw_output: 0
             info:
               alias: ''
-              raw_output: false
+              raw_output: 0
             body:
               alias: ''
-              raw_output: false
+              raw_output: 0
             field_cta_label:
               alias: cta_label
-              raw_output: false
+              raw_output: 0
             field_cta_url:
               alias: cta_url
-              raw_output: false
+              raw_output: 0
             field_texto:
-              alias: texto
-              raw_output: false
+              alias: text
+              raw_output: 0
       display_description: ''
       path: api/blocks/%
       arguments:
@@ -648,6 +654,381 @@ display:
         - 'config:field.storage.block_content.field_cta_url'
         - 'config:field.storage.block_content.field_texto'
         - 'config:field.storage.block_content.field_titulo'
+  better_rest_export_2:
+    id: better_rest_export_2
+    display_title: 'Banner Block'
+    display_plugin: better_rest_export
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Banner Block'
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        fields: false
+      path: api/blocks/banner
+      filters:
+        status:
+          id: status
+          table: block_content_field_data
+          field: status
+          entity_type: block_content
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        reusable:
+          id: reusable
+          table: block_content_field_data
+          field: reusable
+          entity_type: block_content
+          entity_field: reusable
+          plugin_id: boolean
+          value: '1'
+        type:
+          id: type
+          table: block_content_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            banner: banner
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: block_content
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: data_export
+        options:
+          uses_fields: 1
+          formats:
+            json: json
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+            utf8_bom: 0
+            use_serializer_encode_only: 0
+      row:
+        type: data_field
+        options:
+          field_options:
+            field_imagem:
+              alias: image
+              raw_output: 0
+            field_titulo:
+              alias: title
+              raw_output: 0
+            field_servicos:
+              alias: services
+              raw_output: 0
+            field_atalho_clara:
+              alias: clara_shortcut
+              raw_output: 0
+      fields:
+        field_imagem:
+          id: field_imagem
+          table: block_content__field_imagem
+          field: field_imagem
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
+        field_titulo:
+          id: field_titulo
+          table: block_content__field_titulo
+          field: field_titulo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: '0'
+          element_class: ''
+          element_label_type: '0'
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: '0'
+          element_wrapper_class: ''
+          element_default_classes: 0
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
+        field_servicos:
+          id: field_servicos
+          table: block_content__field_servicos
+          field: field_servicos
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: target_id
+          type: entity_reference_revisions_entity_view
+          settings:
+            view_mode: default
+          group_column: ''
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
+        field_atalho_clara:
+          id: field_atalho_clara
+          table: block_content__field_atalho_clara
+          field: field_atalho_clara
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+      tags:
+        - 'config:field.storage.block_content.field_atalho_clara'
+        - 'config:field.storage.block_content.field_imagem'
+        - 'config:field.storage.block_content.field_servicos'
+        - 'config:field.storage.block_content.field_titulo'
   rest_export_1:
     id: rest_export_1
     display_title: 'Basic Block (Todos)'
@@ -670,7 +1051,7 @@ display:
         options:
           field_options:
             field_titulo:
-              alias: titulo
+              alias: title
               raw_output: false
             info:
               alias: ''
@@ -685,7 +1066,7 @@ display:
               alias: cta_url
               raw_output: false
             field_texto:
-              alias: texto
+              alias: text
               raw_output: false
       display_description: ''
       display_extenders: {  }
