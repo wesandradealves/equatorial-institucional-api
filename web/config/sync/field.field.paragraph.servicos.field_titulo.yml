@@ -1,0 +1,19 @@
+uuid: 6830b7db-cf9c-4b33-b309-34be64e6ce59
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titulo
+    - paragraphs.paragraphs_type.servicos
+id: paragraph.servicos.field_titulo
+field_name: field_titulo
+entity_type: paragraph
+bundle: servicos
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
