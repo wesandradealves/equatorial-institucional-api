@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Equatorial Institucional",
+    "title": "Drupal API - Equatorial Institucional",
     "version": "1.0.0",
     "contact": {}
   },
