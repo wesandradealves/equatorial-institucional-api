@@ -1,0 +1,35 @@
+uuid: 75f817f2-8fa3-4a04-a462-fc3574eedbab
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.servicos.field_imagem
+    - field.field.paragraph.servicos.field_titulo
+    - paragraphs.paragraphs_type.servicos
+  module:
+    - image
+id: paragraph.servicos.default
+targetEntityType: paragraph
+bundle: servicos
+mode: default
+content:
+  field_imagem:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titulo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

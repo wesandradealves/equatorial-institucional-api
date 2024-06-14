@@ -22,14 +22,15 @@ third_party_settings:
       region: content
       parent_name: ''
       weight: 3
-      format_type: accordion_item
+      format_type: details
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        formatter: closed
+        open: false
         description: ''
         required_fields: false
+        formatter: closed
 _core:
   default_config_hash: jAps3FCxvKecABS_tgExbhCZrBLQB3bNPWw18WjE3ss
 id: block_content.basic.default
