@@ -31,6 +31,10 @@ docker-compose up
 
 - **phpMyAdmin**: Uma ferramenta de administração de banco de dados MySQL baseada na web. Neste projeto, estamos usando a imagem `phpmyadmin/phpmyadmin`.
 
+- **postgres** : Um sistema de gerenciamento de banco de dados relacional. Neste projeto, estamos usando a imagem `postgres:13`.
+
+- **pgadmin** : Uma ferramenta de administração de banco de dados POSTSGRESQL baseada na web. Neste projeto, estamos usando a imagem `dpage/pgadmin4`.
+
 Todos os três serviços estão na mesma rede Docker, `drupal_network`, permitindo que eles se comuniquem entre si.
 
 ### Variáveis de Ambiente
