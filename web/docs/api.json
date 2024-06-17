@@ -2,7 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Drupal API - Equatorial Institucional",
-    "version": "1.0.0beta",
+    "version": "1.0.0 beta",
+    "description": "API para consumo de dados do Drupal",
     "contact": {}
   },
 
@@ -283,6 +284,72 @@
         "summary": "Iniciativas (Por categoria)",
         "description": "Iniciativas (Por categoria)",
         "operationId": "iniciativasPorCategoria",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/blocks/banner": {
+      "get": {
+        "summary": "Banner",
+        "description": "Banner",
+        "operationId": "banner",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/blocks": {
+      "get": {
+        "summary": "Block Fields",
+        "description": "Block Fields",
+        "operationId": "blockFields",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/blocks/banner_principal": {
+      "get": {
+        "summary": "Banner Principal",
+        "description": "Banner Principal",
+        "operationId": "bannerPrincipal",
         "parameters": [
           {
             "name": "items_per_page",
