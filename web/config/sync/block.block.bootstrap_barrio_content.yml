@@ -1,5 +1,5 @@
 uuid: a8b4b2b6-3e77-4a5a-8395-e3a08d63736e
-langcode: pt-br
+langcode: en
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: bootstrap_barrio_content
 theme: bootstrap_barrio
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Conteúdo da página principal'
+  label: 'Main page content'
   label_display: '0'
   provider: system
 visibility: {  }
