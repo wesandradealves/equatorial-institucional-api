@@ -5,8 +5,8 @@ services:
     build: .
     ports:
       - 8080:80
-    volumes:
-      - ./:/var/www/html
+    # volumes:
+    #   - .:/var/www/html
     environment:
       - DB_TYPE=${DB_TYPE}||"postgres"
       - MYSQL_HOST=${MYSQL_HOST}
