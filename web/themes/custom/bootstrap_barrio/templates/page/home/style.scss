@@ -1,0 +1,107 @@
+.path-frontpage {
+    color: white; 
+    min-height: 100vh;
+
+    #wrap {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        background: -webkit-linear-gradient(290deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));
+        background: -o-linear-gradient(290deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));
+        background: linear-gradient(160deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));        
+
+        padding-top: 35px;
+
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            max-width: 1024px;
+        }
+
+        header {
+            .navbar-brand {
+                flex: 0 0 auto;    
+            }
+
+            .navigation {
+                flex: 1;
+                .nav {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .navigation {
+        .nav-link {
+            color: white !important;
+            padding: 12px 15px;
+            font-size: 1.2rem;
+            transition: 500ms ease all;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+            &:hover {
+                text-shadow: 0 0 100px white!important;
+                -webkit-box-shadow: 0 0 100px rgba(255, 255, 255, 0.6);
+                box-shadow: 0 0 100px rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 30px;
+                text-decoration: none;                
+            }
+        }
+
+        &.menu--location {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px 0;
+
+            h2 {
+                font-weight: bold;
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            .nav {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px 0;
+                .nav-item {
+                    width: 100%;
+                    .nav-link {
+                        border: 2px white solid;
+                        border-radius: 30px;
+                        width: 100%;
+                        text-align: center;
+                        min-width: 284px;
+                        font-weight: 500;
+                        &:hover {
+                            border-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .region-content {
+        padding: 80px 0 35px;
+    }
+}

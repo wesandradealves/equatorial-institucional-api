@@ -547,6 +547,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
+            banner: banner
             basic: basic
           group: 1
           exposed: false

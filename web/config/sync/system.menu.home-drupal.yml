@@ -1,0 +1,8 @@
+uuid: 9df61884-a83d-475a-b200-7f0ef8277bcd
+langcode: pt-br
+status: true
+dependencies: {  }
+id: home-drupal
+label: 'Home Drupal'
+description: ''
+locked: false

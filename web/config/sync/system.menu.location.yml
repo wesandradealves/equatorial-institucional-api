@@ -1,0 +1,8 @@
+uuid: e1fecaf5-721b-4637-b84b-9c415f60c383
+langcode: pt-br
+status: true
+dependencies: {  }
+id: location
+label: Location
+description: ''
+locked: false
