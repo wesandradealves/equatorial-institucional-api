@@ -1,5 +1,6 @@
 _core:
   default_config_hash: uJrXr5XtXfruHHGzSpajRna1kE99LMlHsH1V3GVkcT8
+langcode: pt-br
 bootstrap_barrio_library: production
 bootstrap_barrio_fluid_container: 0
 bootstrap_barrio_container: container

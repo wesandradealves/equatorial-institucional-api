@@ -12,7 +12,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://image 73_0.png'
+  path: 'public://logo-light-equatorial.png'
   url: null
   use_default: false
 copyright: 'Equatorial © 2024. Todos os direiros reservados'
@@ -49,3 +49,5 @@ talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
+home_bg:
+  - '85'

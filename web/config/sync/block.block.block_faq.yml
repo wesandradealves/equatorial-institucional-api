@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:d4888675-2fcd-4d18-9477-007b90c663fe'
   module:
     - block_content
+    - system
   theme:
     - bootstrap_barrio
 id: block_faq
@@ -23,3 +24,8 @@ settings:
   info: ''
   view_mode: full
 visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -63,6 +63,7 @@ module:
   path: 0
   path_alias: 0
   quick_node_clone: 0
+  redirect_after_login: 0
   rest: 0
   rest_menu_items: 0
   rest_menu_tree: 0

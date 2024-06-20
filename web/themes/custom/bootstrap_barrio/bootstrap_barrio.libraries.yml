@@ -40,6 +40,7 @@ global-styling:
       css/components/progress.css: { weight: -10 }
     theme:
       css/print.css: { media: print }
+      scss/style.scss: {}
   dependencies:
     - core/drupal
 
@@ -375,21 +376,6 @@ views.ajax:
   js:
     js/modules/views/ajax_view.js: {}
 
-# Bootstrap
-
-bootstrap:
-  js:
-    /libraries/bootstrap/dist/js/bootstrap.bundle.min.js: { minified: true }
-  css:
-    component:
-      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
-bootstrap_cdn:
-  js:
-    //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js: { type: external, minified: true }
-  css:
-    component:
-      //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css: { type: external, minified: true }
-
 # Bootswatch
 
 bootswatch_cerulean:
@@ -518,3 +504,18 @@ bootswatch_yeti:
   css:
     component:
       //cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/yeti/bootstrap.min.css: { type: external, minified: true }
+
+bootstrap:
+  dependencies:
+    - core/jquery
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js: {}
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-grid.min.css:
+        {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-reboot.min.css:
+        {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-utilities.min.css:
+        {}
