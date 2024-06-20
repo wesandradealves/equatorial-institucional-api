@@ -19,6 +19,7 @@ RUN apt-get clean \
 
 WORKDIR /var/www/html
 COPY web .
+COPY composer.* .
 
 WORKDIR /var/www/
 COPY composer.json /var/www/composer.json
