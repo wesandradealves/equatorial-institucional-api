@@ -1,4 +1,4 @@
-uuid: 44ccafd8-ad5c-49a1-854d-df2dd3a42230
+uuid: d0d36c5b-b562-4252-b698-accb696752b2
 langcode: pt-br
 status: true
 dependencies:
@@ -8,15 +8,15 @@ dependencies:
     - system
   theme:
     - bootstrap_barrio
-id: block_menu_header
+id: bootstrap_barrio_homedrupal
 theme: bootstrap_barrio
 region: header
-weight: -3
+weight: 0
 provider: null
 plugin: 'system_menu_block:home-drupal'
 settings:
   id: 'system_menu_block:home-drupal'
-  label: 'Escolha o seu estado:'
+  label: Menu
   label_display: '0'
   provider: system
   level: 1

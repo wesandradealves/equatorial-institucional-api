@@ -16,11 +16,11 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: "Conteúdo da página principal"
-  label_display: "0"
+  label: 'Conteúdo da página principal'
+  label_display: '0'
   provider: system
 visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>"
+    pages: '<front>'
