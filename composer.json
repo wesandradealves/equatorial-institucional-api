@@ -55,6 +55,7 @@
         "drupal/pathauto": "^1.12",
         "drupal/quick_node_clone": "^1.17",
         "drupal/redirect_after_login": "^3.0",
+        "drupal/rest_absolute_urls": "^1.0@beta",
         "drupal/rest_api_authentication": "^2.0",
         "drupal/rest_menu_items": "^3.0",
         "drupal/rest_menu_tree": "^2.0",
