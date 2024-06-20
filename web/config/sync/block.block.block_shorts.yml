@@ -1,0 +1,30 @@
+uuid: d7c863f8-704b-4b3c-914b-cba2036945d2
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d467118-2c7c-45ed-900e-d8b9118e9778'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_barrio
+id: block_shorts
+theme: bootstrap_barrio
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
+settings:
+  id: 'block_content:5d467118-2c7c-45ed-900e-d8b9118e9778'
+  label: 'Dicas de economia e facilidades'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

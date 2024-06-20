@@ -1,13 +1,24 @@
 <?php
-
+use Drupal\file\Entity\File;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
  * @file
  * Functions to support theming in the SASS Starterkit subtheme.
  */
+
+function sys_twig_extensions_suggestions_region_alter(array &$suggestions, array $variables, $hook) {
+  $suggestions[] = $hook.'__'.$variables['elements']['#region'];
+}
+
 function sys_twig_extensions_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'sys_twig_extensions/admin';
+
+  if(theme_get_setting('home_bg')) {
+    $bg = theme_get_setting('home_bg');
+    $bg = File::load(reset($bg));
+    $variables['home_bg'] = $bg->createFileUrl();
+  }
 }
 
 function sys_twig_extensions_tariff_bands() {
@@ -19,6 +30,13 @@ function sys_twig_extensions_tariff_bands() {
 }
 
 function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['home_bg'] = array(
+      '#type' => 'managed_file',
+      '#upload_location' => 'public://',
+      '#title' => 'Home Page Background',
+      '#default_value' => theme_get_setting('home_bg'),
+  );  
+
   $form['header'] = array(
     '#type' => 'fieldset',
     '#title' => 'Header',
@@ -348,9 +366,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
 function sys_twig_extensions_form_system_theme_settings_validate(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
 
+  $home_bg = file_save_upload('home_bg');
   $google_play_img = file_save_upload('google_play_img');
   $app_store_img = file_save_upload('app_store_img');
   $talk_to_clara_img = file_save_upload('talk_to_clara_img');
+
+  if (isset($home_bg)) {
+    if ($home_bg) {
+      $values['home_bg_upload'] = $home_bg;
+    }
+  }   
 
   if (isset($google_play_img)) {
     if ($google_play_img) {
@@ -372,6 +397,10 @@ function sys_twig_extensions_form_system_theme_settings_validate(&$form, FormSta
 }
 
 function sys_twig_extensions_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
+  $home_bg = $form_state->getValue('home_bg');
+  $home_bg = reset($home_bg);
+  $home_bg = \Drupal\file\Entity\File::load($home_bg);
+
   $google_play_img = $form_state->getValue('google_play_img');
   $google_play_img = reset($google_play_img);
   $google_play_img = \Drupal\file\Entity\File::load($google_play_img);
@@ -383,6 +412,11 @@ function sys_twig_extensions_form_system_theme_settings_submit(&$form, FormState
   $talk_to_clara_img = $form_state->getValue('talk_to_clara_img');
   $talk_to_clara_img = reset($talk_to_clara_img);
   $talk_to_clara_img = \Drupal\file\Entity\File::load($talk_to_clara_img);
+
+  if($home_bg) {
+      $home_bg->setPermanent();
+      $home_bg->save();      
+  }     
 
   if($google_play_img) {
       $google_play_img->setPermanent();
