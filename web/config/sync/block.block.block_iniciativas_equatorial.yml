@@ -6,7 +6,6 @@ dependencies:
     - "block_content:basic:9640268c-48d9-4b39-8728-ceaad52e6256"
   module:
     - block_content
-    - system
   theme:
     - bootstrap_barrio
 id: block_iniciativas_equatorial
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ""
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    negate: true
-    pages: "<front>"
+visibility: {}

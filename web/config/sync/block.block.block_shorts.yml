@@ -6,7 +6,6 @@ dependencies:
     - "block_content:basic:5d467118-2c7c-45ed-900e-d8b9118e9778"
   module:
     - block_content
-    - system
   theme:
     - bootstrap_barrio
 id: block_shorts
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ""
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    negate: true
-    pages: "<front>"
+visibility: {}

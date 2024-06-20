@@ -6,7 +6,6 @@ dependencies:
     - "block_content:basic:f1727d0f-2811-4103-a1bd-92d4a1e2add5"
   module:
     - block_content
-    - system
   theme:
     - bootstrap_barrio
 id: block_ultimas_noticias
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ""
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    negate: true
-    pages: "<front>"
+visibility: {}
