@@ -1047,7 +1047,7 @@ display:
             external: 0
             replace_spaces: 0
             path_case: none
-            trim_whitespace: 0
+            trim_whitespace: 1
             alt: ''
             rel: ''
             link_class: ''
@@ -1065,14 +1065,14 @@ display:
             trim: 0
             preserve_tags: ''
             html: 0
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: 1
+          element_default_classes: 0
           empty: ''
           hide_empty: 0
           empty_zero: 0
