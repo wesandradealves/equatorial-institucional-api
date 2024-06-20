@@ -3,7 +3,7 @@ _core:
 langcode: pt-br
 favicon:
   mimetype: image/jpeg
-  path: 'public://images.jpeg'
+  path: "public://images.jpeg"
   use_default: false
 features:
   comment_user_picture: true
@@ -11,16 +11,11 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://logo-light-equatorial_0.png'
+  path: "public://logo-light-equatorial_0.png"
   use_default: false
 bootstrap_barrio_library: production
-bootstrap_barrio_source: '0'
 bootstrap_barrio_fluid_container: 0
 bootstrap_barrio_container: container
-bootstrap_barrio_region_clean_header: 0
-bootstrap_barrio_region_class_header: ''
-bootstrap_barrio_region_clean_content: 0
-bootstrap_barrio_region_class_content: ''
 bootstrap_barrio_sidebar_position: both
 bootstrap_barrio_content_offset: 0
 bootstrap_barrio_sidebar_collapse: 0
@@ -28,47 +23,30 @@ bootstrap_barrio_sidebar_first_width: 4
 bootstrap_barrio_sidebar_first_offset: 0
 bootstrap_barrio_sidebar_second_width: 3
 bootstrap_barrio_sidebar_second_offset: 0
-bootstrap_barrio_hide_node_label: 0
-bootstrap_barrio_breadcrumb_divider: ''
 bootstrap_barrio_button: 1
-bootstrap_barrio_button_size: ''
+bootstrap_barrio_button_size: ""
 bootstrap_barrio_button_type: primary
 bootstrap_barrio_button_outline: 0
-bootstrap_barrio_navbar_container: '0'
+bootstrap_barrio_navbar_container: navbar-toggleable-md
 bootstrap_barrio_navbar_toggle: navbar-toggleable-lg
-bootstrap_barrio_navbar_top_navbar: 0
-bootstrap_barrio_navbar_top_class: ''
-bootstrap_barrio_navbar_class: ''
-bootstrap_barrio_navbar_top_position: ''
+bootstrap_barrio_navbar_top_position: ""
 bootstrap_barrio_navbar_top_color: navbar-dark
-bootstrap_barrio_navbar_top_background: ''
-bootstrap_barrio_navbar_position: ''
+bootstrap_barrio_navbar_top_background: ""
+bootstrap_barrio_navbar_position: ""
 bootstrap_barrio_navbar_color: navbar-dark
 bootstrap_barrio_navbar_background: bg-primary
 bootstrap_barrio_navbar_flyout: false
 bootstrap_barrio_navbar_slide: false
-bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_navbar_offcanvas: ""
 bootstrap_barrio_messages_widget: toasts
-bootstrap_barrio_float_label: '0'
-bootstrap_barrio_checkbox: ''
-bootstrap_barrio_navbar_top_affix: 0
-bootstrap_barrio_navbar_affix: 0
-bootstrap_barrio_sidebar_first_affix: 0
-bootstrap_barrio_sidebar_second_affix: 0
-bootstrap_barrio_scroll_spy: ''
-bootstrap_barrio_google_fonts: ''
 bootstrap_barrio_bootstrap_icons: 1
-bootstrap_barrio_icons: ''
 bootstrap_barrio_system_messages: messages_white
 bootstrap_barrio_table_style: table-striped
 bootstrap_barrio_table_hover: 1
-bootstrap_barrio_table_head: ''
-bootstrap_barrio_image_fluid: false
-bootstrap_barrio_tabs_style: ''
 bootstrap_barrio_enable_color: false
 bootstrap_barrio_color_scheme: default
-bootstrap_barrio_base_primary_color: '#2F3C7E'
-bootstrap_barrio_base_secondary_color: '#FBEAEB'
+bootstrap_barrio_base_primary_color: "#2F3C7E"
+bootstrap_barrio_base_secondary_color: "#FBEAEB"
 bootstrap_barrio_body_color: gray-800
 bootstrap_barrio_body_bg_color: white
 bootstrap_barrio_h1_color: base
@@ -77,38 +55,38 @@ bootstrap_barrio_h3_color: base
 bootstrap_barrio_region_width_header: 0
 bootstrap_barrio_region_width_content: 0
 home_bg:
-  - '85'
-tariff_band_label: 'Bandeira tarifária'
-tariff_band_label_en: 'Tariff band'
+  - "85"
+tariff_band_label: "Bandeira tarifária"
+tariff_band_label_en: "Tariff band"
 band: Amarela
-text: 'Desligamento programado'
-text_en: 'Scheduled shutdown'
-searchbar: 'Digite sua busca'
+text: "Desligamento programado"
+text_en: "Scheduled shutdown"
+searchbar: "Digite sua busca"
 searchbar_en: Keywords
-copyright: 'Equatorial © 2024. Todos os direiros reservados'
-copyright_en: 'Equatorial © 2024. All rights reserved'
-social_networks_label: 'Fale com a Equatorial nas redes sociais'
-social_networks_label_en: 'Talk to Equatorial on social media'
-facebook: 'https://facebook.com/'
-twitter: 'https://twitter.com/'
-instagram: 'https://instagram.com/'
-youtube: 'https://youtube.com/'
-linkedin: 'https://linkedin.com/'
-app_label: 'Baixe nosso app'
-app_label_en: 'Download our app'
+copyright: "Equatorial © 2024. Todos os direiros reservados"
+copyright_en: "Equatorial © 2024. All rights reserved"
+social_networks_label: "Fale com a Equatorial nas redes sociais"
+social_networks_label_en: "Talk to Equatorial on social media"
+facebook: "https://facebook.com/"
+twitter: "https://twitter.com/"
+instagram: "https://instagram.com/"
+youtube: "https://youtube.com/"
+linkedin: "https://linkedin.com/"
+app_label: "Baixe nosso app"
+app_label_en: "Download our app"
 google_play_img:
-  - '4'
-google_play_url: 'http://institucional-drupal.ddev.site/'
+  - "4"
+google_play_url: "http://institucional-drupal.ddev.site/"
 app_store_img:
-  - '5'
-app_store_url: 'http://institucional-drupal.ddev.site/'
+  - "5"
+app_store_url: "http://institucional-drupal.ddev.site/"
 phone: "Atendimento Equatorial  116\r\nGrandes Clientes  0800 098 2997\r\nNegociação Equatorial  0800 098 2997\r\nOuvidoria  0800 098 2997"
 phone_en: "Equatorial Service 116\r\nLarge Customers 0800 098 2997\r\nEquatorial Trading 0800 098 2997\r\nOmbudsman 0800 098 2997"
 talk: "Precisa tirar dúvidas, solicitar informações, fazer denúncias ou reclamações?\_"
-talk_en: 'Do you need to ask questions, request information, make reports or complaints?'
-talk_url: 'http://institucional-drupal.ddev.site/'
-talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
-talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
-talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
+talk_en: "Do you need to ask questions, request information, make reports or complaints?"
+talk_url: "http://institucional-drupal.ddev.site/"
+talk_to_clara: "Fale com a Clara, nossa assistente virtual no WhatsApp"
+talk_to_clara_en: "Talk to Clara, our virtual assistant on WhatsApp"
+talk_to_clara_url: "http://institucional-drupal.ddev.site/"
 talk_to_clara_img:
-  - '6'
+  - "6"

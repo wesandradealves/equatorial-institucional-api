@@ -3,10 +3,9 @@ langcode: pt-br
 status: true
 dependencies:
   content:
-    - 'block_content:basic:9640268c-48d9-4b39-8728-ceaad52e6256'
+    - "block_content:basic:9640268c-48d9-4b39-8728-ceaad52e6256"
   module:
     - block_content
-    - system
   theme:
     - bootstrap_barrio
 id: block_iniciativas_equatorial
@@ -14,17 +13,13 @@ theme: bootstrap_barrio
 region: content
 weight: 2
 provider: null
-plugin: 'block_content:9640268c-48d9-4b39-8728-ceaad52e6256'
+plugin: "block_content:9640268c-48d9-4b39-8728-ceaad52e6256"
 settings:
-  id: 'block_content:9640268c-48d9-4b39-8728-ceaad52e6256'
-  label: 'O amanhã vai ser bem melhor se a gente fizer algo hoje'
+  id: "block_content:9640268c-48d9-4b39-8728-ceaad52e6256"
+  label: "O amanhã vai ser bem melhor se a gente fizer algo hoje"
   label_display: visible
   provider: block_content
   status: true
-  info: ''
+  info: ""
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    negate: true
-    pages: '<front>'
+visibility: {}
