@@ -39,3 +39,5 @@ docker/database/data/*
 docker-compose.override.yml
 /.editorconfig
 /.gitattributes
+
+.DS_Store
