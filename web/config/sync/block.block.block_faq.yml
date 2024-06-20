@@ -1,0 +1,25 @@
+uuid: 434802a0-255f-4882-8954-8076b5d64445
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d4888675-2fcd-4d18-9477-007b90c663fe'
+  module:
+    - block_content
+  theme:
+    - bootstrap_barrio
+id: block_faq
+theme: bootstrap_barrio
+region: content
+weight: 3
+provider: null
+plugin: 'block_content:d4888675-2fcd-4d18-9477-007b90c663fe'
+settings:
+  id: 'block_content:d4888675-2fcd-4d18-9477-007b90c663fe'
+  label: 'Perguntas frequentes'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
