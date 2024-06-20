@@ -1,4 +1,4 @@
-uuid: 043abea8-cf18-458d-867e-6cf10ae9a73d
+uuid: 0f63f81a-ad13-4fc2-937a-0f644aada0aa
 langcode: pt-br
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - system
   theme:
     - bootstrap_barrio
-id: bootstrap_barrio_definicaodemarcadosite
+id: block_logo
 theme: bootstrap_barrio
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Definição de marca do site'
+  label: Logo
   label_display: '0'
   provider: system
   use_site_logo: true
