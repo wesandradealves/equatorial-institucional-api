@@ -9,8 +9,8 @@ dependencies:
     - field.field.block_content.banner.field_servicos
     - field.field.block_content.banner.field_titulo
   module:
-    - entity_reference_revisions
     - image
+    - rest_views
     - text
 id: block_content.banner.default
 targetEntityType: block_content
@@ -34,11 +34,9 @@ content:
     weight: 1
     region: content
   field_servicos:
-    type: entity_reference_revisions_entity_view
+    type: entity_reference_entity_id_export
     label: hidden
-    settings:
-      view_mode: default
-      link: ''
+    settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content

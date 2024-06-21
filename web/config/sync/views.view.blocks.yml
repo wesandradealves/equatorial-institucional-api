@@ -18,6 +18,7 @@ dependencies:
     - entity_reference_revisions
     - image
     - rest
+    - rest_views
     - serialization
     - text
     - views_better_rest
@@ -592,7 +593,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships: {  }
@@ -750,14 +751,6 @@ display:
           group: 1
           expose:
             operator: ''
-        reusable:
-          id: reusable
-          table: block_content_field_data
-          field: reusable
-          entity_type: block_content
-          entity_field: reusable
-          plugin_id: boolean
-          value: '1'
         type:
           id: type
           table: block_content_field_data
@@ -832,7 +825,7 @@ display:
             field_titulo:
               alias: title
               raw_output: 0
-            field_servicos:
+            field_servicos_export:
               alias: services
               raw_output: 0
             field_atalho_clara:
@@ -1037,7 +1030,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: 0
+          exclude: 1
           alter:
             alter_text: 0
             text: ''
@@ -1089,9 +1082,69 @@ display:
           delta_reversed: 0
           delta_first_last: 0
           multi_type: separator
-          separator: ', '
-          field_api_classes: 0
+          separator: ''
+          field_api_classes: 1
           plugin_id: field
+        field_servicos_export:
+          id: field_servicos_export
+          table: block_content__field_servicos
+          field: field_servicos_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: target_id
+          type: entity_reference_entity_id_export
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          field_api_classes: 0
+          plugin_id: field_export
         field_atalho_clara:
           id: field_atalho_clara
           table: block_content__field_atalho_clara
@@ -1155,6 +1208,10 @@ display:
           separator: ', '
           field_api_classes: 0
           plugin_id: field
+      pager:
+        type: none
+        options:
+          offset: '0'
     cache_metadata:
       max-age: -1
       contexts:
