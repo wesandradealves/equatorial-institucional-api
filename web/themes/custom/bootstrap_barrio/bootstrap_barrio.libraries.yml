@@ -353,9 +353,8 @@ material_design_icons:
 
 fontawesome:
   version: VERSION
-  css:
-    component:
-      //use.fontawesome.com/releases/v5.13.0/css/all.css: { type: external }
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js: { type: external, minified: true }
 
 # Material Design for Bootstrap
 

@@ -54,12 +54,16 @@
     {% if page.content %}
       {{ page.content }}
     {% endif %}
+
+    {% if page.footer %}
+      {{ page.footer }}
+    {% endif %}    
 </div>
 
 {% if home_bg %}
   <style>
-    body {
-      background: url({{home_bg}}) center center / cover no-repeat white;
+    #wrap {
+      background: url({{home_bg}}) center -1200px / auto no-repeat rgba(255, 255, 255, 0.20);
     }
   </style>
 {% endif %}

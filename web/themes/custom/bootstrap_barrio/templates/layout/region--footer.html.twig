@@ -14,16 +14,22 @@
 #}
 {%
   set classes = [
-    'header',
+    'mt-auto',
+    'footer',
     'region',
     'region-' ~ region|clean_class,
   ]
 %}
 
 {% if content %}
-    <header{{ attributes.addClass(classes) }}>
-        <div class="container d-flex flex-wrap align-items-center justify-content-center">
-            {{ content }}
+    <footer{{ attributes.addClass(classes) }}>
+        <div class="container d-flex flex-wrap align-items-center justify-content-between">
+            <div class="flex-fill">
+              {{ content }}
+            </div>
+            {% if copyright %}
+              <p>{{copyright}}</p>
+            {% endif %}
         </div>
-    </header>
+    </footer>
 {% endif %}
