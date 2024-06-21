@@ -44,6 +44,7 @@ module:
   language: 0
   link: 0
   locale: 0
+  login_emailusername: 0
   media: 0
   menu_item_extras: 0
   menu_link_attributes: 0
