@@ -3,11 +3,32 @@
   "info": {
     "title": "Drupal API - Equatorial Institucional",
     "version": "1.0.0 beta",
-    "description": "API para consumo de dados do Drupal",
-    "contact": {}
+    "contact": {},
+    "description": "API para consumo de dados do Drupal"
   },
-
   "paths": {
+    "/token": {
+      "get": {
+        "summary": "Token",
+        "description": "Token",
+        "operationId": "token",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/login": {
       "post": {
         "summary": "Login",
@@ -65,6 +86,63 @@
         }
       }
     },
+    "/logout": {
+      "post": {
+        "summary": "Logout",
+        "description": "Logout",
+        "operationId": "logout",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "drupal-developer"
+                  },
+                  "pass": {
+                    "type": "string",
+                    "example": "admin"
+                  }
+                }
+              },
+              "examples": {
+                "Logout": {
+                  "value": {
+                    "name": "drupal-developer",
+                    "pass": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/api/config": {
       "get": {
         "summary": "Config",
@@ -87,11 +165,99 @@
         }
       }
     },
+    "/languages": {
+      "get": {
+        "summary": "Languages",
+        "description": "Languages",
+        "operationId": "languages",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/api/header": {
       "get": {
         "summary": "Header",
         "description": "Header",
         "operationId": "header",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/menu_items/main": {
+      "get": {
+        "summary": "Navigation",
+        "description": "Navigation",
+        "operationId": "navigation",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/footer": {
+      "get": {
+        "summary": "Footer",
+        "description": "Footer",
+        "operationId": "footer",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/taxonomy": {
+      "get": {
+        "summary": "Taxonomias",
+        "description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada\n\nPode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada",
+        "operationId": "taxonomias",
         "parameters": [
           {
             "name": "_format",
@@ -279,6 +445,28 @@
         }
       }
     },
+    "/api/iniciativas": {
+      "get": {
+        "summary": "Iniciativas",
+        "description": "Iniciativas",
+        "operationId": "iniciativas",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/api/iniciativas/8": {
       "get": {
         "summary": "Iniciativas (Por categoria)",
@@ -301,18 +489,26 @@
         }
       }
     },
-    "/api/blocks/banner": {
+    "/api/entity/block/block_banner": {
       "get": {
-        "summary": "Banner",
-        "description": "Banner",
-        "operationId": "banner",
+        "summary": "Block",
+        "description": "Block",
+        "operationId": "block",
         "parameters": [
           {
-            "name": "items_per_page",
+            "name": "_format",
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "3"
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
             }
           }
         ],
@@ -326,15 +522,15 @@
     "/api/blocks": {
       "get": {
         "summary": "Block Fields",
-        "description": "Block Fields",
+        "description": "Passar na URL o id de configuração retornado no endpoint de Block",
         "operationId": "blockFields",
         "parameters": [
           {
-            "name": "items_per_page",
+            "name": "_format",
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "3"
+              "example": "json"
             }
           }
         ],
@@ -345,18 +541,40 @@
         }
       }
     },
-    "/api/blocks/banner_principal": {
+    "/api/blocks/banner": {
       "get": {
-        "summary": "Banner Principal",
-        "description": "Banner Principal",
-        "operationId": "bannerPrincipal",
+        "summary": "Banner",
+        "description": "Passar na URL o id de configuração retornado no endpoint de Block",
+        "operationId": "banner",
         "parameters": [
           {
-            "name": "items_per_page",
+            "name": "_format",
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "3"
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/entity/paragraph": {
+      "get": {
+        "summary": "Paragraphs",
+        "description": "Paragraphs",
+        "operationId": "paragraphs",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
             }
           }
         ],
