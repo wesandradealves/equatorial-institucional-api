@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 function sys_twig_extensions_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['pass']['#title_display'] = $form['pass']['#description'] = false;
   $form['name']['#title_display'] = $form['name']['#description'] = false;
-  $form['name']['#attributes']['placeholder'] = "Nome de usuário ou senha";
+  $form['name']['#attributes']['placeholder'] = "Nome de usuário ou e-mail";
   $form['pass']['#attributes']['placeholder'] = "Senha";
 }
 
