@@ -37,7 +37,8 @@
     .user-login-form {
         display: flex;
         flex-flow: column;
-        gap: 15px 0;
+        gap: 25px 0;
+        margin-top: 25px;
 
         .form-submit {
             font-family: "Open Sans", sans-serif;
