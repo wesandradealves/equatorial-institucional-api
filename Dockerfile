@@ -7,8 +7,8 @@ RUN apt-get update -y && apt-get install -y \
     default-mysql-client \
     postgresql-client \
     vim \
-    sendmail \
-    libpq-dev
+    libpq-dev \
+    sendmail
 
 COPY ob.ini /usr/local/etc/php/conf.d/ob.ini
 

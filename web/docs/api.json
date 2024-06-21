@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Drupal API - Equatorial Institucional",
-    "version": "1.0.0 beta",
+    "version": "1.0.1 beta",
     "contact": {},
     "description": "API para consumo de dados do Drupal"
   },
