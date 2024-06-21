@@ -7,13 +7,13 @@
         {% if form %}
             {{form}}
         {% endif %}
-
-        {% if home_bg %}
-            <style>
-                body {
-                    background: url({{home_bg}}) center center / cover no-repeat white;
-                }
-            </style>
-        {% endif %}    
     </div>
 </div>
+
+{% if home_bg %}
+    <style>
+        body {
+            background: url({{home_bg}}) center center / cover no-repeat white;
+        }
+    </style>
+{% endif %}    
