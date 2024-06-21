@@ -1,7 +1,8 @@
 <?php
 use Drupal\file\Entity\File;
 use Drupal\Core\Form\FormStateInterface;
-
+use Drupal\Core\Entity\EntityInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 /**
  * @file
  * Functions to support theming in the SASS Starterkit subtheme.
@@ -61,6 +62,12 @@ function sys_twig_extensions_preprocess_page(&$variables) {
     $bg = File::load(reset($bg));
     $variables['home_bg'] = $bg->createFileUrl();
   }
+
+  $user = \Drupal::routeMatch()->getParameter('user');
+  if ($user instanceof \Drupal\user\UserInterface) {
+    (new RedirectResponse('/'))->send();
+    exit();    
+  }  
 }
 
 function sys_twig_extensions_preprocess_region__footer(&$variables) {
