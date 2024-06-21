@@ -1,0 +1,91 @@
+.page-user-login {
+    color: white;
+    min-height: 100vh;
+
+    #wrap {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        background: -webkit-linear-gradient(290deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));
+        background: -o-linear-gradient(290deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));
+        background: linear-gradient(160deg, #00029194 10%, rgba(30, 76, 205, 0.42), rgba(110, 0, 255, 0.67));
+
+        padding-top: 35px;
+
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 414px;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .region-content {
+        padding: 35px 0;
+    }
+
+    .user-login-form {
+        display: flex;
+        flex-flow: column;
+        gap: 25px 0;
+        margin-top: 25px;
+
+        .form-submit {
+            font-family: "Open Sans", sans-serif;
+            border-radius: 999px;
+            width: 100%;
+            color: black;
+            font-weight: 600;
+            background-color: #FCD403;
+            border: 0;
+            padding: 10px;
+            transition: 500ms ease all;
+            &:hover {
+                transform: scale(1.01);
+            }            
+            &::before {
+                display: none;
+            }
+        }
+        .js-form-item {
+            margin-bottom: 0 !important;
+            .form-control {
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px white solid;
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 0;
+                outline: none !important;
+                box-shadow: none !important;
+                font-size: 1rem;
+                padding: 10px 15px;
+                font-weight: 300; 
+                font-family: "Open Sans", sans-serif;
+                color: white;
+                transition: 500ms ease all;
+                &::-webkit-input-placeholder {
+                    color: white;
+                }
+                &::-moz-placeholder {
+                    color: white;
+                }
+                &:-ms-input-placeholder {
+                    color: white;
+                }
+                &:-moz-placeholder {
+                    color: white;
+                }
+            }
+        }
+    }
+}

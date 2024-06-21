@@ -41,6 +41,7 @@
         "drupal/field_group": "3.4",
         "drupal/inline_responsive_images": "3.x-dev@dev",
         "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/login_emailusername": "^2.1",
         "drupal/mailsystem": "^4.4",
         "drupal/menu_item_extras": "^3.0",
         "drupal/menu_link_attributes": "^1.3",
