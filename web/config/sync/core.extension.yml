@@ -87,6 +87,7 @@ module:
   token: 0
   toolbar: 0
   twig_tweak: 0
+  url_redirect: 0
   user: 0
   viewfield: 0
   views_argument_token: 0

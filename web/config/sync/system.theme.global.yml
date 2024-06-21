@@ -50,4 +50,4 @@ talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
 home_bg:
-  - '85'
+  - '89'

@@ -72,6 +72,7 @@
         "drupal/suggestion": "^4.1",
         "drupal/svg_image_field": "^2.3",
         "drupal/twig_tweak": "^3.2",
+        "drupal/url_redirect": "^3.0",
         "drupal/viewfield": "^3.0@beta",
         "drupal/views_argument_token": "^2.0",
         "drupal/views_better_rest": "^1.0",

@@ -1,6 +1,6 @@
 uuid: d0d36c5b-b562-4252-b698-accb696752b2
 langcode: pt-br
-status: true
+status: false
 dependencies:
   config:
     - system.menu.home-drupal
