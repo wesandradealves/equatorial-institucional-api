@@ -1,0 +1,20 @@
+uuid: a224f176-31df-405d-af90-dc2015f4d3ef
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_barrio
+id: block_copyright
+theme: bootstrap_barrio
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Desenvolvido com Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

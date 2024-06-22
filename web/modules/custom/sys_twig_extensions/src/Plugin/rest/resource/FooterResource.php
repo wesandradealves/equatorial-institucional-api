@@ -57,7 +57,7 @@ class FooterResource extends ResourceBase {
               'youtube' => theme_get_setting('youtube'),
             ],
             'label' => [
-                'pt-br' => theme_get_setting('social_networks_label'),
+                'pt_br' => theme_get_setting('social_networks_label'),
                 'en' => theme_get_setting('social_networks_label_en')
             ],            
         ],
@@ -73,22 +73,22 @@ class FooterResource extends ResourceBase {
               ]   
             ],
             'label' => [
-                'pt-br' => theme_get_setting('app_label'),
+                'pt_br' => theme_get_setting('app_label'),
                 'en' => theme_get_setting('app_label_en')
             ],                          
         ],
         'contact' => [
             'phone' => [
-                'pt-br' => theme_get_setting('phone'),
+                'pt_br' => theme_get_setting('phone'),
                 'en' => theme_get_setting('phone_en')
             ],
             'talktous' => [
-                'pt-br' => theme_get_setting('talk'),
+                'pt_br' => theme_get_setting('talk'),
                 'en' => theme_get_setting('talk_en'),
                 'url' => theme_get_setting('talk_url')
             ],
             'talktoclara' => [
-                'pt-br' => theme_get_setting('talk_to_clara'),
+                'pt_br' => theme_get_setting('talk_to_clara'),
                 'en' => theme_get_setting('talk_to_clara_en'),
                 'url' => theme_get_setting('talk_to_clara_url'),
                 'img' => isset($talk_to_clara_img) ? $talk_to_clara_img : null

@@ -59,7 +59,7 @@ function sys_twig_extensions_preprocess_page(&$variables) {
 
   if(theme_get_setting('home_bg')) {
     $bg = theme_get_setting('home_bg');
-    $bg = File::load(reset($bg));
+    $bg = \Drupal\file\Entity\File::load(reset($bg));
     $variables['home_bg'] = $bg->createFileUrl();
   }
 
@@ -70,11 +70,18 @@ function sys_twig_extensions_preprocess_page(&$variables) {
   }  
 }
 
-function sys_twig_extensions_preprocess_region__footer(&$variables) {
+function sys_twig_extensions_preprocess_block__block_copyright(&$variables)
+{
   if(theme_get_setting('copyright')) {
     $variables['copyright'] = theme_get_setting('copyright');
   }
 }
+
+// function sys_twig_extensions_preprocess_region__footer(&$variables) {
+//   if(theme_get_setting('copyright')) {
+//     $variables['copyright'] = theme_get_setting('copyright');
+//   }
+// }
 
 function sys_twig_extensions_preprocess_page__user__login(&$variables) {
   $variables['logo'] = \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url'));

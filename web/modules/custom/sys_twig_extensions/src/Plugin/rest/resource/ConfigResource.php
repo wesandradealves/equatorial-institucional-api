@@ -29,13 +29,22 @@ class ConfigResource extends ResourceBase {
    *
    */
   public function get() {
+    if(theme_get_setting('home_bg')) {
+      $bg = theme_get_setting('home_bg');
+      $bg = \Drupal\file\Entity\File::load(reset($bg));
+      $bg = $bg->createFileUrl();
+    }
+
     return (new ResourceResponse([
       'data' => [
         'copyright' => [
           'en' => theme_get_setting('copyright_en'),
-          'pt-br' => theme_get_setting('copyright')
+          'pt_br' => theme_get_setting('copyright')
         ],
+        'site_name' => \Drupal::config('system.site')->get('name'),
+        'basePath' => \Drupal::request()->getSchemeAndHttpHost(),
         'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
+        'location_screen_bg' => isset($bg) ? $bg : null,
         'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
       ] 
     ]))->addCacheableDependency([

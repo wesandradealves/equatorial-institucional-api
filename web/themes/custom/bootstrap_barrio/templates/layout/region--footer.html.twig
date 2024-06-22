@@ -24,12 +24,7 @@
 {% if content %}
     <footer{{ attributes.addClass(classes) }}>
         <div class="container d-flex flex-wrap align-items-center justify-content-between">
-            <div class="flex-fill">
-              {{ content }}
-            </div>
-            {% if copyright %}
-              <p>{{copyright}}</p>
-            {% endif %}
+            {{ content }}
         </div>
     </footer>
 {% endif %}

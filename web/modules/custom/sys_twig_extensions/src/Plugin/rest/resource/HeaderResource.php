@@ -33,18 +33,18 @@ class HeaderResource extends ResourceBase {
       'data' => [
         'text' => [
           'en' => theme_get_setting('text_en'),
-          'pt-br' => theme_get_setting('text')
+          'pt_br' => theme_get_setting('text')
         ],
         'tariff_band' => [
           'label' => [
             'en' => theme_get_setting('tariff_band_label'),
-            'pt-br' => theme_get_setting('tariff_band_label_en')
+            'pt_br' => theme_get_setting('tariff_band_label_en')
           ],
           'band' => theme_get_setting('band')
         ],
         'searchbar' => [
           'en' => theme_get_setting('searchbar'),
-          'pt-br' => theme_get_setting('searchbar_en')
+          'pt_br' => theme_get_setting('searchbar_en')
         ]        
       ] 
     ]))->addCacheableDependency([

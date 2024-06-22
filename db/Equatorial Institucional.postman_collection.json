@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "13f4dd7a-bc61-4348-88c3-62d03c273c38",
+		"name": "Equatorial Institucional",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3598780"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{baseUrl}}/session/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"drupal-developer\",\"pass\": \"admin\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/login?_format=json",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"drupal-developer\",\"pass\": \"admin\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}user/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/config?_format=json",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"config"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Languages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/languages"
+			},
+			"response": []
+		},
+		{
+			"name": "Header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/header?_format=json",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"header"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Navigation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/api/menu_items/main"
+			},
+			"response": []
+		},
+		{
+			"name": "Footer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/footer"
+			},
+			"response": []
+		},
+		{
+			"name": "Taxonomias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{baseUrl}}/api/taxonomy/5",
+				"description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada\n\nPode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada"
+			},
+			"response": []
+		},
+		{
+			"name": "Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/videos?items_per_page=2&page=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos (Por categoria)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/videos/2?items_per_page=2&page=0",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"videos",
+						"2"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soluções",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solucoes/5?items_per_page=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solucoes",
+						"5"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soluções (Por categoria)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solucoes/3?items_per_page=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solucoes",
+						"3"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Noticias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/noticias/?items_per_page=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"noticias",
+						""
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Noticias (Por categoria)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/noticias/13?items_per_page=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"noticias",
+						"13"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FAQ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/faq?items_per_page=3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"faq"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Iniciativas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/iniciativas/"
+			},
+			"response": []
+		},
+		{
+			"name": "Iniciativas (Por categoria)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/iniciativas/8?items_per_page=3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"iniciativas",
+						"8"
+					],
+					"query": [
+						{
+							"key": "items_per_page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/entity/block/block_banner"
+			},
+			"response": []
+		},
+		{
+			"name": "Block Fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/blocks/",
+				"description": "Passar na URL o id de configuração retornado no endpoint de Block"
+			},
+			"response": []
+		},
+		{
+			"name": "Banner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/blocks/banner",
+				"description": "Passar na URL o id de configuração retornado no endpoint de Block"
+			},
+			"response": []
+		},
+		{
+			"name": "Paragraphs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/entity/paragraph/1"
+			},
+			"response": []
+		}
+	]
+}
