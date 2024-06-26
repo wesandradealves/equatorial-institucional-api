@@ -19,6 +19,7 @@ dependencies:
     - image
     - node
     - rest
+    - rest_views
     - serialization
     - text
     - user
@@ -2525,14 +2526,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_categoria:
-          id: field_categoria
+        field_categoria_export:
+          id: field_categoria_export
           table: node__field_categoria
-          field: field_categoria
+          field: field_categoria_export
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          plugin_id: field_export
           label: ''
           exclude: false
           alter:
@@ -2575,8 +2576,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
+          type: entity_reference_label
+          settings:
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2584,8 +2586,6 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
           field_api_classes: false
         title:
           id: title
@@ -2866,7 +2866,7 @@ display:
             field_image:
               alias: image
               raw_output: false
-            field_categoria:
+            field_categoria_export:
               alias: category
               raw_output: false
             title:
@@ -2973,14 +2973,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_categoria:
-          id: field_categoria
+        field_categoria_export:
+          id: field_categoria_export
           table: node__field_categoria
-          field: field_categoria
+          field: field_categoria_export
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          plugin_id: field_export
           label: ''
           exclude: false
           alter:
@@ -3023,8 +3023,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
+          type: entity_reference_label
+          settings:
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -3032,8 +3033,6 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
           field_api_classes: false
         title:
           id: title
@@ -3353,12 +3352,12 @@ display:
             field_image:
               alias: image
               raw_output: false
-            field_categoria:
-              alias: category
-              raw_output: false
             title:
               alias: ''
               raw_output: true
+            field_categoria_export:
+              alias: category
+              raw_output: false
             body:
               alias: ''
               raw_output: false
