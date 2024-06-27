@@ -718,26 +718,9 @@ display:
     display_options:
       title: 'Videos REST '
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       style:
         type: better_rest_resources_serializer
         options:
@@ -793,26 +776,9 @@ display:
     display_options:
       title: 'Videos REST  (By TAX)'
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       arguments:
         field_categoria_target_id:
           id: field_categoria_target_id
