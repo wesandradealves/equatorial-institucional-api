@@ -1,0 +1,8 @@
+uuid: 62067425-820d-4c4e-abe8-e45dbdf7c3f4
+langcode: pt-br
+status: true
+dependencies: {  }
+id: rodape
+label: Rodape
+description: ''
+locked: false
