@@ -35,23 +35,31 @@ function sys_twig_extensions_theme_suggestions_container_alter(array &$suggestio
 
 function sys_twig_extensions_theme_suggestions_input_alter(&$suggestions, array $variables, $hook)
 {
-    $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
-    if(isset($variables['element']['#context'])) {
-        $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+    if(isset($variables['element']['#id'])) {
+      $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+      if(isset($variables['element']['#context'])) {
+          $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+      }
     }
 }
 
 function sys_twig_extensions_theme_suggestions_form_element_alter(&$suggestions, array $variables, $hook)
 {
-    $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+    if(isset($variables['element']['#id'])) {
+      $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+    }
     $suggestions[] = $hook . '__' . $variables['element']['#type'];
     if(isset($variables['element']['#context'])) {
         $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . $variables['element']['#context']['#view_id'];
         $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
-        $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'];
-        $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+        if(isset($variables['element']['#id'])) {
+          $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'];
+          $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+        }
     }
-    $variables['id'] = $variables['element']['#id'];
+    if(isset($variables['element']['#id'])) {
+      $variables['id'] = $variables['element']['#id'];
+    }
 }
 
 function sys_twig_extensions_preprocess_page(&$variables) {
