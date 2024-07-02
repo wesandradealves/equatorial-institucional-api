@@ -60,10 +60,15 @@
     {% endif %}    
 </div>
 
+{{ dump() }}
+
 {% if home_bg %}
   <style>
     #wrap {
-      background: url({{home_bg}}) center -1200px / auto no-repeat rgba(255, 255, 255, 0.20);
+      background-image: url({{home_bg}});
+      background-position: center 0;
+      background-size: auto; 
+      background-repeat: no-repeat;
     }
   </style>
 {% endif %}

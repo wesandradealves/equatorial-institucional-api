@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4587cb9aa65df11f03442bfaeb23ae5",
+    "content-hash": "8c24f01c1042987a8bfbef3795e70992",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4026,6 +4026,142 @@
             }
         },
         {
+            "name": "drupal/migrate_plus",
+            "version": "6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_plus.git",
+                "reference": "6.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-6.0.2.zip",
+                "reference": "6.0.2",
+                "shasum": "4315bc293aa75ea9247582d5d1925b075865e467"
+            },
+            "require": {
+                "drupal/core": ">=9.1",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*"
+            },
+            "suggest": {
+                "ext-soap": "*",
+                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.0.2",
+                    "datestamp": "1705424638",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Enhancements to core migration support.",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_plus",
+                "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "slack": "#migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "6.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_tools.git",
+                "reference": "6.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-6.0.4.zip",
+                "reference": "6.0.4",
+                "shasum": "63c571aefece96b199ce8b8f90da648186502be4"
+            },
+            "require": {
+                "drupal/core": ">=9.1",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "drupal/migrate_plus": ">=5",
+                "drupal/migrate_source_csv": ">=3",
+                "drush/drush": ">=11"
+            },
+            "suggest": {
+                "drupal/migrate_plus": ">=5",
+                "drush/drush": ">=11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.0.4",
+                    "datestamp": "1707330330",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "http://drupal.org/project/migrate_tools",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_tools",
+                "issues": "https://www.drupal.org/project/issues/migrate_tools",
+                "slack": "#migrate"
+            }
+        },
+        {
             "name": "drupal/node_export",
             "version": "1.1.0",
             "source": {
@@ -6186,6 +6322,66 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+            }
+        },
+        {
+            "name": "drupal/wordpress_migrate",
+            "version": "3.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/wordpress_migrate.git",
+                "reference": "8.x-3.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/wordpress_migrate-8.x-3.0-alpha6.zip",
+                "reference": "8.x-3.0-alpha6",
+                "shasum": "2c0997ea6894b4a8dca7a01b4187652025974fa9"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/ctools": "~4.0",
+                "drupal/migrate_plus": "~6.0"
+            },
+            "require-dev": {
+                "drupal/ctools": "*",
+                "drupal/migrate_tools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-alpha6",
+                    "datestamp": "1695541288",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Feidt (hongpong)",
+                    "homepage": "https://drupal.org/u/hongpong",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "wordpress_migrate supports migrating WordPress blog exports (WXR format) into Drupal using the Migrate module.",
+            "homepage": "https://drupal.org/project/wordpress_migrate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/wordpress_migrate",
+                "issues": "https://www.drupal.org/project/issues/wordpress_migrate"
             }
         },
         {
@@ -11384,11 +11580,14 @@
         "drupal/scss": 20,
         "drupal/viewfield": 10,
         "drupal/views_field_view": 10,
-        "drupal/webform": 10
+        "drupal/webform": 10,
+        "drupal/wordpress_migrate": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-gd": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
