@@ -11,6 +11,7 @@ RUN apt-get update -y && apt-get install -y \
     sendmail
 
 COPY ob.ini /usr/local/etc/php/conf.d/ob.ini
+COPY custom.ini /usr/local/etc/php/conf.d/custom.ini
 
 RUN docker-php-ext-install mysqli pgsql pdo_pgsql
 RUN apt-get clean \
