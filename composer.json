@@ -1,6 +1,6 @@
 {
     "name": "equatorial/base-drupal-project",
-    "description": "Project template for Drupal projects with a relocated document root",
+    "description": "Project template for Drupal projects with a relocated document root, 1.0",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/drupal",
@@ -111,11 +111,11 @@
             }
         },
         "patches": {
-            "drupal/restui" : {
-                "TypeError - get_class_methods - php > 8 (drupal 10)" : "https://www.drupal.org/files/issues/2023-06-23/type-error-class-3337894-10.patch"
+            "drupal/restui": {
+                "TypeError - get_class_methods - php > 8 (drupal 10)": "https://www.drupal.org/files/issues/2023-06-23/type-error-class-3337894-10.patch"
             },
-            "drupal/openapi_jsonapi" : {
-                "3185778: TypeError: Cannot read property 'anyOf' of undefined" : "https://www.drupal.org/files/issues/2020-12-21/add_required_keyword_8.x_2.x-3185778-5.patch"
+            "drupal/openapi_jsonapi": {
+                "3185778: TypeError: Cannot read property 'anyOf' of undefined": "https://www.drupal.org/files/issues/2020-12-21/add_required_keyword_8.x_2.x-3185778-5.patch"
             }
         },
         "installer-paths": {
