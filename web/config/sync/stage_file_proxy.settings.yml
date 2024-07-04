@@ -1,10 +1,10 @@
 _core:
   default_config_hash: LqXuXXQCTd1NWw7dGLef0PCi3_aEEWQuogAblo4hHaE
 langcode: pt-br
-hotlink: true
-origin: 'https://2ccc-2804-214-816b-d665-c96-72c6-4547-2e28.ngrok-free.app'
+hotlink: false
+origin: ''
 origin_dir: sites/default/files
 proxy_headers: ''
-use_imagecache_root: true
-verify: true
+use_imagecache_root: false
+verify: false
 excluded_extensions: ''
