@@ -2,8 +2,8 @@ _core:
   default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
 langcode: pt-br
 favicon:
-  mimetype: image/jpeg
-  path: 'public://images.jpeg'
+  mimetype: image/png
+  path: 'public://screenshot_2.png'
   url: ''
   use_default: false
 features:
@@ -12,7 +12,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://logo-light-equatorial.png'
+  path: 'public://Logo_3.png'
   url: null
   use_default: false
 copyright: 'Equatorial © 2024. Todos os direiros reservados'
@@ -50,4 +50,4 @@ talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
 home_bg:
-  - '89'
+  - '1359'

@@ -2,8 +2,8 @@ _core:
   default_config_hash: D3-cIQNivNqjklhcbWAjbb0HzjJ9-vBpqpqT8uLknc4
 langcode: pt-br
 favicon:
-  mimetype: image/jpeg
-  path: 'public://images.jpeg'
+  mimetype: image/png
+  path: 'public://screenshot.png'
   use_default: false
 features:
   comment_user_picture: true
@@ -11,7 +11,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://logo-light-equatorial_0.png'
+  path: 'public://Logo_4.png'
   use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_source: '0'
@@ -77,7 +77,7 @@ bootstrap_barrio_h3_color: base
 bootstrap_barrio_region_width_header: 0
 bootstrap_barrio_region_width_content: 0
 home_bg:
-  - '89'
+  - '1359'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
 band: Amarela
