@@ -115,21 +115,24 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );  
 
   $form['header'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Header',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );    
 
   $form['header']['tariff_band'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Bandeira Tarifária',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );  
   
   $form['header']['tariff_band']['label'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Label',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -155,7 +158,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );
 
   $form['header']['text'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Texto',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -174,14 +178,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );    
 
   $form['header']['navigation'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Navegação',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );  
   
   $form['header']['navigation']['search'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Busca',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -200,14 +206,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );      
   
   $form['footer'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Footer',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );  
   
   $form['footer']['copyright'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Copyright',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -226,14 +234,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );    
 
   $form['footer']['social_networks'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Redes Sociais',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );  
   
   $form['footer']['social_networks']['social_networks_label'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Label',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -288,14 +298,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );     
 
   $form['footer']['app'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'App',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );   
 
   $form['footer']['app']['app_label'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Label',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -314,7 +326,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );   
   
   $form['footer']['app']['google_play'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Google Play',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -334,7 +347,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );     
 
   $form['footer']['app']['app_store'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'App Store',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -354,14 +368,16 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );       
 
   $form['footer']['contact'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Contatos',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );   
   
   $form['footer']['contact']['phone'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Telefone',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -380,7 +396,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );   
 
   $form['footer']['contact']['talk'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Fale com a gente',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -399,7 +416,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );     
 
   $form['footer']['contact']['talk']['label'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Link',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -424,7 +442,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );       
 
   $form['footer']['contact']['talk_to_clara'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Fale com a clara',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
@@ -443,7 +462,8 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );      
 
   $form['footer']['contact']['talk_to_clara']['label'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
+    '#open'         => FALSE,
     '#title' => 'Link',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
