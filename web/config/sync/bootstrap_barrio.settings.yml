@@ -102,8 +102,12 @@ google_play_url: 'http://institucional-drupal.ddev.site/'
 app_store_img:
   - '5'
 app_store_url: 'http://institucional-drupal.ddev.site/'
-phone: "Atendimento Equatorial  116\r\nGrandes Clientes  0800 098 2997\r\nNegociação Equatorial  0800 098 2997\r\nOuvidoria  0800 098 2997"
-phone_en: "Equatorial Service 116\r\nLarge Customers 0800 098 2997\r\nEquatorial Trading 0800 098 2997\r\nOmbudsman 0800 098 2997"
+phone:
+  value: "Atendimento Equatorial  <b>116</b>\r\nGrandes Clientes  <b>0800 098 2997</b>\r\nNegociação Equatorial <b>0800 098 2997</b>\r\nOuvidoria  <b>0800 098 2997</b>"
+  format: basic_html
+phone_en:
+  value: '<p>Equatorial Service <strong>116</strong> Large Customers <strong>0800 098 2997</strong> Equatorial Trading <strong>0800 098 2997</strong> Ombudsman <strong>0800 098 2997</strong></p>'
+  format: basic_html
 talk: "Precisa tirar dúvidas, solicitar informações, fazer denúncias ou reclamações?\_"
 talk_en: 'Do you need to ask questions, request information, make reports or complaints?'
 talk_url: 'http://institucional-drupal.ddev.site/'
@@ -115,3 +119,7 @@ talk_to_clara_img:
 bootstrap_barrio_region_clean_footer: 0
 bootstrap_barrio_region_width_footer: 0
 bootstrap_barrio_region_class_footer: ''
+talk_label: 'Fale com a gente'
+talk_label_en: 'Talk to us'
+talk_to_clara_label: 'Fale com a Clara'
+talk_to_clara_label_en: 'Talk to clara'

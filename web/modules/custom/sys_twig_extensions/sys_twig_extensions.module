@@ -384,15 +384,19 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   );     
 
   $form['footer']['contact']['phone']['phone'] = array(
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => 'Default',
-      '#default_value' => theme_get_setting('phone')
+      '#default_value' => theme_get_setting('phone')['value'],
+      '#format' => theme_get_setting('phone')['format'],      
+      // '#default_value' => theme_get_setting('phone')
   ); 
   
   $form['footer']['contact']['phone']['phone_en'] = array(
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => 'EN',
-      '#default_value' => theme_get_setting('phone_en')
+      '#default_value' => theme_get_setting('phone_en')['value'],
+      '#format' => theme_get_setting('phone_en')['format'],         
+      // '#default_value' => theme_get_setting('phone_en')
   );   
 
   $form['footer']['contact']['talk'] = array(

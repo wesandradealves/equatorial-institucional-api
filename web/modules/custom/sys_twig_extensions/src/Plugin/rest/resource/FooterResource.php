@@ -79,8 +79,8 @@ class FooterResource extends ResourceBase {
         ],
         'contact' => [
             'phone' => [
-                'pt_br' => theme_get_setting('phone'),
-                'en' => theme_get_setting('phone_en')
+                'pt_br' => theme_get_setting('phone')['value'],
+                'en' => theme_get_setting('phone_en')['value']
             ],
             'talktous' => [
                 'pt_br' => theme_get_setting('talk'),
