@@ -48,7 +48,7 @@ talk_en: 'Do you need to ask questions, request information, make reports or com
 talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
 talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
 talk_to_clara_img:
-  - '6'
+  - '1365'
 talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 app_label: 'Baixe nosso app'
