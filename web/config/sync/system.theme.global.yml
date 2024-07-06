@@ -51,3 +51,8 @@ app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
 home_bg:
   - '1359'
+label: 'Fale com a Clara'
+talk_label_en: 'Talk to us'
+talk_to_clara_label_en: 'Talk to clara'
+talk_label: 'Fale com a gente'
+talk_to_clara_label: 'Fale com a Clara'

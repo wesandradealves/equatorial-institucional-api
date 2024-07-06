@@ -398,7 +398,26 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
       '#default_value' => theme_get_setting('talk_en')
   );     
 
-  $form['footer']['contact']['talk']['talk_url'] = array(
+  $form['footer']['contact']['talk']['label'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Link',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['footer']['contact']['talk']['label']['talk_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk_label')
+  );     
+
+  $form['footer']['contact']['talk']['label']['talk_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_label_en')
+  );    
+
+  $form['footer']['contact']['talk']['label']['talk_url'] = array(
       '#type' => 'textarea',
       '#title' => 'URL',
       '#default_value' => theme_get_setting('talk_url')
@@ -423,7 +442,26 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
       '#default_value' => theme_get_setting('talk_to_clara_en')
   );      
 
-  $form['footer']['contact']['talk_to_clara']['talk_to_clara_url'] = array(
+  $form['footer']['contact']['talk_to_clara']['label'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Link',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );      
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk_to_clara_label')
+  );     
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_to_clara_label_en')
+  );    
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_url'] = array(
       '#type' => 'textarea',
       '#title' => 'URL',
       '#default_value' => theme_get_setting('talk_to_clara_url')

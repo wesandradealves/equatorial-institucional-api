@@ -85,12 +85,24 @@ class FooterResource extends ResourceBase {
             'talktous' => [
                 'pt_br' => theme_get_setting('talk'),
                 'en' => theme_get_setting('talk_en'),
-                'url' => theme_get_setting('talk_url')
+                'link' => [
+                  'label' => [
+                    'pt_br' => theme_get_setting('talk_label'),
+                    'en' => theme_get_setting('talk_label_en'),
+                  ],
+                  'url' => theme_get_setting('talk_url')
+                ]        
             ],
             'talktoclara' => [
                 'pt_br' => theme_get_setting('talk_to_clara'),
                 'en' => theme_get_setting('talk_to_clara_en'),
-                'url' => theme_get_setting('talk_to_clara_url'),
+                'link' => [
+                  'label' => [
+                    'pt_br' => theme_get_setting('talk_to_clara_label'),
+                    'en' => theme_get_setting('talk_to_clara_label_en'),
+                  ],
+                  'url' => theme_get_setting('talk_to_clara_url')
+                ],
                 'img' => isset($talk_to_clara_img) ? $talk_to_clara_img : null
             ]                          
         ]        
