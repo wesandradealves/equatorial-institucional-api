@@ -28,6 +28,19 @@ class HeaderResource extends ResourceBase {
    *
    */
   public function get() {
+
+    $colours = array(
+      '#5BD05F' => 'Verde',
+      '#FCD403' => 'Amarela',
+      '#ea2639' => 'Vermelha',            
+    );
+
+    $translations = array(
+      '#5BD05F' => 'Green',
+      '#FCD403' => 'Yellow',
+      '#ea2639' => 'Redd',      
+    );    
+
     return (new ResourceResponse([
       'data' => [
         'text' => [
@@ -39,7 +52,13 @@ class HeaderResource extends ResourceBase {
             'en' => theme_get_setting('tariff_band_label'),
             'pt_br' => theme_get_setting('tariff_band_label_en')
           ],
-          'band' => theme_get_setting('band')
+          'band' => [
+            "label" => [
+              'en' => $translations[theme_get_setting('band')],
+              'pt_br' => theme_get_setting('band')
+            ],
+            "value" => theme_get_setting('band')
+          ]
         ],
         'searchbar' => [
           'en' => theme_get_setting('searchbar'),

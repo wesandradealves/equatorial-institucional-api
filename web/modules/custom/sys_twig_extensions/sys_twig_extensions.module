@@ -100,7 +100,7 @@ function sys_twig_extensions_preprocess_page__user__login(&$variables) {
 
 function sys_twig_extensions_tariff_bands() {
   return array(
-    '#5BD05F' => t('Verde 1'),
+    '#5BD05F' => t('Verde'),
     '#FCD403' => t('Amarela'),
     '#ea2639' => t('Vermelha'),
   );
@@ -153,7 +153,11 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
   $form['header']['tariff_band']['band'] = array(
     '#type' => 'select', 
     '#title' => t('Bandeira'), 
-    '#options' => sys_twig_extensions_tariff_bands(),
+    '#options' => array(
+      '#5BD05F' => t('Verde'),
+      '#FCD403' => t('Amarela'),
+      '#ea2639' => t('Vermelha'),
+    ),
     '#default_value' => theme_get_setting('band')
   );
 

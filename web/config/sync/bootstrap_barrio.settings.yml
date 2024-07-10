@@ -79,7 +79,7 @@ home_bg:
   - '1359'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
-band: Amarela
+band: '#5BD05F'
 text: 'Desligamento programado'
 text_en: 'Scheduled shutdown'
 searchbar: 'Digite sua busca'
@@ -96,16 +96,16 @@ linkedin: 'https://linkedin.com/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
 google_play_img:
-  - '4'
+  - '1366'
 google_play_url: 'http://institucional-drupal.ddev.site/'
 app_store_img:
-  - '5'
+  - '1367'
 app_store_url: 'http://institucional-drupal.ddev.site/'
 phone:
-  value: "Atendimento Equatorial  <b>116</b>\r\nGrandes Clientes  <b>0800 098 2997</b>\r\nNegociação Equatorial <b>0800 098 2997</b>\r\nOuvidoria  <b>0800 098 2997</b>"
+  value: '<p>Atendimento Equatorial <strong>116</strong>&nbsp;</p><p>Grandes Clientes <strong>0800 098 2997</strong>&nbsp;</p><p>Negociação Equatorial <strong>0800 098 2997</strong>&nbsp;</p><p>Ouvidoria <strong>0800 098 2997</strong></p>'
   format: basic_html
 phone_en:
-  value: '<p>Equatorial Service <strong>116</strong> Large Customers <strong>0800 098 2997</strong> Equatorial Trading <strong>0800 098 2997</strong> Ombudsman <strong>0800 098 2997</strong></p>'
+  value: '<p>Equatorial Service <strong>116</strong>&nbsp;</p><p>Large Customers <strong>0800 098 2997&nbsp;</strong></p><p>Equatorial Trading <strong>0800 098 2997&nbsp;</strong></p><p>Ombudsman <strong>0800 098 2997</strong></p>'
   format: basic_html
 talk: "Precisa tirar dúvidas, solicitar informações, fazer denúncias ou reclamações?\_"
 talk_en: 'Do you need to ask questions, request information, make reports or complaints?'
@@ -114,7 +114,7 @@ talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
 talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara_img:
-  - '6'
+  - '1365'
 bootstrap_barrio_region_clean_footer: 0
 bootstrap_barrio_region_width_footer: 0
 bootstrap_barrio_region_class_footer: ''
