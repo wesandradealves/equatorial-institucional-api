@@ -55,7 +55,7 @@ class HeaderResource extends ResourceBase {
           'band' => [
             "label" => [
               'en' => $translations[theme_get_setting('band')],
-              'pt_br' => theme_get_setting('band')
+              'pt_br' => $colours[theme_get_setting('band')]
             ],
             "value" => theme_get_setting('band')
           ]
