@@ -1,5 +1,7 @@
 # Institucional Drupal
 
+# [PADRÃO DE DESENVOLVIMENTO E QUALIDADE](README-Definições.md)
+
 Este é o projeto Institucional Drupal. Antes de começar, você precisa criar um arquivo `.env` na pasta `web`.
 
 ## Configuração Inicial
