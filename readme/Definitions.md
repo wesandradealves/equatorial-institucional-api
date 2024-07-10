@@ -100,7 +100,7 @@ Constant Case (CONSTANT_CASE): Todas as letras são maiúsculas e as palavras s�
 
 ## Pastas e arquivos
 Snake Case (snake_case): Todas as letras são minúsculas e as palavras são separadas por sublinhados.
-> Exemplo: minha_variavel
+> Exemplo: minha_pasta
 
 
 
@@ -162,7 +162,7 @@ Obs: Para correções de feature que não estão em produção deve seguir do pa
 - Modificações especificas serão feita no repositório do estado ou estados;
 - Atualmente existiram 8 repositórios para o front-end e mais 8 para back-end, um padrão e 7 outros para cada estado.
 
-![Fluxo do Deploy](/readme/fluxo_deploy.png)
+![Fluxo do Deploy](/readme/deploy_flow.png)
 
 
 
@@ -171,8 +171,8 @@ Obs: Para correções de feature que não estão em produção deve seguir do pa
 
 [Templates Accenture](https://www.figma.com/design/LoC2MJvVh7vo7UaMUbZJGf/[Entrega-Design]-Templates-Institucional-1?node-id=1-11&t=825dOcBDJ3IGGb2d-0)
 
+[Mapa do site Accenture](https://www.figma.com/design/qOXGhWN8vFL8CDvFe2hzHy/[Entrega-Design]-Mapa-do-site?node-id=1251-8256&t=A4fA0hLDCHSEX39p-0)
+
 [Páginas de transparência](https://www.figma.com/design/krqgdQ4RmFRkOt7O6F56ES/Site-institucional?node-id=369-5173&t=aP8MGj0ftUHkk2xm-4)
 
 [Página sobre](https://www.figma.com/proto/krqgdQ4RmFRkOt7O6F56ES/Site-institucional?page-id=75%3A2005&node-id=75-5828&viewport=709%2C490%2C0.1&t=1Cmm7accUKV8WhPZ-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=75%3A3004)
-
-[Mapa do site](https://www.figma.com/design/qOXGhWN8vFL8CDvFe2hzHy/[Entrega-Design]-Mapa-do-site?node-id=1251-8256&t=A4fA0hLDCHSEX39p-0)
