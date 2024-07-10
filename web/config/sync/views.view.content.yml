@@ -255,6 +255,7 @@ display:
             previous: '‹ Voltar'
             first: '« Primeiro'
             last: 'Último »'
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

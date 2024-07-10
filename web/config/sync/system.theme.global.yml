@@ -1,6 +1,5 @@
 _core:
   default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
-langcode: pt-br
 favicon:
   mimetype: image/png
   path: 'public://screenshot_2.png'
@@ -21,7 +20,7 @@ text: 'Desligamento programado'
 text_en: 'Scheduled shutdown'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
-band: Amarela
+band: '#5BD05F'
 searchbar: 'Digite sua busca'
 searchbar_en: Keywords
 social_networks_label: 'Fale com a Equatorial nas redes sociais'

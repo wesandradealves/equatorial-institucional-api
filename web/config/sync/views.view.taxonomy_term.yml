@@ -6,12 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
   module:
     - node
-    - rest
-    - serialization
     - taxonomy
     - user
-    - views_better_rest
-    - views_data_export
 _core:
   default_config_hash: z9csC6m3M65M2JczdNul_lMUrVg8ZO66pbSq8jPCBKs
 id: taxonomy_term
@@ -47,6 +43,7 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset: false
             offset_label: Deslocamento
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

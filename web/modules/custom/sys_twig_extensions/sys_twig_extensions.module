@@ -100,9 +100,9 @@ function sys_twig_extensions_preprocess_page__user__login(&$variables) {
 
 function sys_twig_extensions_tariff_bands() {
   return array(
-    'Verde' => t('Verde'),
-    'Amarela' => t('Amarela'),
-    'Vermelha' => t('Vermelha'),
+    '#5BD05F' => t('Verde 1'),
+    '#FCD403' => t('Amarela'),
+    '#ea2639' => t('Vermelha'),
   );
 }
 

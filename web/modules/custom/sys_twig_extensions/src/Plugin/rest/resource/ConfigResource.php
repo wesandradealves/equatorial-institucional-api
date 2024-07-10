@@ -43,9 +43,9 @@ class ConfigResource extends ResourceBase {
         ],
         'site_name' => \Drupal::config('system.site')->get('name'),
         'basePath' => \Drupal::request()->getSchemeAndHttpHost(),
-        'logo' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
-        'location_screen_bg' => isset($bg) ? $bg : null,
-        'favico' => \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
+        'logo' => \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
+        'location_screen_bg' => isset($bg) ? \Drupal::request()->getSchemeAndHttpHost().$bg : null,
+        'favico' => \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
       ] 
     ]))->addCacheableDependency([
       '#cache' => [

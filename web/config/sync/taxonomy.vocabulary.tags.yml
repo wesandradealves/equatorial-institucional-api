@@ -8,3 +8,4 @@ name: Tags
 vid: tags
 description: 'Use etiquetas para agrupar artigos sobre temas semelhantes em categorias.'
 weight: 0
+new_revision: false

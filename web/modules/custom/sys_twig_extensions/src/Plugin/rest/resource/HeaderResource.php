@@ -17,7 +17,6 @@ use Drupal\rest\ResourceResponse;
  * )
  */
 class HeaderResource extends ResourceBase {
-
   /**
    *
    */
