@@ -61,8 +61,8 @@ class HeaderResource extends ResourceBase {
           ]
         ],
         'searchbar' => [
-          'en' => theme_get_setting('searchbar'),
-          'pt_br' => theme_get_setting('searchbar_en')
+          'en' => theme_get_setting('searchbar_en'),
+          'pt_br' => theme_get_setting('searchbar')
         ]        
       ] 
     ]))->addCacheableDependency([
