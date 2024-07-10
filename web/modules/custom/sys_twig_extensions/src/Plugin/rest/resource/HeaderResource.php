@@ -49,8 +49,8 @@ class HeaderResource extends ResourceBase {
         ],
         'tariff_band' => [
           'label' => [
-            'en' => theme_get_setting('tariff_band_label'),
-            'pt_br' => theme_get_setting('tariff_band_label_en')
+            'en' => theme_get_setting('tariff_band_label_en'),
+            'pt_br' => theme_get_setting('tariff_band_label')
           ],
           'band' => [
             "label" => [
