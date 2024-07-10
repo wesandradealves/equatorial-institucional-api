@@ -79,7 +79,7 @@ home_bg:
   - '1359'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
-band: '#5BD05F'
+band: '#FCD403'
 text: 'Desligamento programado'
 text_en: 'Scheduled shutdown'
 searchbar: 'Digite sua busca'

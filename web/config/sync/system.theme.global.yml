@@ -20,7 +20,7 @@ text: 'Desligamento programado'
 text_en: 'Scheduled shutdown'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
-band: '#5BD05F'
+band: '#FCD403'
 searchbar: 'Digite sua busca'
 searchbar_en: Keywords
 social_networks_label: 'Fale com a Equatorial nas redes sociais'
