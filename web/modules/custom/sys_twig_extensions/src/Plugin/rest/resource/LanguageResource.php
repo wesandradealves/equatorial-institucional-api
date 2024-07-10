@@ -33,7 +33,10 @@ class LanguageResource extends ResourceBase {
     $array = [];
   
     foreach ($langs as $key => $lang) {
-      $array[$key] = $lang->getName(); 
+      $array[] = [
+        "name" => $lang->getName(),
+        "key" => $key
+      ]; 
     }
 
     return (new ResourceResponse([
