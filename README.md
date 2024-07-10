@@ -8,10 +8,11 @@ Este é o projeto é a aplicação back-end do portal Institucional Equatorial c
 - CadaDrupalterá seu banco de dados que não estará dentro da máquina Open Shift;
 - O Drupal terá duas rotas, uma para o front-end consumir os dados via API e outra para o painel administrativo do CMS;
 - Atualmente teremos 14 aplicações, 7 para back-end, uma por estado e outras 7 de front-end, uma para cada estado.
-![Fluxo da aplicação](/fluxo-aplica.png)
+
+![Fluxo da aplicação](/readme/fluxo_aplica.png)
 
 
-#Subir a aplicação no ambiente local
+# Subir a aplicação no ambiente local
 Antes de começar, você precisa criar um arquivo `.env` na pasta `web`.
 
 ## Configuração Inicial
