@@ -1,7 +1,11 @@
 # Institucional Drupal
 Este é o projeto é a aplicação back-end do portal Institucional Equatorial com a finalidade de realizar a gestão de conteúdo e fornecer APIs para o front-end em React. 
 
-# [PADRÃO DE DESENVOLVIMENTO E QUALIDADE](README-Definições.md)
+
+
+# [PADRÃO DE DESENVOLVIMENTO E QUALIDADE](/readme/Definições.md)
+
+
 
 # Fluxo da Aplicação
 - Cada estado terá seu par te aplicações, uma front-ende outra back-end, ambas dentro do Open Shift;
@@ -10,6 +14,7 @@ Este é o projeto é a aplicação back-end do portal Institucional Equatorial c
 - Atualmente teremos 14 aplicações, 7 para back-end, uma por estado e outras 7 de front-end, uma para cada estado.
 
 ![Fluxo da aplicação](/readme/fluxo_aplicacao.png)
+
 
 
 # Subir a aplicação no ambiente local

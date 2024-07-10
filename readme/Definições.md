@@ -162,7 +162,7 @@ Obs: Para correções de feature que não estão em produção deve seguir do pa
 - Modificações especificas serão feita no repositório do estado ou estados;
 - Atualmente existiram 8 repositórios para o front-end e mais 8 para back-end, um padrão e 7 outros para cada estado.
 
-![Fluxo do Deploy](/fluxo_deploy.png)
+![Fluxo do Deploy](/readme/fluxo_deploy.png)
 
 
 
