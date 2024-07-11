@@ -1,0 +1,13 @@
+name: Menu Tree
+type: module
+description: REST Endpoint for Menu Tree.
+core_version_requirement: ^9 || ^10
+package: Web services
+dependencies:
+  - drupal:rest
+  - menu_normalizer:menu_normalizer
+
+# Information added by Drupal.org packaging script on 2022-09-19
+version: '2.0.1'
+project: 'rest_menu_tree'
+datestamp: 1663604890

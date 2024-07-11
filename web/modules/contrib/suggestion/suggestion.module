@@ -1,0 +1,154 @@
+<?php
+
+/**
+ * @file
+ * Contains suggestion.module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
+use Drupal\node\NodeInterface;
+use Drupal\suggestion\SuggestionHelper as Helper;
+use Drupal\suggestion\SuggestionStorage as Storage;
+
+/**
+ * Implements hook_cron().
+ */
+function suggestion_cron() {
+  if (!Helper::getConfig('synced')) {
+    Helper::index();
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function suggestion_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $autocomplete = Helper::getConfig('autocomplete');
+
+  $field_name = !empty($autocomplete[$form_id]) ? $autocomplete[$form_id] : '';
+
+  if (!$field_name) {
+    return;
+  }
+  return Helper::alterElement($form, $field_name);
+}
+
+/**
+ * Implements hook_help().
+ */
+function suggestion_help($route_name, CurrentRouteMatch $route_match) {
+  $x = [
+    '```php' => '<code>',
+    '```'    => '</code>',
+    "\n"     => "\n<br />",
+  ];
+  switch ($route_name) {
+    case 'help.page.suggestion':
+      $txt = file_get_contents(\Drupal::service('extension.list.module')->getPath('suggestion') . '/README.md');
+      return str_replace(array_keys($x), array_values($x), Html::escape($txt));
+  }
+  return '';
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function suggestion_node_delete(NodeInterface $node) {
+  if ($node->isPublished()) {
+    Helper::remove($node->getTitle(), Storage::CONTENT_BIT);
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function suggestion_node_insert($node) {
+  $types = Helper::types();
+
+  if ($node->isPublished() && in_array($node->getType(), $types)) {
+    Helper::insert($node->getTitle(), Storage::CONTENT_BIT);
+   }
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function suggestion_node_update(NodeInterface $node) {
+  $original = $node->original;
+
+  if (!$original instanceof NodeInterface) {
+    return;
+  }
+  if ($original->isPublished() && !$node->isPublished()) {
+    Helper::remove($node->getTitle());
+  }
+  elseif ($node->isPublished() && ($original->getTitle() !== $node->getTitle())) {
+    Helper::remove($original->getTitle(), Storage::CONTENT_BIT);
+    Helper::insert($node->getTitle(), Storage::CONTENT_BIT);
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function suggestion_permission() {
+  return [
+    'administer suggestion' => [
+      'title'       => t('Administer the Suggestion Module'),
+      'description' => t('Perform administration tasks for the suggestion module.'),
+    ],
+  ];
+}
+
+/**
+ * Custom submit function to add surfer suggestions.
+ */
+function suggestion_surfer_submit($form, FormStateInterface $form_state) {
+  $cfg = Helper::getConfig();
+  $form_id = $form_state->getValue('form_id');
+  $min_score = 1;
+
+  $field_name = !empty($cfg->autocomplete[$form_id]) ? $cfg->autocomplete[$form_id] : '';
+
+  if (!$field_name || !$form_state->getValue($field_name)) {
+    return;
+  }
+  $txt = Helper::tokenize($form_state->getValue($field_name), $cfg->min);
+
+  if (!$txt) {
+    return;
+  }
+  $atoms = Helper::atomize($txt);
+
+  $count = count($atoms);
+
+  if ($count < $cfg->atoms_min || $count > $cfg->atoms_max) {
+    return;
+  }
+  $ngram = implode(' ', $atoms);
+
+  $qty = Storage::getNgramQty($ngram);
+
+  if ($qty) {
+    $count = str_word_count($ngram);
+    $src = Storage::getBitmap($ngram, Storage::SURFER_BIT);
+
+    $key = ['ngram' => $ngram];
+    $fields = [
+      'atoms'   => $count,
+      'density' => Helper::calculateDensity($src, $count, ($qty + 1)),
+      'qty'     => $qty + 1,
+      'src'     => $src,
+    ];
+    Storage::mergeSuggestion($key, $fields);
+
+    return;
+  }
+  $score = Storage::getScore($atoms);
+
+  if ($score >= $min_score) {
+    Helper::insert($ngram, Storage::SURFER_BIT, $score);
+  }
+}

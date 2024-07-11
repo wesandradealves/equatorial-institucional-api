@@ -1,0 +1,13 @@
+name: Entity Rest Extra
+type: module
+description: 'Extra Rest resources to enable/access entities configuration.'
+package: Web services
+core_version_requirement: ^8.8 || ^9 || ^10
+dependencies:
+  - drupal:serialization
+  - restui:restui
+
+# Information added by Drupal.org packaging script on 2023-07-25
+version: '8.x-2.3'
+project: 'entity_rest_extra'
+datestamp: 1690271277
