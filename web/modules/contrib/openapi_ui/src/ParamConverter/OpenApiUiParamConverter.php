@@ -2,9 +2,8 @@
 
 namespace Drupal\openapi_ui\ParamConverter;
 
-use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
-
+use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Core\ParamConverter\ParamConverterInterface;
 use Symfony\Component\Routing\Route;
 

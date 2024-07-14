@@ -12,38 +12,18 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class OpenApiListController extends ControllerBase {
 
-  /**
-   * Current Generator plugin manager.
-   *
-   * @var \Drupal\Component\Plugin\PluginManagerInterface
-   */
-  public $openapiGeneratorManager;
-
-  /**
-   * Creates a new OpenApiListController.
-   *
-   * @param \Drupal\Component\Plugin\PluginManagerInterface $openapi_generator_manager
-   *   The current openapi generator plugin manager instance.
-   * @param \Drupal\Component\Plugin\PluginManagerInterface $openapi_ui_manager
-   *   ui library plugin manager instance. NULL if the module is not enabled.
-   */
-  public function __construct(PluginManagerInterface $openapi_generator_manager, PluginManagerInterface $openapi_ui_manager = NULL) {
-    $this->openapiGeneratorManager = $openapi_generator_manager;
-    $this->openapiUiManager = $openapi_ui_manager;
-  }
+  public function __construct(
+    private readonly PluginManagerInterface $openapiGeneratorManager,
+    private readonly ?PluginManagerInterface $openapiUiManager,
+  ) {}
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    $ui_manager = NULL;
-    $module_handler = $container->get('module_handler');
-    if ($module_handler->moduleExists('openapi_ui')) {
-      $ui_manager = $container->get('plugin.manager.openapi_ui.ui');
-    }
     return new static(
       $container->get('plugin.manager.openapi.generator'),
-      $ui_manager
+      $container->get('plugin.manager.openapi_ui.ui', ContainerInterface::NULL_ON_INVALID_REFERENCE),
     );
   }
 
@@ -81,9 +61,9 @@ class OpenApiListController extends ControllerBase {
       ];
       $ui_message = $this->t("Please visit the <a href=':openapi_ui_link'>OpenAPI UI module</a> for information on these interfaces and to discover others.", $openapi_ui_context) . '</p>';
 
-      $ui_plugins = [];
       $build['ui'] = [];
-      if ($this->openapiUiManager !== NULL && ($ui_plugins = $this->openapiUiManager->getDefinitions())  && count($ui_plugins)) {
+      $ui_plugins = $this->openapiUiManager?->getDefinitions() ?? [];
+      if (count($ui_plugins)) {
         $ui_message = '<strong>*</strong> ' . $ui_message;
       }
       else {
@@ -133,7 +113,7 @@ class OpenApiListController extends ControllerBase {
           foreach ($ui_plugins as $ui_plugin_id => $ui_plugin) {
             $interface_args = [
               'openapi_generator' => $generator_id,
-              'openapi_ui' => $ui_plugin_id
+              'openapi_ui' => $ui_plugin_id,
             ];
             $ui_context = [
               '%interface' => $ui_plugin['label'],
@@ -160,7 +140,7 @@ class OpenApiListController extends ControllerBase {
       ];
       $no_plugins_message = '<strong>' . $this->t('No OpenApi generator plugins are currently available.') . '</strong> ';
       $no_plugins_message .= $this->t('You must enable a REST or API module which supports OpenApi Downloads, such as the <a href=":rest_link">Core Rest</a> and <a href=":jsonapi_link">JSON:API</a> modules.', $links);
-      $this->messenger()->addWarning($no_plugins_message);
+      $this->messenger()->addWarning(['#markup' => $no_plugins_message]);
     }
 
     return $build;

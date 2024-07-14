@@ -1,0 +1,84 @@
+uuid: 4c90b0c6-9e0b-45b7-a50c-de4860b4854f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro.field_cta_label
+    - field.field.paragraph.intro.field_cta_url
+    - field.field.paragraph.intro.field_imagem
+    - field.field.paragraph.intro.field_texto
+    - field.field.paragraph.intro.field_title
+    - field.field.paragraph.intro.field_titulo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.intro
+  module:
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_cta:
+      children:
+        - field_cta_url
+        - field_cta_label
+      label: CTA
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+id: paragraph.intro.default
+targetEntityType: paragraph
+bundle: intro
+mode: default
+content:
+  field_cta_label:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_url:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_imagem:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_texto:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_titulo: true
+  status: true

@@ -18,7 +18,7 @@ https://www.drupal.org/docs/8/extending-drupal-8/installing-drupal-8-modules).
 
 This module has no dependencies outside of Drupal core.
 
-The OpenAPI integration modules may leverate the
+The OpenAPI integration modules may leverage the
 [schemata](https://drupal.org/project/schemata) module to derive the entity
 schema for the project.
 
@@ -49,14 +49,14 @@ to use the functionality provided by this module.
 
 This module uses the [OpenAPI UI module](https://drupal.org/project/openapi_ui)
 to display the generated docs within a web interface. You can install openapi_ui
-and its extention modules.
+and its extension modules.
 
 We recommend that you use the [Redoc](https://github.com/Rebilly/ReDoc) project.
 This can be downloaded and configured to display docs within a drupal site using
 the [Redoc for OpenAPI UI](https://drupal.org/project/openapi_ui_redoc) module.
 Once the module installed, you will need to have a supported api schema module
-nstalled, see "Using OpenAPI" above. You can then navigate to the respective url
-for the api.
+installed, see "Using OpenAPI" above. You can then navigate to the respective
+URL for the api.
 
 - REST - `/admin/config/services/openapi/redoc/rest`
 - JSON:API -  `/admin/config/services/openapi/redoc/jsonapi`

@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_conteudo
     - node.type.page
   module:
-    - text
+    - rest_views
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -15,15 +16,14 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    type: text_default
+  field_conteudo:
+    type: entity_reference_entity_id_export
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  links:
-    weight: 101
+    weight: 1
     region: content
 hidden:
+  body: true
   langcode: true
+  links: true

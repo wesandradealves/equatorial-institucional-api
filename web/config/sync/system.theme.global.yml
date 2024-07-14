@@ -2,16 +2,16 @@ _core:
   default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
 favicon:
   mimetype: image/png
-  path: 'public://screenshot_2.png'
+  path: 'public://screenshot_1.png'
   url: ''
   use_default: false
 features:
-  comment_user_picture: true
+  comment_user_picture: false
   comment_user_verification: true
   favicon: true
-  node_user_picture: true
+  node_user_picture: false
 logo:
-  path: 'public://Logo_3.png'
+  path: 'public://Logo_1.png'
   url: null
   use_default: false
 copyright: 'Equatorial © 2024. Todos os direiros reservados'
@@ -47,13 +47,13 @@ talk_en: 'Do you need to ask questions, request information, make reports or com
 talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
 talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
 talk_to_clara_img:
-  - '1365'
+  - '1393'
 talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
 home_bg:
-  - '1359'
+  - '1387'
 label: 'Fale com a Clara'
 talk_label_en: 'Talk to us'
 talk_to_clara_label_en: 'Talk to clara'

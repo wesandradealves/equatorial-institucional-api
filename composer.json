@@ -25,6 +25,7 @@
         "drupal/better_social_sharing_buttons": "^4.0",
         "drupal/blocache": "2.0",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/ckeditor5_font": "1.x-dev@dev",
         "drupal/color_pickr": "^1.1",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_ignore": "^3.1",
@@ -48,8 +49,8 @@
         "drupal/menu_item_extras": "^3.0",
         "drupal/menu_link_attributes": "^1.3",
         "drupal/metatag": "^2.0",
-        "drupal/mobile_number": "^2.0",
         "drupal/migrate_tools": "^6.0",
+        "drupal/mobile_number": "^2.0",
         "drupal/node_export": "^1.1",
         "drupal/node_token": "^1.3",
         "drupal/openapi": "^2.1",
@@ -83,6 +84,7 @@
         "drupal/views_better_rest": "^1.0",
         "drupal/views_data_export": "1.3",
         "drupal/views_field_view": "^1.0@beta",
+        "drupal/views_url_alias": "^3.1",
         "drupal/webform": "^6.2@beta",
         "drupal/wordpress_migrate": "^3.0@alpha",
         "drush/drush": "^12.4",
@@ -113,7 +115,11 @@
                 "web-root": "web/"
             }
         },
+        "enable-patching": true,
         "patches": {
+            "drupal/ckeditor5_font": {
+                "'no config schema' Error": "https://www.drupal.org/files/issues/2024-01-11/ckeditor5_font-schema-fix-10.2.1-3368736-37.patch"
+            },            
             "drupal/restui": {
                 "TypeError - get_class_methods - php > 8 (drupal 10)": "https://www.drupal.org/files/issues/2023-06-23/type-error-class-3337894-10.patch"
             },

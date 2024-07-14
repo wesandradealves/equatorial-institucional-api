@@ -1,0 +1,39 @@
+uuid: d87a000e-d998-4e6c-9d56-b9f7ab4cc2d1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conteudo
+    - node.type.page
+    - paragraphs.paragraphs_type.galeria
+    - paragraphs.paragraphs_type.intro
+  module:
+    - entity_reference_revisions
+id: node.page.field_conteudo
+field_name: field_conteudo
+entity_type: node
+bundle: page
+label: Conteudo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      intro: intro
+      galeria: galeria
+    negate: 0
+    target_bundles_drag_drop:
+      galeria:
+        weight: 4
+        enabled: true
+      intro:
+        weight: 3
+        enabled: true
+      servicos:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

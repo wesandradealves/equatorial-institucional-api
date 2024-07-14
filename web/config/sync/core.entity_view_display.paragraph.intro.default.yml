@@ -1,30 +1,30 @@
-uuid: 6519c657-4b0c-420f-b669-44d7ab723aa5
+uuid: afb68107-1958-42c0-bd0d-470df00ea110
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - block_content.type.banner
-    - field.field.block_content.banner.field_atalho_clara
-    - field.field.block_content.banner.field_cta_url
-    - field.field.block_content.banner.field_imagem
-    - field.field.block_content.banner.field_servicos
-    - field.field.block_content.banner.field_titulo
+    - field.field.paragraph.intro.field_cta_label
+    - field.field.paragraph.intro.field_cta_url
+    - field.field.paragraph.intro.field_imagem
+    - field.field.paragraph.intro.field_texto
+    - field.field.paragraph.intro.field_title
+    - field.field.paragraph.intro.field_titulo
+    - paragraphs.paragraphs_type.intro
   module:
     - image
-    - rest_views
     - text
-id: block_content.banner.default
-targetEntityType: block_content
-bundle: banner
+id: paragraph.intro.default
+targetEntityType: paragraph
+bundle: intro
 mode: default
 content:
-  field_atalho_clara:
-    type: image_url
+  field_cta_label:
+    type: string
     label: hidden
     settings:
-      image_style: ''
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_cta_url:
     type: string
@@ -32,7 +32,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_imagem:
     type: image_url
@@ -40,16 +40,16 @@ content:
     settings:
       image_style: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
-  field_servicos:
-    type: entity_reference_entity_id_export
+  field_texto:
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
-  field_titulo:
+  field_title:
     type: text_default
     label: hidden
     settings: {  }
@@ -57,4 +57,4 @@ content:
     weight: 0
     region: content
 hidden:
-  langcode: true
+  field_titulo: true

@@ -483,6 +483,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -497,7 +498,6 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset: false
             offset_label: Deslocamento
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -831,6 +831,9 @@ display:
               raw_output: 0
             field_atalho_clara:
               alias: clara_shortcut
+              raw_output: 0
+            field_cta_url:
+              alias: clara_url
               raw_output: 0
       fields:
         uuid:
@@ -1209,6 +1212,69 @@ display:
           separator: ', '
           field_api_classes: 0
           plugin_id: field
+        field_cta_url:
+          id: field_cta_url
+          table: block_content__field_cta_url
+          field: field_cta_url
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
       pager:
         type: none
         options:
@@ -1221,6 +1287,7 @@ display:
         - request_format
       tags:
         - 'config:field.storage.block_content.field_atalho_clara'
+        - 'config:field.storage.block_content.field_cta_url'
         - 'config:field.storage.block_content.field_imagem'
         - 'config:field.storage.block_content.field_servicos'
         - 'config:field.storage.block_content.field_titulo'

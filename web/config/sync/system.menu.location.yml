@@ -3,6 +3,6 @@ langcode: pt-br
 status: true
 dependencies: {  }
 id: location
-label: Location
+label: 'Seleção de Localidades'
 description: ''
 locked: false
