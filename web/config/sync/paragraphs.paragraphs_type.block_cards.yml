@@ -1,9 +1,9 @@
-uuid: 3654323d-64a6-48dd-bf38-f81fa124f641
+uuid: 8525f8b9-9126-4035-9ac9-f7afec9235c5
 langcode: pt-br
 status: true
 dependencies: {  }
-id: galeria
-label: Galeria
+id: block_cards
+label: 'Bloco de Cards'
 icon_uuid: null
 icon_default: null
 description: ''

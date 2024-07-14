@@ -1,0 +1,31 @@
+uuid: b9afcab3-7f2f-470f-b300-67faa8a12246
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_cards.field_card
+    - field.field.paragraph.block_cards.field_title
+    - paragraphs.paragraphs_type.block_cards
+  module:
+    - rest_views
+    - text
+id: paragraph.block_cards.default
+targetEntityType: paragraph
+bundle: block_cards
+mode: default
+content:
+  field_card:
+    type: entity_reference_entity_id_export
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

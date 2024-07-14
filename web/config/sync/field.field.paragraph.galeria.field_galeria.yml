@@ -1,0 +1,40 @@
+uuid: d52da8b2-43bc-48bf-924d-3c405a19b8c3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_galeria
+    - paragraphs.paragraphs_type.galeria
+    - paragraphs.paragraphs_type.galeria_item
+  module:
+    - entity_reference_revisions
+id: paragraph.galeria.field_galeria
+field_name: field_galeria
+entity_type: paragraph
+bundle: galeria
+label: Galeria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      galeria_item: galeria_item
+    negate: 0
+    target_bundles_drag_drop:
+      galeria:
+        weight: 5
+        enabled: false
+      galeria_item:
+        weight: 6
+        enabled: true
+      intro:
+        weight: 7
+        enabled: false
+      servicos:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

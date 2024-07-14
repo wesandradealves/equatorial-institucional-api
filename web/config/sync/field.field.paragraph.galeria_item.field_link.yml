@@ -1,14 +1,14 @@
-uuid: 0b5e0cb6-78fa-4a1c-b9ee-9a0b3e59414d
+uuid: 48ec0c6b-4f11-41e1-b077-cc8091fcb9ee
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_link
-    - paragraphs.paragraphs_type.galeria
-id: paragraph.galeria.field_link
+    - paragraphs.paragraphs_type.galeria_item
+id: paragraph.galeria_item.field_link
 field_name: field_link
 entity_type: paragraph
-bundle: galeria
+bundle: galeria_item
 label: Link
 description: ''
 required: false

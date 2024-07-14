@@ -1,0 +1,56 @@
+uuid: d70fc67a-b69b-412b-b0b6-56173f3e7ba3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_cards_item.field_icone
+    - field.field.paragraph.block_cards_item.field_imagem
+    - field.field.paragraph.block_cards_item.field_texto
+    - field.field.paragraph.block_cards_item.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.block_cards_item
+  module:
+    - image
+    - svg_image_field
+    - text
+id: paragraph.block_cards_item.default
+targetEntityType: paragraph
+bundle: block_cards_item
+mode: default
+content:
+  field_icone:
+    type: svg_image_field_widget
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  field_imagem:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_texto:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

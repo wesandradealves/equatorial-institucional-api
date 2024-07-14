@@ -1,16 +1,16 @@
-uuid: fc7c311d-a9be-4047-abca-b53d0aa6340f
+uuid: 114e72d7-e123-4666-a19f-dffb228ae02c
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_imagem
-    - paragraphs.paragraphs_type.galeria
+    - paragraphs.paragraphs_type.block_cards_item
   module:
     - image
-id: paragraph.galeria.field_imagem
+id: paragraph.block_cards_item.field_imagem
 field_name: field_imagem
 entity_type: paragraph
-bundle: galeria
+bundle: block_cards_item
 label: Imagem
 description: ''
 required: false

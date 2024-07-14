@@ -1,18 +1,18 @@
-uuid: 191dd51e-89cd-4b5e-b2d7-d73c72c065ad
+uuid: 838f6a54-7778-408d-93a0-e6c573e204d8
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
+    - field.storage.paragraph.field_body
     - filter.format.full_html
-    - paragraphs.paragraphs_type.galeria
+    - paragraphs.paragraphs_type.simple_content_block
   module:
     - text
-id: paragraph.galeria.field_title
-field_name: field_title
+id: paragraph.simple_content_block.field_body
+field_name: field_body
 entity_type: paragraph
-bundle: galeria
-label: Titulo
+bundle: simple_content_block
+label: Body
 description: ''
 required: false
 translatable: false

@@ -1,9 +1,9 @@
-uuid: 3654323d-64a6-48dd-bf38-f81fa124f641
+uuid: 908bf0f4-1ed5-4095-9d49-0955564129c6
 langcode: pt-br
 status: true
 dependencies: {  }
-id: galeria
-label: Galeria
+id: simple_content_block
+label: 'Bloco de Conteúdo Simples'
 icon_uuid: null
 icon_default: null
 description: ''

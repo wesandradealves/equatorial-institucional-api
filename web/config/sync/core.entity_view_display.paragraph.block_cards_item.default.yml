@@ -1,0 +1,50 @@
+uuid: 5d5e206d-3ba3-4d75-8a61-1389154c6aac
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_cards_item.field_icone
+    - field.field.paragraph.block_cards_item.field_imagem
+    - field.field.paragraph.block_cards_item.field_texto
+    - field.field.paragraph.block_cards_item.field_title
+    - paragraphs.paragraphs_type.block_cards_item
+  module:
+    - image
+    - svg_image_field
+    - text
+id: paragraph.block_cards_item.default
+targetEntityType: paragraph
+bundle: block_cards_item
+mode: default
+content:
+  field_icone:
+    type: svg_image_url_formatter
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_imagem:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

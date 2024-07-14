@@ -1,9 +1,9 @@
-uuid: 3654323d-64a6-48dd-bf38-f81fa124f641
+uuid: 4643c139-6908-42fc-a370-c316ba5dc99f
 langcode: pt-br
 status: true
 dependencies: {  }
-id: galeria
-label: Galeria
+id: galeria_item
+label: 'Galeria Item'
 icon_uuid: null
 icon_default: null
 description: ''
