@@ -1,0 +1,24 @@
+uuid: 4c190378-9c91-4499-8f10-e382431a157f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.galeria.field_galeria
+    - paragraphs.paragraphs_type.galeria
+  module:
+    - entity_reference_revisions
+id: paragraph.galeria.default
+targetEntityType: paragraph
+bundle: galeria
+mode: default
+content:
+  field_galeria:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

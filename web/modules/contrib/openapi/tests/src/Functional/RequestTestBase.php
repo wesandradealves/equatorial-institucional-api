@@ -14,6 +14,11 @@ use Drupal\Tests\BrowserTestBase;
 abstract class RequestTestBase extends BrowserTestBase {
 
   /**
+   * The API module being tested.
+   */
+  const API_MODULE = NULL;
+
+  /**
    * {@inheritdoc}
    */
   protected $defaultTheme = 'stark';
@@ -23,7 +28,7 @@ abstract class RequestTestBase extends BrowserTestBase {
    *
    * The test will be marked as a fail when generating test files.
    */
-  protected static $generateExpectationFiles = FALSE;
+  protected static bool $generateExpectationFiles = FALSE;
 
   /**
    * List of required array keys for response schema.
@@ -38,6 +43,9 @@ abstract class RequestTestBase extends BrowserTestBase {
     'paths' => 'paths',
   ];
 
+  /**
+   * {@inheritdoc}
+   */
   protected static $entityTestBundles = [
     "taxonomy_term" => [
       "camelids",
@@ -54,7 +62,7 @@ abstract class RequestTestBase extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
     'field',
     'filter',
@@ -131,9 +139,11 @@ abstract class RequestTestBase extends BrowserTestBase {
   }
 
   /**
-   * Dataprovider for testRequests.
+   * Data provider for testRequests.
    */
-  public function providerRequestTypes() {
+  public static function providerRequestTypes(): iterable {
+    static::assertNotEmpty(static::API_MODULE, 'The API_MODULE constant must be overridden by ' . static::class . '.');
+
     $data = [];
     foreach (static::$entityTestBundles as $entity_type => $bundles) {
       foreach ($bundles as $bundle) {
@@ -241,10 +251,10 @@ abstract class RequestTestBase extends BrowserTestBase {
     $supported_security_types = ['basic', 'apiKey', 'cookie', 'oauth', 'oauth2'];
     foreach ($security_definitions as $definition_id => $definition) {
       if ($definition_id !== 'csrf_token') {
-        // CSRF Token will never have an auth collector, all others shoud.
+        // CSRF Token will never have an auth collector, all others should.
         $this->assertTrue(array_key_exists($definition_id, $auth_providers), 'Security definition ' . $definition_id . ' not an auth collector.');
       }
-      $this->assertTrue(in_array($definition['type'], $supported_security_types), 'Security definition schema ' . $definition_id . ' has invalid type '. $definition['type']);
+      $this->assertContains($definition['type'], $supported_security_types);
     }
 
     // Test paths for valid tags, schema, security, and definitions.

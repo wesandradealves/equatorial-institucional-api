@@ -2,9 +2,8 @@
 
 namespace Drupal\openapi_ui_swagger\Plugin\openapi_ui\OpenApiUi;
 
-use Drupal\Core\Url;
 use Drupal\Component\Serialization\Json;
-
+use Drupal\Core\Url;
 use Drupal\openapi_ui\Plugin\openapi_ui\OpenApiUi;
 
 /**

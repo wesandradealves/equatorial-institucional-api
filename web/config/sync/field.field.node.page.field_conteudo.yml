@@ -1,0 +1,60 @@
+uuid: d87a000e-d998-4e6c-9d56-b9f7ab4cc2d1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conteudo
+    - node.type.page
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.block_cards
+    - paragraphs.paragraphs_type.galeria
+    - paragraphs.paragraphs_type.intro
+    - paragraphs.paragraphs_type.simple_content_block
+  module:
+    - entity_reference_revisions
+id: node.page.field_conteudo
+field_name: field_conteudo
+entity_type: node
+bundle: page
+label: Conteudo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner: banner
+      intro: intro
+      galeria: galeria
+      block_cards: block_cards
+      simple_content_block: simple_content_block
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: -10
+        enabled: true
+      block_cards:
+        weight: 9
+        enabled: true
+      block_cards_item:
+        weight: 10
+        enabled: false
+      galeria:
+        weight: -8
+        enabled: true
+      galeria_item:
+        weight: -7
+        enabled: false
+      intro:
+        weight: -9
+        enabled: true
+      servicos:
+        weight: -11
+        enabled: false
+      simple_content_block:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

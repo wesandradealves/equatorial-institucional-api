@@ -22,7 +22,7 @@
    * @type {Drupal~behavior}
    *
    * @prop {Drupal~behaviorAttach} attach
-   *   Attaches the behavior to initilize the swagger-ui.
+   *   Attaches the behavior to initialize the swagger-ui.
    */
   Drupal.behaviors.swaggerui = {
     attach: function (context, settings) {

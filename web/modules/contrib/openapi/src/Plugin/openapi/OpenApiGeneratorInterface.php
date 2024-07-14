@@ -124,18 +124,18 @@ interface OpenApiGeneratorInterface {
   public function getDefinitions();
 
   /**
-   * Get a list of all MIME Type that the API Consumes
+   * Get a list of all MIME Type that the API Consumes.
    *
    * @return array
-   *    An array of all MIME Type that the API Consumes
+   *   An array of all MIME Type that the API Consumes
    */
   public function getConsumes();
 
   /**
-   * Get a list of all MIME Type that the API Produces
+   * Get a list of all MIME Type that the API Produces.
    *
    * @return array
-   *    An array of all MIME Type that the API Produces
+   *   An array of all MIME Type that the API Produces
    */
   public function getProduces();
 

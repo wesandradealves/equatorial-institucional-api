@@ -1,0 +1,10 @@
+uuid: 1c0e64a3-7d52-4bdd-bbda-0d9790fd6299
+langcode: pt-br
+status: true
+dependencies: {  }
+id: block_cards_item
+label: 'Block Cards Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

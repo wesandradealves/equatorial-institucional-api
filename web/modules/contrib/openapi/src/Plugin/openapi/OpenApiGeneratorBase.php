@@ -12,9 +12,9 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteProviderInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines base class for OpenApi Generator plugins.
@@ -28,7 +28,8 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
    *
    * @var string
    */
-  static $DEFINITION_SEPARATOR = ':';
+  // phpcs:ignore
+  public static string $DEFINITION_SEPARATOR = ':';
 
   /**
    * The generator label.
@@ -38,46 +39,11 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
   public $label;
 
   /**
-   * The entity type manager.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
-   * The route provider.
-   *
-   * @var \Drupal\Core\Routing\RouteProviderInterface
-   */
-  protected $routingProvider;
-
-  /**
-   * The Field Manager.
-   *
-   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
-   */
-  protected $fieldManager;
-
-  /**
-   * The serializer.
-   *
-   * @var \Symfony\Component\Serializer\SerializerInterface
-   */
-  protected $serializer;
-
-  /**
    * The configuration object factory.
    *
    * @var \Symfony\Component\HttpFoundation\Request
    */
   protected $request;
-
-  /**
-   * The configuration object factory.
-   *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected $configFactory;
 
   /**
    * The request options parameter.
@@ -86,48 +52,22 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
    */
   protected $options;
 
-  /**
-   * The configuration object factory.
-   *
-   * @var \Drupal\Core\Authentication\AuthenticationCollectorInterface
-   */
-  protected $authenticationCollector;
-
-  /**
-   * OpenApiGeneratorBase constructor.
-   *
-   * @param array $configuration
-   *   Plugin configuration.
-   * @param string $plugin_id
-   *   Unique plugin id.
-   * @param array|mixed $plugin_definition
-   *   Plugin instance definition.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager.
-   * @param \Drupal\Core\Routing\RouteProviderInterface $routing_provider
-   *   The routing provider.
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $field_manager
-   *   The field manager.
-   * @param \Symfony\Component\Serializer\SerializerInterface $serializer
-   *   The serializer.
-   * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
-   *   The current request stack.
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-   *   The configuration object factory.
-   * @param \Drupal\Core\Authentication\AuthenticationCollectorInterface $authentication_collector
-   *   The authentication collector.
-   */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager, RouteProviderInterface $routing_provider, EntityFieldManagerInterface $field_manager, SerializerInterface $serializer, RequestStack $request_stack, ConfigFactoryInterface $config_factory, AuthenticationCollectorInterface $authentication_collector) {
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    protected EntityTypeManagerInterface $entityTypeManager,
+    protected RouteProviderInterface $routingProvider,
+    protected EntityFieldManagerInterface $fieldManager,
+    protected SerializerInterface $serializer,
+    RequestStack $request_stack,
+    protected ConfigFactoryInterface $configFactory,
+    protected AuthenticationCollectorInterface $authenticationCollector,
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->label = $this->getPluginDefinition()["label"];
-    $this->entityTypeManager = $entity_type_manager;
-    $this->routingProvider = $routing_provider;
-    $this->fieldManager = $field_manager;
-    $this->serializer = $serializer;
     $this->request = $request_stack->getCurrentRequest();
-    $this->configFactory = $config_factory;
-    $this->authenticationCollector = $authentication_collector;
     $this->options = [];
   }
 
@@ -174,11 +114,8 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
    * {@inheritdoc}
    */
   public function getLabel() {
-    if ($this->label === NULL) {
-      // Load value from definition.
-      $this->label = $this->get()["label"];
-    }
-    return $this->label;
+    // Load value from definition.
+    return $this->label ?? $this->getPluginDefinition()['label'];
   }
 
   /**
@@ -202,7 +139,7 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
     ];
 
     // Strip any empty arrays which aren't required.
-    $required = ['swagger',  'info', 'paths'];
+    $required = ['swagger', 'info', 'paths'];
     foreach ($spec as $key => $item) {
       if (!in_array($key, $required) && is_array($item) && !count($item)) {
         unset($spec[$key]);
@@ -252,12 +189,13 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
 
     foreach ($auth_providers as $provider => $info) {
       $def = NULL;
-      switch($provider) {
+      switch ($provider) {
         case 'basic_auth':
           $def = [
-            'type' => 'basic'
+            'type' => 'basic',
           ];
           break;
+
         case 'oauth2':
           $def = [
             'type' => 'oauth2',
@@ -283,6 +221,7 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
             ],
           ];
           break;
+
         default:
           continue 2;
       }
@@ -296,17 +235,20 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
       'type' => 'apiKey',
       'name' => 'X-CSRF-Token',
       'in' => 'header',
-      'x-tokenUrl' => $base_url . 'user/token',
+      'x-tokenUrl' => $base_url . 'session/token',
     ];
 
     return $security_definitions;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getSecurity() {
-    // @TODO: #2977109 - Calculate oauth scopes required.
+    // @todo #2977109 - Calculate oauth scopes required.
     $security = [];
     foreach (array_keys($this->getSecurityDefinitions()) as $method) {
-      $security[$method] = [];
+      $security[] = [$method => []];
     }
     return $security;
   }
@@ -447,6 +389,7 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
         break;
 
       case 'post':
+        // @phpstan-ignore-next-line
         unset($responses['200']);
         $responses['201'] = [
           'description' => 'Entity created',
@@ -454,8 +397,9 @@ abstract class OpenApiGeneratorBase extends PluginBase implements OpenApiGenerat
         break;
 
       case 'delete':
+        // @phpstan-ignore-next-line
         unset($responses['200']);
-        $responses['201'] = [
+        $responses['204'] = [
           'description' => 'Entity deleted',
         ];
         break;

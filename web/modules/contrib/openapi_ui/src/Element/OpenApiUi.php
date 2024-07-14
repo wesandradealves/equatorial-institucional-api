@@ -2,15 +2,18 @@
 
 namespace Drupal\openapi_ui\Element;
 
+use Drupal\Component\Plugin\PluginBase;
+use Drupal\Component\Utility\DeprecationHelper;
+use Drupal\Core\Render\Element\ElementInterface;
+use Drupal\Core\Render\Element\RenderElement;
+use Drupal\Core\Render\Element\RenderElementBase;
 use Drupal\Core\Url;
 use Drupal\openapi_ui\Plugin\openapi_ui\OpenApiUiInterface;
 
-use Drupal\Core\Render\Element\RenderElement;
-
 /**
- * Defines a render element for OpenApi Doc display librarys.
+ * Defines a render element for OpenApi Doc display libraries.
  *
- * This display element will act as a warpper for the ui element. The rendering
+ * This display element will act as a wrapper for the ui element. The rendering
  * process will use the library's plugin in order to allow for the plugin to
  * control and extend the way the docs are being rendered.
  *
@@ -20,16 +23,16 @@ use Drupal\Core\Render\Element\RenderElement;
  * - An array: An array containing the docs of the module which conforms to the
  *   OpenAPI schema. The array will be converted to json and exported during
  *   rendering.
- * - A url object: The url or path to a complient schema document.
+ * - A url object: The url or path to a compliant schema document.
  * - A url string: If a string is given, it will be converted to a url object.
  * - A file object: A drupal file object may be passed here. Checks will be
  *   performed to ensure that the doc is accessible to the user. The private url
- *   of the doc will ultimately be used by the ui, effectivly having the file
+ *   of the doc will ultimately be used by the ui, effectively having the file
  *   object converted into its private url.
  * - A callback function: The docs can be implemented via a callback. The
  *   callback will be passed the render element and as a result should take
- *   exactly one paramter, an array, and return either an array with openapi
- *   complient schema or a url for the schema.
+ *   exactly one parameter, an array, and return either an array with openapi
+ *   compliant schema or a url for the schema.
  *
  * Doc library plugins may only support specific formats for the openapi docs.
  * They may also support additional properties on this render element which can
@@ -53,19 +56,15 @@ use Drupal\Core\Render\Element\RenderElement;
  *
  * @RenderElement("openapi_ui")
  */
-class OpenApiUi extends RenderElement {
+class OpenApiUi extends PluginBase implements ElementInterface {
 
   /**
    * {@inheritdoc}
    */
   public function getInfo() {
-    $class = get_class($this);
     return [
       '#pre_render' => [
-        [
-          $class,
-          'preRenderOpenApiUi',
-        ],
+        [static::class, 'preRenderOpenApiUi'],
       ],
     ];
   }
@@ -107,7 +106,7 @@ class OpenApiUi extends RenderElement {
       $schema = Url::fromUri($schema);
       $element['#openapi_schema'] = $schema;
     }
-    // If schema is not a complient array or a URL, quit rendering.
+    // If schema is not a compliant array or a URL, quit rendering.
     if (!(is_array($schema) || $schema instanceof Url)) {
       $messenger->addError(t('Invalid schema source provided.'));
       return $element;
@@ -117,6 +116,21 @@ class OpenApiUi extends RenderElement {
     $element['ui'] = $plugin->build($element);
 
     return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function setAttributes(&$element, $class = []) {
+    // This method can be removed when Drupal 10.3 is the minimum supported
+    // version of core, and this class extends RenderElementBase instead of
+    // implementing ElementInterface.
+    DeprecationHelper::backwardsCompatibleCall(
+      \Drupal::VERSION,
+      '10.3.0',
+      fn () => RenderElementBase::setAttributes($element, $class),
+      fn () => RenderElement::setAttributes($element, $class),
+    );
   }
 
 }

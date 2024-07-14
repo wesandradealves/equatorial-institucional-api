@@ -1,0 +1,60 @@
+uuid: afb68107-1958-42c0-bd0d-470df00ea110
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro.field_cta_label
+    - field.field.paragraph.intro.field_cta_url
+    - field.field.paragraph.intro.field_imagem
+    - field.field.paragraph.intro.field_texto
+    - field.field.paragraph.intro.field_title
+    - field.field.paragraph.intro.field_titulo
+    - paragraphs.paragraphs_type.intro
+  module:
+    - image
+    - text
+id: paragraph.intro.default
+targetEntityType: paragraph
+bundle: intro
+mode: default
+content:
+  field_cta_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_imagem:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_titulo: true

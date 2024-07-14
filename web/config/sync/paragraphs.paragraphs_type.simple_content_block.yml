@@ -1,0 +1,10 @@
+uuid: 908bf0f4-1ed5-4095-9d49-0955564129c6
+langcode: pt-br
+status: true
+dependencies: {  }
+id: simple_content_block
+label: 'Bloco de Conteúdo Simples'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -2,7 +2,7 @@ _core:
   default_config_hash: D3-cIQNivNqjklhcbWAjbb0HzjJ9-vBpqpqT8uLknc4
 favicon:
   mimetype: image/png
-  path: 'public://screenshot.png'
+  path: 'public://screenshot_0.png'
   use_default: false
 features:
   comment_user_picture: true
@@ -10,7 +10,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://Logo_4.png'
+  path: 'public://Logo.png'
   use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_source: '0'
@@ -76,7 +76,7 @@ bootstrap_barrio_h3_color: base
 bootstrap_barrio_region_width_header: 0
 bootstrap_barrio_region_width_content: 0
 home_bg:
-  - '1359'
+  - '1387'
 tariff_band_label: 'Bandeira tarifária'
 tariff_band_label_en: 'Tariff band'
 band: '#FCD403'
@@ -113,8 +113,7 @@ talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
 talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
-talk_to_clara_img:
-  - '1365'
+talk_to_clara_img: {  }
 bootstrap_barrio_region_clean_footer: 0
 bootstrap_barrio_region_width_footer: 0
 bootstrap_barrio_region_class_footer: ''

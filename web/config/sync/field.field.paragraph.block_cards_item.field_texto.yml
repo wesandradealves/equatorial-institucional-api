@@ -1,0 +1,24 @@
+uuid: 9ca25aee-057c-4ebf-88f8-83a56f7a9093
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.block_cards_item
+  module:
+    - text
+id: paragraph.block_cards_item.field_texto
+field_name: field_texto
+entity_type: paragraph
+bundle: block_cards_item
+label: Texto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
