@@ -27,8 +27,7 @@ WORKDIR /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html/sites/default/ && \
     chmod -R 755 /var/www/html/sites/default/  && \
-    chmod -R 755 /opt/drupal/web/modules/ && \
-    cp -ra /var/www/web/modules/contrib /opt/drupal/web/modules/
+    chmod -R 755 /opt/drupal/web/modules/
 
 RUN echo "memory_limit = 1024M" >> /usr/local/etc/php/php.ini
 RUN echo "post_max_size = 1024M" >> /usr/local/etc/php/php.ini
