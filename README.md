@@ -20,6 +20,8 @@ This guide will walk you through the steps to install and set up a Drupal projec
 ## Prerequisites
 
 - Git
+- PHP 8.0+
+- Drupal10
 - DDEV (installation instructions below)
 - Composer
 
