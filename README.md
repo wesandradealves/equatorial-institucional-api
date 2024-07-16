@@ -2,9 +2,7 @@
 Este é o projeto é a aplicação back-end do portal Institucional Equatorial com a finalidade de realizar a gestão de conteúdo e fornecer APIs para o front-end em React. 
 
 
-
 # [PADRÃO DE DESENVOLVIMENTO E QUALIDADE](/readme/Definitions.md)
-
 
 
 # Fluxo da Aplicação
@@ -15,21 +13,104 @@ Este é o projeto é a aplicação back-end do portal Institucional Equatorial c
 
 ![Fluxo da aplicação](/readme/app_flow.png)
 
+# Drupal Installation Guide
 
+This guide will walk you through the steps to install and set up a Drupal project using DDEV.
 
-# Subir a aplicação no ambiente local
-Antes de começar, você precisa criar um arquivo `.env` na pasta `web`.
+## Prerequisites
 
-## Configuração Inicial
+- Git
+- DDEV (installation instructions below)
+- Composer
 
-1. Crie um novo arquivo chamado `.env`.
+## Steps
 
-```bash
-cp .env.example .env
+### 1. Clone the Repository
+
+First, clone the repository from IBM Cloud:
+
+```sh
+git clone https://us-south.git.cloud.ibm.com/equatorial-one/institucional-drupal
+cd institucional-drupal
 ```
 
-2. Siga os passos do arquivo [DOCKER.md](/readme/DOCKER.md)
+### 2. Switch to the Develop Branch
 
-### Suporte
+```sh
+git checkout develop
+```
 
-Se você encontrar algum problema ao usar este repositório, por favor, abra uma issue.
+### 3. Install DDEV
+
+Follow the instructions to install DDEV on your device: [DDEV Installation Guide](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/#__tabbed_1_2)
+
+### 4. Configure DDEV
+
+At the root of the cloned repository, run the following command to configure DDEV:
+
+```sh
+ddev config
+```
+
+Follow the instructions:
+
+- Preferably choose to install on the root.
+- Select `drupal10` as the default config.
+- Set a name for the project.
+
+This will create a folder called `.ddev`.
+
+### 5. Update DDEV Configuration
+
+Locate the file `.ddev/config.yaml` and scroll down to lines 43 and 44 (or around there). Look for `router_http_port` and `router_https_port`. Uncomment the lines and change the ports to avoid conflicts:
+
+```yaml
+router_http_port: 5353  # Port to be used for http (defaults to global configuration, usually 80)
+router_https_port: 444  # Port for https (defaults to global configuration, usually 443)
+```
+
+### 6. Install Dependencies
+
+At the root of the project, run:
+
+```sh
+composer install
+```
+
+### 7. Start the DDEV Project
+
+Start the project with:
+
+```sh
+ddev start
+```
+
+This will start a blank Drupal project. Access the given URL and proceed with the installation of the blank Drupal project.
+
+### 8. Enable the Backup and Migrate Module
+
+Once your Drupal instance is installed and running, enable the `backup_migrate` module:
+
+```sh
+ddev drush en backup_migrate
+```
+
+### 9. Access the Admin Screen
+
+To access the admin screen, either go to `/user/` URL or run the following command to generate a login URL:
+
+```sh
+ddev drush uli
+```
+
+### 10. Restore Backup
+
+Go to the Backup and Migrate restore menu at `/admin/config/development/backup_migrate/restore` and upload the current backup.
+
+### 11. Unzip the Files Folder
+
+Unzip the files folder in `/sites/default/` and check if it has unzipped correctly.
+
+---
+
+By following these steps, you should have a Drupal project set up and running with the necessary configurations. If you encounter any issues, refer to the DDEV and Drupal documentation for further assistance.
