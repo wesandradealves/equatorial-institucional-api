@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.v.body
     - field.field.node.v.field_categoria
     - field.field.node.v.field_thumbnail
     - field.field.node.v.field_url
@@ -12,12 +13,21 @@ dependencies:
   module:
     - file
     - image
+    - text
     - user
 id: node.v.teaser
 targetEntityType: node
 bundle: v
 mode: teaser
 content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_categoria:
     type: entity_reference_entity_id
     label: hidden

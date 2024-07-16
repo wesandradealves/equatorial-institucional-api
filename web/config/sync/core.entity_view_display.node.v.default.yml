@@ -3,6 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.node.v.body
     - field.field.node.v.field_categoria
     - field.field.node.v.field_thumbnail
     - field.field.node.v.field_url
@@ -11,12 +12,20 @@ dependencies:
   module:
     - file
     - image
+    - text
     - user
 id: node.v.default
 targetEntityType: node
 bundle: v
 mode: default
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_categoria:
     type: entity_reference_entity_id
     label: hidden

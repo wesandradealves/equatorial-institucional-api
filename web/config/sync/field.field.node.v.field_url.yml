@@ -10,7 +10,7 @@ field_name: field_url
 entity_type: node
 bundle: v
 label: URL
-description: ''
+description: 'Inserir no formato: https://www.youtube.com/watch?v=-nv2GTa-0HA'
 required: false
 translatable: false
 default_value: {  }
