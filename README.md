@@ -107,9 +107,13 @@ ddev drush uli
 
 ### 10. Restore Backup
 
+(https://us-south.git.cloud.ibm.com/equatorial-one/institucional-react/uploads/1906189c62c5475568c8589dbbc0c5da/backup-2024-07-16T09-36-57.mysql.gz)
+
 Go to the Backup and Migrate restore menu at `/admin/config/development/backup_migrate/restore` and upload the current backup.
 
 ### 11. Unzip the Files Folder
+
+(https://us-south.git.cloud.ibm.com/equatorial-one/institucional-react/uploads/949bf9311c481ed27ebc6d0356323726/files.zip)
 
 Unzip the files folder in `/sites/default/` and check if it has unzipped correctly.
 
