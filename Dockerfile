@@ -37,4 +37,6 @@ RUN echo "output_buffering = 1" >> /usr/local/etc/php/php.ini
 RUN echo "log_errors = On" >> /usr/local/etc/php/php.ini
 RUN echo "error_log = /var/log/php_errors.log" >> /usr/local/etc/php/php.ini
 
+RUN cd .. && rm -rf composer.* vendor && cd web && cp composer.json ../composer.json && cd .. && composer install
+
 EXPOSE 80
