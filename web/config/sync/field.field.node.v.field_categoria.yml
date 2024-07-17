@@ -1,0 +1,29 @@
+uuid: 0fe5cd9c-7205-4c41-83a1-8640019944c0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria
+    - node.type.v
+    - taxonomy.vocabulary.videos
+id: node.v.field_categoria
+field_name: field_categoria
+entity_type: node
+bundle: v
+label: Categoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      videos: videos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

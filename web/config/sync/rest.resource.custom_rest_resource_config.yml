@@ -1,0 +1,19 @@
+uuid: d8f911ce-0e0c-4816-9de4-d7c109a20cb9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - sys_twig_extensions
+    - user
+id: custom_rest_resource_config
+plugin_id: custom_rest_resource_config
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

@@ -1,0 +1,578 @@
+<?php
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+function sys_twig_extensions_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+  $form['pass']['#title_display'] = $form['pass']['#description'] = false;
+  $form['name']['#title_display'] = $form['name']['#description'] = false;
+  $form['name']['#attributes']['placeholder'] = "Nome de usuário ou e-mail";
+  $form['pass']['#attributes']['placeholder'] = "Senha";
+}
+
+function sys_twig_extensions_suggestions_region_alter(array &$suggestions, array $variables, $hook) {
+  $suggestions[] = $hook.'__'.$variables['elements']['#region'];
+}
+
+function sys_twig_extensions_theme_suggestions_container_alter(array &$suggestions, array &$variables, $hook)
+{
+  $element = $variables['element'];
+
+  if (isset($element['#type']) && $element['#type'] == 'view') {
+    $suggestions[] = $hook.'__' . $element['#name'];
+    $suggestions[] = $hook.'__' . $element['#name'] . '__' . $element['#display_id'];
+  }
+
+  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
+    $suggestions[] = $hook.'__' . $element['children']['#type'];
+  }
+}
+
+function sys_twig_extensions_theme_suggestions_input_alter(&$suggestions, array $variables, $hook)
+{
+    if(isset($variables['element']['#id'])) {
+      $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+      if(isset($variables['element']['#context'])) {
+          $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+      }
+    }
+}
+
+function sys_twig_extensions_theme_suggestions_form_element_alter(&$suggestions, array $variables, $hook)
+{
+    if(isset($variables['element']['#id'])) {
+      $suggestions[] = $hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+    }
+    $suggestions[] = $hook . '__' . $variables['element']['#type'];
+    if(isset($variables['element']['#context'])) {
+        $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . $variables['element']['#context']['#view_id'];
+        $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+        if(isset($variables['element']['#id'])) {
+          $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'];
+          $suggestions[] = $hook . '__' . $variables['element']['#type'] . '__' . str_replace('-', '_', $variables['element']['#id']) . '__' . $variables['element']['#context']['#view_id'] . '__' . $variables['element']['#context']['#display_id'];
+        }
+    }
+    if(isset($variables['element']['#id'])) {
+      $variables['id'] = $variables['element']['#id'];
+    }
+}
+
+function sys_twig_extensions_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'sys_twig_extensions/admin';
+
+  if(theme_get_setting('home_bg')) {
+    $bg = theme_get_setting('home_bg');
+    $bg = \Drupal\file\Entity\File::load(reset($bg));
+    $variables['home_bg'] = $bg->createFileUrl();
+  }
+
+  $user = \Drupal::routeMatch()->getParameter('user');
+  if ($user instanceof \Drupal\user\UserInterface) {
+    (new RedirectResponse('/'))->send();
+    exit();    
+  }  
+}
+
+function sys_twig_extensions_preprocess_block__block_copyright(&$variables)
+{
+  if(theme_get_setting('copyright')) {
+    $variables['copyright'] = theme_get_setting('copyright');
+  }
+}
+
+// function sys_twig_extensions_preprocess_region__footer(&$variables) {
+//   if(theme_get_setting('copyright')) {
+//     $variables['copyright'] = theme_get_setting('copyright');
+//   }
+// }
+
+function sys_twig_extensions_preprocess_page__user__login(&$variables) {
+  $variables['logo'] = \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url'));
+  $render = Drupal::service('renderer');
+  $form = Drupal::formBuilder()->getForm(Drupal\user\Form\UserLoginForm::class) ; 
+  $variables['form'] = $render->renderPlain($form);  
+} 
+
+function sys_twig_extensions_tariff_bands() {
+  return array(
+    '#5BD05F' => t('Verde'),
+    '#FCD403' => t('Amarela'),
+    '#ea2639' => t('Vermelha'),
+  );
+}
+
+function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['home_bg'] = array(
+      '#type' => 'managed_file',
+      '#upload_location' => 'public://',
+      '#title' => 'Home Page Background',
+      '#default_value' => theme_get_setting('home_bg'),
+  );  
+
+  $form['header'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Header',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['tariff_band'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Bandeira Tarifária',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['header']['tariff_band']['label'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Label',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['tariff_band']['label']['tariff_band_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('tariff_band_label')
+  );  
+  
+  $form['header']['tariff_band']['label']['tariff_band_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('tariff_band_label_en')
+  );   
+
+  $form['header']['tariff_band']['band'] = array(
+    '#type' => 'select', 
+    '#title' => t('Bandeira'), 
+    '#options' => array(
+      '#5BD05F' => t('Verde'),
+      '#FCD403' => t('Amarela'),
+      '#ea2639' => t('Vermelha'),
+    ),
+    '#default_value' => theme_get_setting('band')
+  );
+
+  $form['header']['text'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Texto',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );      
+
+  $form['header']['text']['text'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('text')
+  );  
+  
+  $form['header']['text']['text_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('text_en')
+  );    
+
+  $form['header']['navigation'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Navegação',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['header']['navigation']['search'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Busca',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['header']['navigation']['search']['searchbar'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('searchbar')
+  );  
+  
+  $form['header']['navigation']['search']['searchbar_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('searchbar_en')
+  );      
+  
+  $form['footer'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Footer',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['footer']['copyright'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Copyright',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+
+  $form['footer']['copyright']['copyright'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('copyright')
+  );  
+  
+  $form['footer']['copyright']['copyright_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('copyright_en')
+  );    
+
+  $form['footer']['social_networks'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Redes Sociais',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );  
+  
+  $form['footer']['social_networks']['social_networks_label'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Label',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+  
+  $form['footer']['social_networks']['social_networks_label']['social_networks_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('social_networks_label')
+  ); 
+  
+  $form['footer']['social_networks']['social_networks_label']['social_networks_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('social_networks_label_en')
+  );   
+
+  $form['footer']['social_networks']['facebook'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Facebook',
+      '#default_value' => theme_get_setting('facebook')
+  );  
+  
+  $form['footer']['social_networks']['twitter'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Twitter',
+      '#default_value' => theme_get_setting('twitter')
+  ); 
+  
+  $form['footer']['social_networks']['instagram'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Instagram',
+      '#default_value' => theme_get_setting('instagram')
+  );   
+
+  $form['footer']['social_networks']['youtube'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Youtube',
+      '#default_value' => theme_get_setting('youtube')
+  ); 
+  
+  $form['footer']['social_networks']['youtube'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Youtube',
+      '#default_value' => theme_get_setting('youtube')
+  );   
+
+  $form['footer']['social_networks']['linkedin'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Linkedin',
+      '#default_value' => theme_get_setting('linkedin')
+  );     
+
+  $form['footer']['app'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'App',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );   
+
+  $form['footer']['app']['app_label'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Label',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['app']['app_label']['app_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('app_label')
+  ); 
+  
+  $form['footer']['app']['app_label']['app_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'En',
+      '#default_value' => theme_get_setting('app_label_en')
+  );   
+  
+  $form['footer']['app']['google_play'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Google Play',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['footer']['app']['google_play']['google_play_img'] = array(
+      '#type' => 'managed_file',
+      '#upload_location' => 'public://',
+      '#title' => 'Imagem',
+      '#default_value' => theme_get_setting('google_play_img'),
+  );     
+
+  $form['footer']['app']['google_play']['google_play_url'] = array(
+      '#type' => 'textarea',
+      '#title' => 'URL',
+      '#default_value' => theme_get_setting('google_play_url')
+  );     
+
+  $form['footer']['app']['app_store'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'App Store',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['app']['app_store']['app_store_img'] = array(
+      '#type' => 'managed_file',
+      '#upload_location' => 'public://',
+      '#title' => 'Imagem',
+      '#default_value' => theme_get_setting('app_store_img'),
+  );     
+
+  $form['footer']['app']['app_store']['app_store_url'] = array(
+      '#type' => 'textarea',
+      '#title' => 'URL',
+      '#default_value' => theme_get_setting('app_store_url')
+  );       
+
+  $form['footer']['contact'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Contatos',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );   
+  
+  $form['footer']['contact']['phone'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Telefone',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['contact']['phone']['phone'] = array(
+      '#type' => 'text_format',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('phone')['value'],
+      '#format' => theme_get_setting('phone')['format'],      
+      // '#default_value' => theme_get_setting('phone')
+  ); 
+  
+  $form['footer']['contact']['phone']['phone_en'] = array(
+      '#type' => 'text_format',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('phone_en')['value'],
+      '#format' => theme_get_setting('phone_en')['format'],         
+      // '#default_value' => theme_get_setting('phone_en')
+  );   
+
+  $form['footer']['contact']['talk'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Fale com a gente',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['contact']['talk']['talk'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk')
+  ); 
+  
+  $form['footer']['contact']['talk']['talk_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_en')
+  );     
+
+  $form['footer']['contact']['talk']['label'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Link',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );    
+
+  $form['footer']['contact']['talk']['label']['talk_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk_label')
+  );     
+
+  $form['footer']['contact']['talk']['label']['talk_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_label_en')
+  );    
+
+  $form['footer']['contact']['talk']['label']['talk_url'] = array(
+      '#type' => 'textarea',
+      '#title' => 'URL',
+      '#default_value' => theme_get_setting('talk_url')
+  );       
+
+  $form['footer']['contact']['talk_to_clara'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Fale com a clara',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );     
+
+  $form['footer']['contact']['talk_to_clara']['talk_to_clara'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk_to_clara')
+  ); 
+  
+  $form['footer']['contact']['talk_to_clara']['talk_to_clara_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_to_clara_en')
+  );      
+
+  $form['footer']['contact']['talk_to_clara']['label'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Link',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );      
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_label'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Default',
+      '#default_value' => theme_get_setting('talk_to_clara_label')
+  );     
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_label_en'] = array(
+      '#type' => 'textarea',
+      '#title' => 'EN',
+      '#default_value' => theme_get_setting('talk_to_clara_label_en')
+  );    
+
+  $form['footer']['contact']['talk_to_clara']['label']['talk_to_clara_url'] = array(
+      '#type' => 'textarea',
+      '#title' => 'URL',
+      '#default_value' => theme_get_setting('talk_to_clara_url')
+  );   
+
+  $form['footer']['contact']['talk_to_clara']['talk_to_clara_img'] = array(
+      '#type' => 'managed_file',
+      '#upload_location' => 'public://',
+      '#title' => 'Imagem',
+      '#default_value' => theme_get_setting('talk_to_clara_img'),
+  );     
+  
+  $form['#validate'][] = 'sys_twig_extensions_form_system_theme_settings_validate';
+  $form['#submit'][] = 'sys_twig_extensions_form_system_theme_settings_submit';  
+}
+
+function sys_twig_extensions_form_system_theme_settings_validate(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+
+  $home_bg = file_save_upload('home_bg');
+  $google_play_img = file_save_upload('google_play_img');
+  $app_store_img = file_save_upload('app_store_img');
+  $talk_to_clara_img = file_save_upload('talk_to_clara_img');
+
+  if (isset($home_bg)) {
+    if ($home_bg) {
+      $values['home_bg_upload'] = $home_bg;
+    }
+  }   
+
+  if (isset($google_play_img)) {
+    if ($google_play_img) {
+      $values['google_play_img_upload'] = $google_play_img;
+    }
+  } 
+
+  if (isset($app_store_img)) {
+    if ($app_store_img) {
+      $values['app_store_img_upload'] = $app_store_img;
+    }
+  }  
+
+  if (isset($talk_to_clara_img)) {
+    if ($talk_to_clara_img) {
+      $values['talk_to_clara_img_upload'] = $talk_to_clara_img;
+    }
+  }    
+}
+
+function sys_twig_extensions_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
+  $home_bg = $form_state->getValue('home_bg');
+  $home_bg = reset($home_bg);
+  $home_bg = \Drupal\file\Entity\File::load($home_bg);
+
+  $google_play_img = $form_state->getValue('google_play_img');
+  $google_play_img = reset($google_play_img);
+  $google_play_img = \Drupal\file\Entity\File::load($google_play_img);
+
+  $app_store_img = $form_state->getValue('app_store_img');
+  $app_store_img = reset($app_store_img);
+  $app_store_img = \Drupal\file\Entity\File::load($app_store_img);
+
+  $talk_to_clara_img = $form_state->getValue('talk_to_clara_img');
+  $talk_to_clara_img = reset($talk_to_clara_img);
+  $talk_to_clara_img = \Drupal\file\Entity\File::load($talk_to_clara_img);
+
+  if($home_bg) {
+      $home_bg->setPermanent();
+      $home_bg->save();      
+  }     
+
+  if($google_play_img) {
+      $google_play_img->setPermanent();
+      $google_play_img->save();      
+  }   
+
+  if($app_store_img) {
+      $app_store_img->setPermanent();
+      $app_store_img->save();      
+  }    
+  
+  if($talk_to_clara_img) {
+      $talk_to_clara_img->setPermanent();
+      $talk_to_clara_img->save();      
+  }      
+}

@@ -1,0 +1,25 @@
+uuid: d0d36c5b-b562-4252-b698-accb696752b2
+langcode: pt-br
+status: false
+dependencies:
+  config:
+    - system.menu.home-drupal
+  module:
+    - system
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_homedrupal
+theme: bootstrap_barrio
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:home-drupal'
+settings:
+  id: 'system_menu_block:home-drupal'
+  label: Menu
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 3f9cd0d9-739f-40f0-9457-5acd9652f1d7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Iniciativas
+type: iniciativas
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

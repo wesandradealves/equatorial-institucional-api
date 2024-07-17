@@ -1,0 +1,10 @@
+uuid: 266d4e71-d582-47e4-ac72-d1e92edf1c58
+langcode: pt-br
+status: true
+dependencies: {  }
+id: intro
+label: Intro
+icon_uuid: null
+icon_default: null
+description: 'Intro de três colunas com CTA, Texto e Imagem.'
+behavior_plugins: {  }

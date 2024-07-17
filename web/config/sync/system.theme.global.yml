@@ -1,0 +1,61 @@
+_core:
+  default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
+favicon:
+  mimetype: image/png
+  path: 'public://screenshot_1.png'
+  url: ''
+  use_default: false
+features:
+  comment_user_picture: false
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: false
+logo:
+  path: 'public://Logo_1.png'
+  url: null
+  use_default: false
+copyright: 'Equatorial © 2024. Todos os direiros reservados'
+copyright_en: 'Equatorial © 2024. All rights reserved'
+text: 'Desligamento programado'
+text_en: 'Scheduled shutdown'
+tariff_band_label: 'Bandeira tarifária'
+tariff_band_label_en: 'Tariff band'
+band: '#FCD403'
+searchbar: 'Digite sua busca'
+searchbar_en: Keywords
+social_networks_label: 'Fale com a Equatorial nas redes sociais'
+social_networks_label_en: 'Talk to Equatorial on social media'
+facebook: 'https://facebook.com/'
+twitter: 'https://twitter.com/'
+instagram: 'https://instagram.com/'
+youtube: 'https://youtube.com/'
+linkedin: 'https://linkedin.com/'
+google_play_img:
+  - '1366'
+google_play_url: 'http://institucional-drupal.ddev.site/'
+app_store_img:
+  - '1367'
+app_store_url: 'http://institucional-drupal.ddev.site/'
+phone:
+  value: '<p>Atendimento Equatorial <strong>116</strong>&nbsp;</p><p>Grandes Clientes <strong>0800 098 2997</strong>&nbsp;</p><p>Negociação Equatorial <strong>0800 098 2997</strong>&nbsp;</p><p>Ouvidoria <strong>0800 098 2997</strong></p>'
+  format: basic_html
+phone_en:
+  value: '<p>Equatorial Service <strong>116</strong>&nbsp;</p><p>Large Customers <strong>0800 098 2997&nbsp;</strong></p><p>Equatorial Trading <strong>0800 098 2997&nbsp;</strong></p><p>Ombudsman <strong>0800 098 2997</strong></p>'
+  format: basic_html
+talk: "Precisa tirar dúvidas, solicitar informações, fazer denúncias ou reclamações?\_"
+talk_en: 'Do you need to ask questions, request information, make reports or complaints?'
+talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
+talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
+talk_to_clara_img:
+  - '1393'
+talk_url: 'http://institucional-drupal.ddev.site/'
+talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
+app_label: 'Baixe nosso app'
+app_label_en: 'Download our app'
+home_bg:
+  - '1387'
+label: 'Fale com a Clara'
+talk_label_en: 'Talk to us'
+talk_to_clara_label_en: 'Talk to clara'
+talk_label: 'Fale com a gente'
+talk_to_clara_label: 'Fale com a Clara'

@@ -1,0 +1,5 @@
+services:
+  suggestion.storage:
+    class: Drupal\suggestion\SuggestionStorage
+    arguments:
+      - '@database'

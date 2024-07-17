@@ -1,0 +1,24 @@
+uuid: a2b95e61-346e-4e9f-8343-abb8eb94d123
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_titulo
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.basic.field_titulo
+field_name: field_titulo
+entity_type: block_content
+bundle: basic
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

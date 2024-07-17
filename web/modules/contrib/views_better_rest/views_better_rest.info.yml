@@ -1,0 +1,13 @@
+name: Views Better REST export
+description: 'Provides support of JSONAPI Specification for views output format.'
+package: Views
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:views
+  - drupal:rest
+
+# Information added by Drupal.org packaging script on 2023-09-18
+version: '1.0.0'
+project: 'views_better_rest'
+datestamp: 1695066596

@@ -1,0 +1,44 @@
+uuid: 57ae0edc-17fe-419b-971d-1a2f2a244fd5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.servicos.field_imagem
+    - field.field.paragraph.servicos.field_link
+    - field.field.paragraph.servicos.field_titulo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.servicos
+  module:
+    - image
+id: paragraph.servicos.default
+targetEntityType: paragraph
+bundle: servicos
+mode: default
+content:
+  field_imagem:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_titulo:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

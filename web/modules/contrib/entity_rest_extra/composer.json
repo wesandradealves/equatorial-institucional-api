@@ -1,0 +1,21 @@
+{
+    "name": "drupal/entity_rest_extra",
+    "type": "drupal-module",
+    "description": "Extra Rest resources to enable/access entities configuration.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "George Anderson (geoanders)",
+            "homepage": "https://www.drupal.org/u/geoanders",
+            "role": "Maintainer"
+        }
+    ],
+    "homepage": "https://drupal.org/project/entity_rest_extra",
+    "support": {
+        "issues": "https://drupal.org/project/issues/entity_rest_extra",
+        "source": "https://git.drupalcode.org/project/entity_rest_extra"
+    },
+    "require": {
+        "drupal/core": "^8.8 || ^9 || ^10"
+    }
+}

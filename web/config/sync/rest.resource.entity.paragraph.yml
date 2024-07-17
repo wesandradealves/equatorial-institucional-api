@@ -1,0 +1,19 @@
+uuid: bd13febf-e468-4192-b329-f9d293161a23
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - paragraphs
+    - serialization
+    - user
+id: entity.paragraph
+plugin_id: 'entity:paragraph'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

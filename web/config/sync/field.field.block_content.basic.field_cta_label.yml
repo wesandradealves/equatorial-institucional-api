@@ -1,0 +1,19 @@
+uuid: 24510a91-3d22-449e-a6a1-77810c60d728
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_cta_label
+id: block_content.basic.field_cta_label
+field_name: field_cta_label
+entity_type: block_content
+bundle: basic
+label: 'CTA Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

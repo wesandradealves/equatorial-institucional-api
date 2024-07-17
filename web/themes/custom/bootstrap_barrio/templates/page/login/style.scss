@@ -1,0 +1,105 @@
+.page-user-login {
+    color: white;
+    min-height: 100vh;
+    background-position: center bottom;
+
+    #wrap {
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100%;
+        padding: 35px 0;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            content: '';
+            background: linear-gradient(0deg, rgba(4, 20, 161, 0.00) 39.57%, rgba(4, 20, 161, 0.20) 55.41%), linear-gradient(0deg, rgba(4, 20, 161, 0.20) 0%, rgba(4, 20, 161, 0.20) 100%);
+        }
+
+
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 414px;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .region-content {
+        padding: 35px 0;
+    }
+
+    .user-login-form {
+        display: flex;
+        flex-flow: column;
+        gap: 25px 0;
+        margin-top: 25px;
+
+        padding: 25px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(40px);            
+
+        .form-submit {
+            font-family: "Open Sans", sans-serif;
+            border-radius: 999px;
+            width: 100%;
+            color: black;
+            font-weight: 600;
+            background-color: #FCD403;
+            border: 0;
+            padding: 10px;
+            transition: 500ms ease all;
+            &:hover {
+                transform: scale(1.01);
+            }            
+            &::before {
+                display: none;
+            }
+        }
+
+        .js-form-item {
+            margin-bottom: 0 !important;
+            .form-control {
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px white solid;
+                background-color: transparent;
+                border-radius: 0;
+                outline: none !important;
+                box-shadow: none !important;
+                font-size: 1rem;
+                padding: 10px 15px;
+                font-weight: 300; 
+                font-family: "Open Sans", sans-serif;
+                color: white;
+                transition: 500ms ease all;
+                &::-webkit-input-placeholder {
+                    color: white;
+                }
+                &::-moz-placeholder {
+                    color: white;
+                }
+                &:-ms-input-placeholder {
+                    color: white;
+                }
+                &:-moz-placeholder {
+                    color: white;
+                }
+            }
+        }
+    }
+}

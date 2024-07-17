@@ -1,0 +1,29 @@
+uuid: ee26f0c9-f067-439a-bf62-6521ddc77916
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria
+    - node.type.iniciativas
+    - taxonomy.vocabulary.iniciativas
+id: node.iniciativas.field_categoria
+field_name: field_categoria
+entity_type: node
+bundle: iniciativas
+label: Categoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      iniciativas: iniciativas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

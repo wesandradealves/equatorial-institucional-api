@@ -1,0 +1,59 @@
+uuid: 5db343f7-a601-4da0-96dd-dd8c4691bb3d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.iniciativas.body
+    - field.field.node.iniciativas.field_categoria
+    - field.field.node.iniciativas.field_image
+    - field.field.node.iniciativas.field_title
+    - image.style.wide
+    - node.type.iniciativas
+  module:
+    - image
+    - text
+    - user
+id: node.iniciativas.default
+targetEntityType: node
+bundle: iniciativas
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_categoria:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true

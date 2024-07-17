@@ -1,0 +1,9 @@
+uuid: cf8b73d8-2758-474f-a1ee-c99babeb3a54
+langcode: pt-br
+status: true
+dependencies: {  }
+name: Iniciativas
+vid: iniciativas
+description: null
+weight: 0
+new_revision: false

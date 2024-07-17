@@ -1,0 +1,11 @@
+uuid: 7383a933-2f5c-4cef-987b-125391b1f719
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.solucoes
+id: taxonomy_term.solucoes
+target_entity_type_id: taxonomy_term
+target_bundle: solucoes
+default_langcode: site_default
+language_alterable: false

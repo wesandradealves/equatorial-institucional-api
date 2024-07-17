@@ -1,0 +1,10 @@
+name: Color pickr
+type: module
+description: Provides color pickr types, widgets, and formatters for drupal 9/10
+package: Color pickr
+core_version_requirement: ^8 || ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2024-03-10
+version: '1.1.2'
+project: 'color_pickr'
+datestamp: 1710084894

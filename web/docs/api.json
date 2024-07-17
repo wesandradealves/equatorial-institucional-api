@@ -1,0 +1,590 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Drupal API - Equatorial Institucional",
+    "version": "1.0.1 beta",
+    "contact": {},
+    "description": "API para consumo de dados do Drupal"
+  },
+  "paths": {
+    "/token": {
+      "get": {
+        "summary": "Token",
+        "description": "Token",
+        "operationId": "token",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login",
+        "description": "Login",
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "drupal-developer"
+                  },
+                  "pass": {
+                    "type": "string",
+                    "example": "admin"
+                  }
+                }
+              },
+              "examples": {
+                "Login": {
+                  "value": {
+                    "name": "drupal-developer",
+                    "pass": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "summary": "Logout",
+        "description": "Logout",
+        "operationId": "logout",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "drupal-developer"
+                  },
+                  "pass": {
+                    "type": "string",
+                    "example": "admin"
+                  }
+                }
+              },
+              "examples": {
+                "Logout": {
+                  "value": {
+                    "name": "drupal-developer",
+                    "pass": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/config": {
+      "get": {
+        "summary": "Config",
+        "description": "Config",
+        "operationId": "config",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/languages": {
+      "get": {
+        "summary": "Languages",
+        "description": "Languages",
+        "operationId": "languages",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/header": {
+      "get": {
+        "summary": "Header",
+        "description": "Header",
+        "operationId": "header",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/menu_items/main": {
+      "get": {
+        "summary": "Navigation",
+        "description": "Navigation",
+        "operationId": "navigation",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/footer": {
+      "get": {
+        "summary": "Footer",
+        "description": "Footer",
+        "operationId": "footer",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/taxonomy": {
+      "get": {
+        "summary": "Taxonomias",
+        "description": "Lista todos os termos pra uma taxonomia especificada na URL da chamada\n\nPode se passar na URL somente a /{id} para retornar os dados especificos da taxonomia especificada ou /{vocabulary} ou o vocabulário pra retornar todos os termos da taxonomia especificada",
+        "operationId": "taxonomias",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/videos": {
+      "get": {
+        "summary": "Videos",
+        "description": "Videos",
+        "operationId": "videos",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "2"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/videos/2": {
+      "get": {
+        "summary": "Videos (Por categoria)",
+        "description": "Videos (Por categoria)",
+        "operationId": "videosPorCategoria",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "2"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/solucoes/5": {
+      "get": {
+        "summary": "Soluções",
+        "description": "Soluções",
+        "operationId": "soluEs",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/solucoes/3": {
+      "get": {
+        "summary": "Soluções (Por categoria)",
+        "description": "Soluções (Por categoria)",
+        "operationId": "soluEsPorCategoria",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/noticias/": {
+      "get": {
+        "summary": "Noticias",
+        "description": "Noticias",
+        "operationId": "noticias",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/noticias/13": {
+      "get": {
+        "summary": "Noticias (Por categoria)",
+        "description": "Noticias (Por categoria)",
+        "operationId": "noticiasPorCategoria",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/faq": {
+      "get": {
+        "summary": "FAQ",
+        "description": "FAQ",
+        "operationId": "faq",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/iniciativas": {
+      "get": {
+        "summary": "Iniciativas",
+        "description": "Iniciativas",
+        "operationId": "iniciativas",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/iniciativas/8": {
+      "get": {
+        "summary": "Iniciativas (Por categoria)",
+        "description": "Iniciativas (Por categoria)",
+        "operationId": "iniciativasPorCategoria",
+        "parameters": [
+          {
+            "name": "items_per_page",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/entity/block/block_banner": {
+      "get": {
+        "summary": "Block",
+        "description": "Block",
+        "operationId": "block",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/blocks": {
+      "get": {
+        "summary": "Block Fields",
+        "description": "Passar na URL o id de configuração retornado no endpoint de Block",
+        "operationId": "blockFields",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/blocks/banner": {
+      "get": {
+        "summary": "Banner",
+        "description": "Passar na URL o id de configuração retornado no endpoint de Block",
+        "operationId": "banner",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/entity/paragraph": {
+      "get": {
+        "summary": "Paragraphs",
+        "description": "Paragraphs",
+        "operationId": "paragraphs",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

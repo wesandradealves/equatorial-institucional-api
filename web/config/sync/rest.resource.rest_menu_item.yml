@@ -1,0 +1,19 @@
+uuid: 00fdccea-d112-4642-a261-32aa4daddf91
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - rest_menu_items
+    - serialization
+    - user
+id: rest_menu_item
+plugin_id: rest_menu_item
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

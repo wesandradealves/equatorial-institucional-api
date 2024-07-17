@@ -1,0 +1,11 @@
+uuid: 250be8bb-724e-4447-8c67-88169a26054d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.iniciativas
+id: taxonomy_term.iniciativas
+target_entity_type_id: taxonomy_term
+target_bundle: iniciativas
+default_langcode: site_default
+language_alterable: false

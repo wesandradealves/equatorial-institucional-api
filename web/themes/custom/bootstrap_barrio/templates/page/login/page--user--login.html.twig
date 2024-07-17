@@ -1,0 +1,24 @@
+<div id="wrap" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container">
+        {% if logo %}
+            <h1 class="d-flex align-items-center justify-content-center">
+              <a href="/"><img src="{{logo}}" alt="{{ site_name }}" loading="lazy" class="img-fluid" /></a>
+            </h1>
+        {% endif %}
+        
+        {% if form %}
+            {{form}}
+        {% endif %}
+    </div>
+</div>
+
+{% if home_bg %}
+  <style>
+    #wrap {
+      background-image: url({{home_bg}});
+      background-position: center 0;
+      background-size: auto; 
+      background-repeat: no-repeat;
+    }
+  </style>
+{% endif %}

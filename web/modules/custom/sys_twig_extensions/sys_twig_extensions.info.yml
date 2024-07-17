@@ -1,0 +1,11 @@
+name: 'SysManager Twig Extensions'
+description: 'Custom Tweaks & Resources'
+package: Sys Manager
+core_version_requirement: ^8 || ^9 || ^10
+type: module
+
+# Information added by Drupal.org packaging script on 2021-08-29
+version: '1.0'
+datestamp: 1630242476
+dependencies:
+  - sys_twig_extensions:sys_twig_extensions

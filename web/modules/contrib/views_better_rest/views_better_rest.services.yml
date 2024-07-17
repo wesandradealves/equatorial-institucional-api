@@ -1,0 +1,5 @@
+services:
+  views_better_rest_normalizer.url:
+    class: Drupal\views_better_rest\Normalizer\UrlNormalizer
+    tags:
+      - { name: normalizer, priority: 9 }
