@@ -1,0 +1,58 @@
+uuid: e442661e-8f29-4cfd-a25a-c4744287eeeb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_conteudo_texto_curto
+    - paragraphs.paragraphs_type.blocos_lista_de_texto
+    - paragraphs.paragraphs_type.lista_de_texto
+  module:
+    - entity_reference_revisions
+id: paragraph.lista_de_texto.field_conteudo_texto_curto
+field_name: field_conteudo_texto_curto
+entity_type: paragraph
+bundle: lista_de_texto
+label: 'Texto Curto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      blocos_lista_de_texto: blocos_lista_de_texto
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 11
+        enabled: false
+      block_cards:
+        weight: 12
+        enabled: false
+      block_cards_item:
+        weight: 13
+        enabled: false
+      blocos_lista_de_texto:
+        weight: 14
+        enabled: true
+      galeria:
+        weight: 15
+        enabled: false
+      galeria_item:
+        weight: 16
+        enabled: false
+      intro:
+        weight: 17
+        enabled: false
+      lista_de_texto:
+        weight: 18
+        enabled: false
+      servicos:
+        weight: 19
+        enabled: false
+      simple_content_block:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,64 @@
+uuid: cd5cd229-cfda-410a-867c-ed2d2bb92950
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto_numerado_lista
+    - paragraphs.paragraphs_type.bloco_lista_texto_numerado
+    - paragraphs.paragraphs_type.texto_numerado
+  module:
+    - entity_reference_revisions
+id: paragraph.texto_numerado.field_texto_numerado_lista
+field_name: field_texto_numerado_lista
+entity_type: paragraph
+bundle: texto_numerado
+label: 'Texto Numerado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bloco_lista_texto_numerado: bloco_lista_texto_numerado
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 13
+        enabled: false
+      block_cards:
+        weight: 14
+        enabled: false
+      block_cards_item:
+        weight: 15
+        enabled: false
+      bloco_lista_texto_numerado:
+        weight: 17
+        enabled: true
+      blocos_lista_de_texto:
+        weight: 16
+        enabled: false
+      galeria:
+        weight: 18
+        enabled: false
+      galeria_item:
+        weight: 19
+        enabled: false
+      intro:
+        weight: 20
+        enabled: false
+      lista_de_texto:
+        weight: 21
+        enabled: false
+      servicos:
+        weight: 22
+        enabled: false
+      simple_content_block:
+        weight: 23
+        enabled: false
+      texto_numerado:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+uuid: 80cef6a0-7cf7-4f95-b3f1-e4989cd39b57
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloco_lista_texto_numerado.field_texto_numerado
+    - paragraphs.paragraphs_type.bloco_lista_texto_numerado
+id: paragraph.bloco_lista_texto_numerado.default
+targetEntityType: paragraph
+bundle: bloco_lista_texto_numerado
+mode: default
+content:
+  field_texto_numerado:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 33839b2d-5056-4ba5-bae0-a200f690e7bb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto_curto
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.blocos_lista_de_texto
+  module:
+    - text
+id: paragraph.blocos_lista_de_texto.field_texto_curto
+field_name: field_texto_curto
+entity_type: paragraph
+bundle: blocos_lista_de_texto
+label: 'Texto Curto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary
