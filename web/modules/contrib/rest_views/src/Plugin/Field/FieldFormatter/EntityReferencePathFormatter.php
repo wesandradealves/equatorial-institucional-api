@@ -3,8 +3,8 @@
 namespace Drupal\rest_views\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\rest_views\SerializedData;
 
 /**
@@ -27,6 +27,7 @@ class EntityReferencePathFormatter extends EntityReferenceFormatterBase {
     $elements = [];
 
     foreach ($this->getEntitiesToView($items, $langcode) as $delta => $entity) {
+
       /** @var \Drupal\Core\Url $url */
       $url = $entity->toUrl();
       $elements[$delta] = [

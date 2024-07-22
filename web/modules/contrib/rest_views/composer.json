@@ -11,8 +11,8 @@
     "source": "https://git.drupalcode.org/project/rest_views"
   },
   "require": {
-    "drupal/core": "^9.3 || ^10",
-    "php": "^8"
+    "php": "^8",
+    "drupal/core": "^10.1 || ^11"
   },
   "require-dev": {
     "drupal/entity_reference_revisions": "^1.11.0",

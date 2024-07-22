@@ -1,0 +1,24 @@
+uuid: ed6c6f61-6db9-4f56-bba4-6da81babff79
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lista_de_texto.field_conteudo_texto_curto
+    - paragraphs.paragraphs_type.lista_de_texto
+  module:
+    - entity_reference_revisions
+id: paragraph.lista_de_texto.default
+targetEntityType: paragraph
+bundle: lista_de_texto
+mode: default
+content:
+  field_conteudo_texto_curto:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

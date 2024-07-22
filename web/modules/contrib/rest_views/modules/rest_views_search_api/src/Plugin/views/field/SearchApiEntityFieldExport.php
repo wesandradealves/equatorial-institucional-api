@@ -8,7 +8,7 @@ use Drupal\rest_views\SerializedData;
 use Drupal\search_api\Plugin\views\field\SearchApiEntityField;
 
 /**
- * Display Search API Content Datasource field data in a serialized display.
+ * Display Search API Content DataSource field data in a serialized display.
  *
  * @ViewsField("search_api_field_export")
  *

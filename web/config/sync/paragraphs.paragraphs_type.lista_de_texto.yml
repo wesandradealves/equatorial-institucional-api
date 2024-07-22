@@ -1,0 +1,10 @@
+uuid: b018e547-0ca5-489a-a4e3-1c65fa92edbc
+langcode: pt-br
+status: true
+dependencies: {  }
+id: lista_de_texto
+label: 'Lista de texto'
+icon_uuid: null
+icon_default: null
+description: 'Lista de textos curtos a serem exibidos em blocos nas paginas'
+behavior_plugins: {  }

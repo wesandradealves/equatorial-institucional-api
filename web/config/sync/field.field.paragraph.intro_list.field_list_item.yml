@@ -1,0 +1,58 @@
+uuid: e5464e5f-a692-4ba3-8725-b8a1606c69a2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item
+    - paragraphs.paragraphs_type.intro_list
+    - paragraphs.paragraphs_type.intro_list_item
+  module:
+    - entity_reference_revisions
+id: paragraph.intro_list.field_list_item
+field_name: field_list_item
+entity_type: paragraph
+bundle: intro_list
+label: Item
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      intro_list_item: intro_list_item
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 11
+        enabled: false
+      block_cards:
+        weight: 12
+        enabled: false
+      block_cards_item:
+        weight: 13
+        enabled: false
+      galeria:
+        weight: 14
+        enabled: false
+      galeria_item:
+        weight: 15
+        enabled: false
+      intro:
+        weight: 16
+        enabled: false
+      intro_list:
+        weight: 17
+        enabled: false
+      intro_list_item:
+        weight: 18
+        enabled: true
+      servicos:
+        weight: 19
+        enabled: false
+      simple_content_block:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: d3c9be8a-6709-4543-b095-e9cab5a4e53b
+langcode: pt-br
+status: true
+dependencies: {  }
+id: faq_item
+label: 'FAQ Item'
+icon_uuid: null
+icon_default: null
+description: 'Intro de listagem de conteúdo contendo título, texto e link.'
+behavior_plugins: {  }

@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.iniciativas.body
     - field.field.node.iniciativas.field_categoria
     - field.field.node.iniciativas.field_image
-    - field.field.node.iniciativas.field_title
     - image.style.wide
     - node.type.iniciativas
   module:
@@ -23,14 +22,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 101
     region: content
   field_categoria:
     type: entity_reference_entity_id
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_image:
     type: image
@@ -41,19 +40,12 @@ content:
       image_loading:
         attribute: eager
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_title:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
+    weight: -1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 100
     region: content
 hidden:
   langcode: true

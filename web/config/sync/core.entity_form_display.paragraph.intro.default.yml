@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.intro.field_texto
     - field.field.paragraph.intro.field_title
     - field.field.paragraph.intro.field_titulo
+    - field.field.paragraph.intro.field_video_url
     - image.style.thumbnail
     - paragraphs.paragraphs_type.intro
   module:
@@ -76,6 +77,14 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_url:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
 hidden:

@@ -13,11 +13,13 @@ use Drupal\serialization\Normalizer\NormalizerBase;
 class DataNormalizer extends NormalizerBase {
 
   /**
-   * The interface or class that this Normalizer supports.
-   *
-   * @var array
+   * {@inheritdoc}
    */
-  protected $supportedInterfaceOrClass = [SerializedData::class];
+  public function getSupportedTypes(?string $format): array {
+    return [
+      SerializedData::class => TRUE,
+    ];
+  }
 
   /**
    * {@inheritdoc}

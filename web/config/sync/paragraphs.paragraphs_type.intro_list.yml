@@ -1,0 +1,10 @@
+uuid: 47c55028-7846-4361-a6d5-7a7558da0f53
+langcode: pt-br
+status: true
+dependencies: {  }
+id: intro_list
+label: 'Intro (Lista)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

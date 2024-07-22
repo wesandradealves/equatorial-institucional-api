@@ -1,0 +1,10 @@
+uuid: b15d8825-38c8-437d-a14b-726fb82d0902
+langcode: pt-br
+status: true
+dependencies: {  }
+id: texto_numerado
+label: 'Texto Numerado'
+icon_uuid: null
+icon_default: null
+description: 'Lista de texto Numerado'
+behavior_plugins: {  }

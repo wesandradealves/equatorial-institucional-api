@@ -40,6 +40,7 @@
         "drupal/devel_entity_updates": "^4.1",
         "drupal/disable_messages": "^2.1",
         "drupal/double_field": "^4.2",
+        "drupal/entity_clone": "^2.0@beta",
         "drupal/entity_rest_extra": "^2.3",
         "drupal/field_group": "3.4",
         "drupal/inline_responsive_images": "3.x-dev@dev",
