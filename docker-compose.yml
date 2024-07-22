@@ -45,7 +45,6 @@ services:
       - PMA_PASSWORD=${MYSQL_PASSWORD}
     networks:
       - drupal_network
-
   postgres:
     container_name: postgres
     image: postgres:13
