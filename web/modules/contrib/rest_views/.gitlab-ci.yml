@@ -102,3 +102,39 @@ include:
 #                          .,(((((((((((((((((((((((((.
 #
 ###################################################################################
+
+################
+# Require stylelint checks to pass.
+################
+stylelint:
+  allow_failure: false
+
+################
+# Require PHPCS checks to pass.
+################
+phpcs:
+  allow_failure: false
+
+################
+# Require ESLInt checks to pass.
+################
+eslint:
+  allow_failure: false
+
+################
+# Require CSpell checks to pass.
+################
+cspell:
+  allow_failure: false
+
+################
+# Require PHPStan checks to pass.
+################
+phpstan:
+  allow_failure: false
+
+phpstan (next major):
+  allow_failure: true
+
+phpstan (next minor):
+  allow_failure: true

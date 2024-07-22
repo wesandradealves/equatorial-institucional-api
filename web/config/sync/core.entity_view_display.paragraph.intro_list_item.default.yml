@@ -1,0 +1,39 @@
+uuid: 9b3db278-bd2f-49f2-ad7f-b3b3c2c19ba7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro_list_item.field_link
+    - field.field.paragraph.intro_list_item.field_texto
+    - field.field.paragraph.intro_list_item.field_title
+    - paragraphs.paragraphs_type.intro_list_item
+  module:
+    - text
+id: paragraph.intro_list_item.default
+targetEntityType: paragraph
+bundle: intro_list_item
+mode: default
+content:
+  field_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

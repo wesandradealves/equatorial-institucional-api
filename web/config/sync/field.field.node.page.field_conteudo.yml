@@ -7,9 +7,11 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.block_cards
+    - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.galeria
     - paragraphs.paragraphs_type.intro
     - paragraphs.paragraphs_type.lista_de_texto
+    - paragraphs.paragraphs_type.intro_list
     - paragraphs.paragraphs_type.simple_content_block
     - paragraphs.paragraphs_type.texto_numerado
   module:
@@ -19,22 +21,24 @@ field_name: field_conteudo
 entity_type: node
 bundle: page
 label: Conteudo
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: "default:paragraph"
   handler_settings:
     target_bundles:
       banner: banner
       intro: intro
       galeria: galeria
       block_cards: block_cards
+      faq: faq
       simple_content_block: simple_content_block
       lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
+      intro_list: intro_list
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -48,6 +52,11 @@ settings:
         enabled: false
       blocos_lista_de_texto:
         weight: 14
+      faq:
+        weight: 16
+        enabled: true
+      faq_item:
+        weight: 17
         enabled: false
       galeria:
         weight: -8
@@ -61,6 +70,12 @@ settings:
       lista_de_texto:
         weight: 18
         enabled: true
+      intro_list:
+        weight: 17
+        enabled: true
+      intro_list_item:
+        weight: 18
+        enabled: false
       servicos:
         weight: -11
         enabled: false

@@ -3,7 +3,7 @@ langcode: pt-br
 status: true
 dependencies: {  }
 id: block_cards_item
-label: 'Block Cards Item'
+label: 'Bloco Cards - Item'
 icon_uuid: null
 icon_default: null
 description: ''

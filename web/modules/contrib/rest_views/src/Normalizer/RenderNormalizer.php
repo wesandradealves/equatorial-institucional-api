@@ -14,13 +14,6 @@ use Drupal\serialization\Normalizer\NormalizerBase;
 class RenderNormalizer extends NormalizerBase {
 
   /**
-   * The interface or class that this Normalizer supports.
-   *
-   * @var array
-   */
-  protected $supportedInterfaceOrClass = [RenderableData::class];
-
-  /**
    * The renderer service.
    *
    * @var \Drupal\Core\Render\RendererInterface
@@ -35,6 +28,15 @@ class RenderNormalizer extends NormalizerBase {
    */
   public function __construct(RendererInterface $renderer) {
     $this->renderer = $renderer;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSupportedTypes(?string $format): array {
+    return [
+      RenderableData::class => TRUE,
+    ];
   }
 
   /**

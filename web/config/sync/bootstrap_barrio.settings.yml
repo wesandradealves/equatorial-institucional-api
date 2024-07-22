@@ -10,7 +10,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://Logo.png'
+  path: 'public://Logo_1.png'
   use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_source: '0'
@@ -113,7 +113,8 @@ talk_url: 'http://institucional-drupal.ddev.site/'
 talk_to_clara: 'Fale com a Clara, nossa assistente virtual no WhatsApp'
 talk_to_clara_en: 'Talk to Clara, our virtual assistant on WhatsApp'
 talk_to_clara_url: 'http://institucional-drupal.ddev.site/'
-talk_to_clara_img: {  }
+talk_to_clara_img:
+  - '1393'
 bootstrap_barrio_region_clean_footer: 0
 bootstrap_barrio_region_width_footer: 0
 bootstrap_barrio_region_class_footer: ''

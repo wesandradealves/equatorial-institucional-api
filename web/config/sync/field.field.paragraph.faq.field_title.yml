@@ -1,0 +1,24 @@
+uuid: 0c6b1fec-03af-461a-9067-1b26cfcf4d3a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.faq
+  module:
+    - text
+id: paragraph.faq.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: faq
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
