@@ -1,0 +1,24 @@
+uuid: 55800261-b6bf-4b5f-a049-a82d468cd8be
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.intro_list_item
+  module:
+    - text
+id: paragraph.intro_list_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: intro_list_item
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

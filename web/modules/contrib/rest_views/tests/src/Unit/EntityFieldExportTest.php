@@ -5,6 +5,7 @@ namespace Drupal\Tests\rest_views\Unit;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
+use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Field\FieldTypePluginManagerInterface;
@@ -59,6 +60,7 @@ class EntityFieldExportTest extends UnitTestCase {
     $formatterPluginManager = $this->createMock(FormatterPluginManager::class);
     $fieldTypePluginManager = $this->createMock(FieldTypePluginManagerInterface::class);
     $languageManager = $this->createMock(LanguageManagerInterface::class);
+    $entityTypeBundleInfo = $this->createMock(EntityTypeBundleInfoInterface::class);
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
     $renderer = $this->createMock(RendererInterface::class);
     // For the t() function to work, mock the translation service.
@@ -88,6 +90,7 @@ class EntityFieldExportTest extends UnitTestCase {
         $renderer,
         $entityRepository,
         $entityFieldManager,
+        $entityTypeBundleInfo,
       ])
       ->onlyMethods(['getFieldDefinition'])
       ->getMock();
@@ -170,7 +173,7 @@ class EntityFieldExportTest extends UnitTestCase {
    * @return array
    *   Test case data.
    */
-  public function providerItems(): array {
+  public static function providerItems(): array {
     $data[] = [
       'items' => ['Lorem', 'ipsum', 'dolor', 'sit', 'amet'],
       'expected' => ['Lorem', 'ipsum', 'dolor', 'sit', 'amet'],

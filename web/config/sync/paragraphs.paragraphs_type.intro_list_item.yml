@@ -1,0 +1,10 @@
+uuid: eea9e791-c52e-4502-a116-04111ea7a103
+langcode: pt-br
+status: true
+dependencies: {  }
+id: intro_list_item
+label: 'Intro (Lista) - Item'
+icon_uuid: null
+icon_default: null
+description: 'Intro de listagem de conteúdo contendo título, texto e link.'
+behavior_plugins: {  }
