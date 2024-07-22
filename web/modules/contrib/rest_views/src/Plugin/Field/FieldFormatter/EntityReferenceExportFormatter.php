@@ -30,6 +30,14 @@ class EntityReferenceExportFormatter extends EntityReferenceEntityFormatter {
    */
   public function view(FieldItemListInterface $items, $langcode = NULL): array {
     $elements = $this->viewElements($items, $langcode);
+
+    foreach ($items as $k => $item) {
+      if (empty($elements[$k]) && $item->entity) {
+        $items->removeItem($k);
+      }
+    }
+
+    $elements = array_values($elements);
     $output = ['#items' => $items];
 
     $entityKey = '#' . $this->getFieldSetting('target_type');
