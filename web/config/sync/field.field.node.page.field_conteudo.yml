@@ -21,13 +21,13 @@ field_name: field_conteudo
 entity_type: node
 bundle: page
 label: Conteudo
-description: ""
+description: ''
 required: false
 translatable: false
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:paragraph"
+  handler: 'default:paragraph'
   handler_settings:
     target_bundles:
       banner: banner
@@ -67,15 +67,15 @@ settings:
       intro:
         weight: -9
         enabled: true
-      lista_de_texto:
-        weight: 18
-        enabled: true
       intro_list:
         weight: 17
         enabled: true
       intro_list_item:
         weight: 18
         enabled: false
+      lista_de_texto:
+        weight: 18
+        enabled: true
       servicos:
         weight: -11
         enabled: false

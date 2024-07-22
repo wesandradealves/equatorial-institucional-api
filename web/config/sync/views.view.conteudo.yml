@@ -581,27 +581,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
-          offset: 0
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
-          pagination_heading_level: h4
+          offset: '0'
       filters:
         status:
           id: status
@@ -706,7 +688,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1837,27 +1818,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       filters:
         status:
           id: status
@@ -2206,27 +2169,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       arguments:
         field_categoria_target_id:
           id: field_categoria_target_id
@@ -2617,27 +2562,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       filters:
         status:
           id: status
@@ -2986,27 +2913,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« Primeiro'
-            last: 'Último »'
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Itens por página'
-            items_per_page_options: '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
-            items_per_page_options_all: true
-            items_per_page_options_all_label: '- Todos -'
-            offset: false
-            offset_label: Deslocamento
-          quantity: 9
       arguments:
         field_categoria_target_id:
           id: field_categoria_target_id
