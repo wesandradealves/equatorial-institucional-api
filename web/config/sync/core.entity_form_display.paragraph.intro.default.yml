@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.intro.field_texto
     - field.field.paragraph.intro.field_title
     - field.field.paragraph.intro.field_titulo
+    - field.field.paragraph.intro.field_video_title
     - field.field.paragraph.intro.field_video_url
     - image.style.thumbnail
     - paragraphs.paragraphs_type.intro
@@ -34,6 +35,22 @@ third_party_settings:
         open: false
         description: ''
         required_fields: false
+    group_video:
+      children:
+        - field_video_url
+        - field_video_title
+      label: Vídeo
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.intro.default
 targetEntityType: paragraph
 bundle: intro
@@ -79,9 +96,17 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_video_url:
+  field_video_title:
     type: string_textfield
     weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_url:
+    type: string_textfield
+    weight: 5
     region: content
     settings:
       size: 60
