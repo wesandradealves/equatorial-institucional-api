@@ -1,0 +1,10 @@
+uuid: 5e810f14-bad2-4fe3-809a-165ecb31251b
+langcode: pt-br
+status: true
+dependencies: {  }
+id: list
+label: Lista
+icon_uuid: null
+icon_default: null
+description: "Intro de listagem de conteúdo contendo título, texto e link.\t\r\n"
+behavior_plugins: {  }

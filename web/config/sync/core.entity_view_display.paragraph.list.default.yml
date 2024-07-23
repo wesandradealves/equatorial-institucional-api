@@ -1,17 +1,17 @@
-uuid: 937890b8-d640-478b-9514-fa063158c7c3
+uuid: 1ea52309-d11f-4611-9003-afb274f2c655
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.intro_list.field_list_item
-    - field.field.paragraph.intro_list.field_title
-    - paragraphs.paragraphs_type.intro_list
+    - field.field.paragraph.list.field_list_item
+    - field.field.paragraph.list.field_title
+    - paragraphs.paragraphs_type.list
   module:
     - entity_reference_revisions
     - text
-id: paragraph.intro_list.default
+id: paragraph.list.default
 targetEntityType: paragraph
-bundle: intro_list
+bundle: list
 mode: default
 content:
   field_list_item:

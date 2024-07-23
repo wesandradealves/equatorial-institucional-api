@@ -10,8 +10,9 @@ dependencies:
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.galeria
     - paragraphs.paragraphs_type.intro
-    - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.intro_list
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
     - paragraphs.paragraphs_type.texto_numerado
   module:
@@ -36,9 +37,10 @@ settings:
       block_cards: block_cards
       faq: faq
       simple_content_block: simple_content_block
+      intro_list: intro_list
       lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
-      intro_list: intro_list
+      list: list
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -50,8 +52,12 @@ settings:
       block_cards_item:
         weight: 10
         enabled: false
+      bloco_lista_texto_numerado:
+        weight: 22
+        enabled: false
       blocos_lista_de_texto:
         weight: 14
+        enabled: false
       faq:
         weight: 16
         enabled: true
@@ -73,6 +79,9 @@ settings:
       intro_list_item:
         weight: 18
         enabled: false
+      list:
+        weight: 30
+        enabled: true
       lista_de_texto:
         weight: 18
         enabled: true
