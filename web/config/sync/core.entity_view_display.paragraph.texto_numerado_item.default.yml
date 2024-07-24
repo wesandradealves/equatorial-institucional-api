@@ -1,0 +1,22 @@
+uuid: 499ad3bb-1d59-4799-8006-5878df1335c8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto_numerado_item.field_body
+    - paragraphs.paragraphs_type.texto_numerado_item
+  module:
+    - text
+id: paragraph.texto_numerado_item.default
+targetEntityType: paragraph
+bundle: texto_numerado_item
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

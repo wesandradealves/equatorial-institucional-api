@@ -1,18 +1,18 @@
-uuid: 248a647f-04bf-4215-b1d7-85f79219ece6
+uuid: 7ace6ab7-3015-4b69-8edd-b4b1254f2725
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
+    - field.storage.paragraph.field_body
     - filter.format.full_html
-    - paragraphs.paragraphs_type.bloco_lista_texto_numerado
+    - paragraphs.paragraphs_type.texto_numerado_item
   module:
     - text
-id: paragraph.bloco_lista_texto_numerado.field_title
-field_name: field_title
+id: paragraph.texto_numerado_item.field_body
+field_name: field_body
 entity_type: paragraph
-bundle: bloco_lista_texto_numerado
-label: Titulo
+bundle: texto_numerado_item
+label: Body
 description: ''
 required: false
 translatable: false

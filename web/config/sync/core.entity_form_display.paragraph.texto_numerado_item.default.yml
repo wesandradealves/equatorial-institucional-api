@@ -1,0 +1,25 @@
+uuid: b256a86c-91c6-4e69-8c0f-16793ed3f578
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto_numerado_item.field_body
+    - paragraphs.paragraphs_type.texto_numerado_item
+  module:
+    - text
+id: paragraph.texto_numerado_item.default
+targetEntityType: paragraph
+bundle: texto_numerado_item
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

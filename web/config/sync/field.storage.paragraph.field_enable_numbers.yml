@@ -1,15 +1,14 @@
-uuid: 2271585d-3400-4a93-a015-8a7e790d4ade
+uuid: bb62d9e1-553c-40e3-af3a-e6f5ac826ec7
 langcode: pt-br
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_texto_numerado
-field_name: field_texto_numerado
+id: paragraph.field_enable_numbers
+field_name: field_enable_numbers
 entity_type: paragraph
-type: string_long
-settings:
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

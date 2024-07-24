@@ -52,9 +52,6 @@ settings:
       block_cards_item:
         weight: 10
         enabled: false
-      bloco_lista_texto_numerado:
-        weight: 22
-        enabled: false
       blocos_lista_de_texto:
         weight: 14
         enabled: false
@@ -94,4 +91,7 @@ settings:
       texto_numerado:
         weight: 22
         enabled: true
+      texto_numerado_item:
+        weight: 34
+        enabled: false
 field_type: entity_reference_revisions

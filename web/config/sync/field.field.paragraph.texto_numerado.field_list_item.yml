@@ -1,18 +1,18 @@
-uuid: cd5cd229-cfda-410a-867c-ed2d2bb92950
+uuid: 423c05ee-abda-4118-808d-7339af9ceefe
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_texto_numerado_lista
-    - paragraphs.paragraphs_type.bloco_lista_texto_numerado
+    - field.storage.paragraph.field_list_item
     - paragraphs.paragraphs_type.texto_numerado
+    - paragraphs.paragraphs_type.texto_numerado_item
   module:
     - entity_reference_revisions
-id: paragraph.texto_numerado.field_texto_numerado_lista
-field_name: field_texto_numerado_lista
+id: paragraph.texto_numerado.field_list_item
+field_name: field_list_item
 entity_type: paragraph
 bundle: texto_numerado
-label: 'Texto Numerado'
+label: Item
 description: ''
 required: false
 translatable: false
@@ -22,43 +22,58 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      bloco_lista_texto_numerado: bloco_lista_texto_numerado
+      texto_numerado_item: texto_numerado_item
     negate: 0
     target_bundles_drag_drop:
       banner:
-        weight: 13
+        weight: 11
         enabled: false
       block_cards:
-        weight: 14
+        weight: 12
         enabled: false
       block_cards_item:
-        weight: 15
+        weight: 13
         enabled: false
-      bloco_lista_texto_numerado:
-        weight: 17
-        enabled: true
       blocos_lista_de_texto:
-        weight: 16
-        enabled: false
-      galeria:
-        weight: 18
-        enabled: false
-      galeria_item:
-        weight: 19
-        enabled: false
-      intro:
-        weight: 20
-        enabled: false
-      lista_de_texto:
         weight: 21
         enabled: false
+      faq:
+        weight: 16
+        enabled: false
+      faq_item:
+        weight: 17
+        enabled: false
+      galeria:
+        weight: 14
+        enabled: false
+      galeria_item:
+        weight: 15
+        enabled: false
+      intro:
+        weight: 16
+        enabled: false
+      intro_list:
+        weight: 17
+        enabled: false
+      intro_list_item:
+        weight: 18
+        enabled: false
+      list:
+        weight: 30
+        enabled: false
+      lista_de_texto:
+        weight: 31
+        enabled: false
       servicos:
-        weight: 22
+        weight: 19
         enabled: false
       simple_content_block:
-        weight: 23
+        weight: 20
         enabled: false
       texto_numerado:
-        weight: 24
+        weight: 34
         enabled: false
+      texto_numerado_item:
+        weight: 34
+        enabled: true
 field_type: entity_reference_revisions
