@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.bloco_lista_texto_numerado.field_texto_numerado
+    - field.field.paragraph.bloco_lista_texto_numerado.field_title
     - paragraphs.paragraphs_type.bloco_lista_texto_numerado
+  module:
+    - text
 id: paragraph.bloco_lista_texto_numerado.default
 targetEntityType: paragraph
 bundle: bloco_lista_texto_numerado
@@ -12,7 +15,14 @@ mode: default
 content:
   field_texto_numerado:
     type: basic_string
-    label: above
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
