@@ -3,20 +3,47 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.paragraph.faq.field_layout
     - field.field.paragraph.faq.field_list_item
+    - field.field.paragraph.faq.field_no_background
     - field.field.paragraph.faq.field_title
     - paragraphs.paragraphs_type.faq
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_estilos:
+      children:
+        - field_no_background
+        - field_layout
+      label: Estilos
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
 mode: default
 content:
+  field_layout:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_list_item:
     type: paragraphs
-    weight: 1
+    weight: 4
     region: content
     settings:
       title: Paragraph
@@ -32,9 +59,16 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_no_background:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 0
+    weight: 3
     region: content
     settings:
       rows: 5

@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.intro.field_cta_label
     - field.field.paragraph.intro.field_cta_url
     - field.field.paragraph.intro.field_imagem
+    - field.field.paragraph.intro.field_layout_intro
     - field.field.paragraph.intro.field_texto
     - field.field.paragraph.intro.field_title
     - field.field.paragraph.intro.field_titulo
@@ -26,7 +27,7 @@ third_party_settings:
       label: CTA
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         classes: ''
@@ -42,7 +43,7 @@ third_party_settings:
       label: Vídeo
       region: content
       parent_name: ''
-      weight: 4
+      weight: 6
       format_type: details
       format_settings:
         classes: ''
@@ -74,15 +75,21 @@ content:
     third_party_settings: {  }
   field_imagem:
     type: image_image
-    weight: 3
+    weight: 5
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_layout_intro:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_texto:
     type: text_textarea
-    weight: 2
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -90,7 +97,7 @@ content:
     third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 0
+    weight: 1
     region: content
     settings:
       rows: 5

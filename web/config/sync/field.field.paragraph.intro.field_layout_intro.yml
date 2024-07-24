@@ -1,0 +1,23 @@
+uuid: 91f3672e-d32c-481c-8f34-243e05f03df9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout_intro
+    - paragraphs.paragraphs_type.intro
+  module:
+    - options
+id: paragraph.intro.field_layout_intro
+field_name: field_layout_intro
+entity_type: paragraph
+bundle: intro
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string
