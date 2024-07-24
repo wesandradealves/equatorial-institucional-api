@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.texto_numerado.field_enable_numbers
+    - field.field.paragraph.texto_numerado.field_layout_texto_enumerado
     - field.field.paragraph.texto_numerado.field_list_item
     - field.field.paragraph.texto_numerado.field_title
     - paragraphs.paragraphs_type.texto_numerado
   module:
     - entity_reference_revisions
+    - options
     - text
 id: paragraph.texto_numerado.default
 targetEntityType: paragraph
@@ -24,6 +26,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_layout_texto_enumerado:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_list_item:
     type: entity_reference_revisions_entity_view
