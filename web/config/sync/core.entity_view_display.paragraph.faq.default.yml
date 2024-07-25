@@ -18,7 +18,7 @@ bundle: faq
 mode: default
 content:
   field_layout:
-    type: list_default
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }

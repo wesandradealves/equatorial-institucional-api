@@ -28,7 +28,7 @@ content:
     weight: 0
     region: content
   field_layout_texto_enumerado:
-    type: list_default
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
