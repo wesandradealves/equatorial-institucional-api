@@ -877,18 +877,6 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 }
 
 
-// $databases['default']['default'] = array(
-//   'host' => "localhost",
-//   'database' => 'postgres',
-//   'username' => "db",
-//   'password' => "db",
-//   'prefix' => '',
-//   'port' => '5432',
-//   'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
-//   'driver' => 'pgsql',
-//   'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
-// );
-
 /**
  * Load local development override configuration, if available.
  *
@@ -909,14 +897,3 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 
 $settings['config_sync_directory'] = 'config/sync';
 $config['system.logging']['error_level'] = 'verbose';
-$databases['default']['default'] = array(
-  'database' => 'postgres',
-  'username' => 'db',
-  'password' => 'db',
-  'prefix' => '',
-  'host' => 'postgres',
-  'port' => '5432',
-  'driver' => 'pgsql',
-  'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
-  'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
-);
