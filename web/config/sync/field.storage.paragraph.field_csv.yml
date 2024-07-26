@@ -1,0 +1,24 @@
+uuid: f0ede44d-7a51-4b27-9f76-1c9378addc22
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - csv_field
+    - file
+    - paragraphs
+id: paragraph.field_csv
+field_name: field_csv
+entity_type: paragraph
+type: csv_file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: csv_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

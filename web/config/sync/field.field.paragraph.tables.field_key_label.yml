@@ -1,0 +1,19 @@
+uuid: 10102b38-e427-4a8f-81c4-2bea955ab754
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_key_label
+    - paragraphs.paragraphs_type.tables
+id: paragraph.tables.field_key_label
+field_name: field_key_label
+entity_type: paragraph
+bundle: tables
+label: Label
+description: 'Label amigável que aparecerá no filtro para identificar a chave a ser filtrada'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

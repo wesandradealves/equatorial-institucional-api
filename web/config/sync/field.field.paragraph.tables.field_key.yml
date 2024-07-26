@@ -1,0 +1,19 @@
+uuid: d7f7bc38-ec70-4225-b238-841b524a4ec1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_key
+    - paragraphs.paragraphs_type.tables
+id: paragraph.tables.field_key
+field_name: field_key
+entity_type: paragraph
+bundle: tables
+label: 'Chaves a serem exibidas'
+description: 'Colocar chaves das informações a serem exibidas na tabela separados por vírgula (ex: key1, key2, key3)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

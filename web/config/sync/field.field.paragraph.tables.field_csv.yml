@@ -1,0 +1,27 @@
+uuid: 5069a0d6-a883-4db3-ad7b-d3567256e44a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csv
+    - paragraphs.paragraphs_type.tables
+  module:
+    - csv_field
+id: paragraph.tables.field_csv
+field_name: field_csv
+entity_type: paragraph
+bundle: tables
+label: Tabela
+description: 'Subir conteúdo em um arquivo .csv'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: csv
+  max_filesize: ''
+  description_field: false
+field_type: csv_file

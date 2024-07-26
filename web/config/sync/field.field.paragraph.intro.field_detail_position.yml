@@ -1,0 +1,23 @@
+uuid: a0408bcd-e326-4ae9-a534-60866fa3aabe
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_detail_position
+    - paragraphs.paragraphs_type.intro
+  module:
+    - options
+id: paragraph.intro.field_detail_position
+field_name: field_detail_position
+entity_type: paragraph
+bundle: intro
+label: 'Posição do Detalhe'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
