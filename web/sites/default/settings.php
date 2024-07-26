@@ -265,7 +265,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '9IqS6nitz-s_KCmqqShCMK8eLsUAbp2v1PQ4CLJjaLBTMI_Ys2IsgZeGtOp_LwpHNnOOYP7rYQ';
+$settings['hash_salt'] = 'RabsVRTxrqK8UBYOMhaxg2HcYld1XAc8vJuevltaVxyGaNUwBkDD2POdJXc8nPyDV3EalIhCfQ';
 
 /**
  * Deployment identifier.
@@ -847,19 +847,47 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
   include __DIR__ . '/settings.ddev.php';
 } else {
-  $databases['default']['default'] = array(
-    'database' => $_ENV['MYSQL_DATABASE'],
-    'username' => $_ENV['MYSQL_USER'],
-    'password' => $_ENV['MYSQL_PASSWORD'],
-    'prefix' => '',
-    'host' => $_ENV['MYSQL_HOST'],
-    'port' => $_ENV['MYSQL_PORT'],
-    'isolation_level' => 'READ COMMITTED',
-    'driver' => 'mysql',
-    'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-    'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-  );
+  if ($_ENV['DB_TYPE'] === 'mysql') {
+    $databases['default']['default'] = array(
+      'database' => $_ENV['MYSQL_DATABASE'],
+      'username' => $_ENV['MYSQL_USER'],
+      'password' => $_ENV['MYSQL_PASSWORD'],
+      'prefix' => '',
+      'host' => $_ENV['MYSQL_HOST'],
+      'port' => $_ENV['MYSQL_PORT'],
+      'isolation_level' => 'READ COMMITTED',
+      'driver' => 'mysql',
+      'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+      'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+    );
+  }
+  if ($_ENV['DB_TYPE'] === 'pgsql') {
+    $databases['default']['default'] = array(
+      'database' => $_ENV['POSTGRES_DB'],
+      'username' => $_ENV['POSTGRES_USER'],
+      'password' => $_ENV['POSTGRES_PASSWORD'],
+      'prefix' => '',
+      'host' => $_ENV['POSTGRES_HOST'],
+      'port' => $_ENV['POSTGRES_PORT'],
+      'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+      'driver' => 'pgsql',
+      'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+    );
+  }
 }
+
+
+// $databases['default']['default'] = array(
+//   'host' => "localhost",
+//   'database' => 'postgres',
+//   'username' => "db",
+//   'password' => "db",
+//   'prefix' => '',
+//   'port' => '5432',
+//   'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+//   'driver' => 'pgsql',
+//   'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+// );
 
 /**
  * Load local development override configuration, if available.
@@ -881,3 +909,14 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 
 $settings['config_sync_directory'] = 'config/sync';
 $config['system.logging']['error_level'] = 'verbose';
+$databases['default']['default'] = array(
+  'database' => 'postgres',
+  'username' => 'db',
+  'password' => 'db',
+  'prefix' => '',
+  'host' => 'postgres',
+  'port' => '5432',
+  'driver' => 'pgsql',
+  'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+  'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+);

@@ -21,6 +21,7 @@
         "defuse/php-encryption": "^2.4",
         "drupal/admin_toolbar": "^3.4",
         "drupal/backup_migrate": "^5.0",
+        "drupal/backup_migrate_backbeaver": "^2.0@beta",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/better_social_sharing_buttons": "^4.0",
         "drupal/blocache": "2.0",
