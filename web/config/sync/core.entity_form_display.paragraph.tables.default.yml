@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.tables.field_csv
+    - field.field.paragraph.tables.field_field_items_per_page
     - field.field.paragraph.tables.field_filter_key
-    - field.field.paragraph.tables.field_items_per_page
     - field.field.paragraph.tables.field_key
     - field.field.paragraph.tables.field_key_label
     - field.field.paragraph.tables.field_title
@@ -23,8 +23,25 @@ third_party_settings:
         - field_key
       label: Filtro
       region: content
+      parent_name: group_tabela
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_tabela:
+      children:
+        - field_csv
+        - field_field_items_per_page
+        - group_filtro
+      label: Tabela
+      region: content
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: details
       format_settings:
         classes: ''
@@ -40,12 +57,12 @@ mode: default
 content:
   field_csv:
     type: csv_file_generic
-    weight: 1
+    weight: 2
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-  field_filter_key:
+  field_field_items_per_page:
     type: string_textfield
     weight: 3
     region: content
@@ -53,11 +70,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_items_per_page:
-    type: number
-    weight: 2
+  field_filter_key:
+    type: string_textfield
+    weight: 3
     region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_key:
