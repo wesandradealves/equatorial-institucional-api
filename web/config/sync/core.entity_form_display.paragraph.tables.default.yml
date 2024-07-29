@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.tables.field_filter_key
     - field.field.paragraph.tables.field_key
     - field.field.paragraph.tables.field_key_label
+    - field.field.paragraph.tables.field_mask_enabled
     - field.field.paragraph.tables.field_title
     - paragraphs.paragraphs_type.tables
   module:
@@ -41,7 +42,22 @@ third_party_settings:
       label: Tabela
       region: content
       parent_name: ''
-      weight: 1
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_estilos:
+      children:
+        - field_mask_enabled
+      label: Estilos
+      region: content
+      parent_name: ''
+      weight: 0
       format_type: details
       format_settings:
         classes: ''
@@ -94,9 +110,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_mask_enabled:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 0
+    weight: 2
     region: content
     settings:
       rows: 5

@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.tables.field_filter_key
     - field.field.paragraph.tables.field_key
     - field.field.paragraph.tables.field_key_label
+    - field.field.paragraph.tables.field_mask_enabled
     - field.field.paragraph.tables.field_title
     - paragraphs.paragraphs_type.tables
   module:
@@ -57,6 +58,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_mask_enabled:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_title:
     type: text_default
