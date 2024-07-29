@@ -31,10 +31,10 @@ instagram: 'https://instagram.com/'
 youtube: 'https://youtube.com/'
 linkedin: 'https://linkedin.com/'
 google_play_img:
-  - '1366'
+  - '1431'
 google_play_url: 'http://institucional-drupal.ddev.site/'
 app_store_img:
-  - '1367'
+  - '1432'
 app_store_url: 'http://institucional-drupal.ddev.site/'
 phone:
   value: '<p>Atendimento Equatorial <strong>116</strong>&nbsp;</p><p>Grandes Clientes <strong>0800 098 2997</strong>&nbsp;</p><p>Negociação Equatorial <strong>0800 098 2997</strong>&nbsp;</p><p>Ouvidoria <strong>0800 098 2997</strong></p>'

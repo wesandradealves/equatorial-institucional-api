@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
+    - paragraphs.paragraphs_type.tables
     - paragraphs.paragraphs_type.texto_numerado
   module:
     - entity_reference_revisions
@@ -41,6 +42,7 @@ settings:
       lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
       list: list
+      tables: tables
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -87,6 +89,9 @@ settings:
         enabled: false
       simple_content_block:
         weight: 16
+        enabled: true
+      tables:
+        weight: 34
         enabled: true
       texto_numerado:
         weight: 22

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.intro.field_cta_label
     - field.field.paragraph.intro.field_cta_url
+    - field.field.paragraph.intro.field_detail_color
+    - field.field.paragraph.intro.field_detail_position
     - field.field.paragraph.intro.field_imagem
     - field.field.paragraph.intro.field_layout_intro
     - field.field.paragraph.intro.field_texto
@@ -14,6 +16,7 @@ dependencies:
     - field.field.paragraph.intro.field_video_url
     - paragraphs.paragraphs_type.intro
   module:
+    - color_pickr
     - image
     - options
     - text
@@ -37,6 +40,20 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_detail_color:
+    type: color_pickr_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_detail_position:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_imagem:
     type: image_url

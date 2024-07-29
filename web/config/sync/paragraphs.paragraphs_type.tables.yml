@@ -1,0 +1,10 @@
+uuid: 02987f29-a709-440d-ba19-ea17ce6d8050
+langcode: pt-br
+status: true
+dependencies: {  }
+id: tables
+label: Tabelas
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: 6db6b1ff-67b4-47d6-8ff3-69b8838217cc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_detail_color
+    - paragraphs.paragraphs_type.intro
+  module:
+    - color_pickr
+id: paragraph.intro.field_detail_color
+field_name: field_detail_color
+entity_type: paragraph
+bundle: intro
+label: 'Cor do Detalhe'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color_pickr: '#0414A1'
+default_value_callback: ''
+settings: {  }
+field_type: color_pickr_code
