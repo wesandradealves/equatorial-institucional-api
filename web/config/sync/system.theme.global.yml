@@ -59,3 +59,9 @@ talk_label_en: 'Talk to us'
 talk_to_clara_label_en: 'Talk to clara'
 talk_label: 'Fale com a gente'
 talk_to_clara_label: 'Fale com a Clara'
+error_page:
+  value: '<img src="http://institucional-drupal.ddev.site:5353/sites/default/files/inline-images/sentiment_dissatisfied_0.png" data-entity-uuid="fac657dd-8d5f-40f3-8daf-fb2fc27ebcbc" data-entity-type="file" width="81" height="80"><p class="text-align-center"><span style="white-space:pre-wrap;"><strong>Opa! Erro 404!</strong></span></p><h2 class="text-align-center"><span style="white-space:pre-wrap;">Página não encontrada</span></h2>'
+  format: full_html
+error_page_en:
+  value: '<p class="text-align-center"><img src="http://institucional-drupal.ddev.site:5353/sites/default/files/inline-images/sentiment_dissatisfied_0.png" data-entity-uuid="fac657dd-8d5f-40f3-8daf-fb2fc27ebcbc" data-entity-type="file" width="81" height="80"></p><p class="text-align-center"><span style="white-space:pre-wrap;"><strong>Oops! Error 404!</strong></span></p><h2 class="text-align-center"><span style="white-space:pre-wrap;">Page not found</span></h2>'
+  format: full_html

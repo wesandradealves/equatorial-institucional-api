@@ -369,39 +369,39 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
       '#type' => 'textarea',
       '#title' => 'URL',
       '#default_value' => theme_get_setting('app_store_url')
-  );       
+  );     
 
-  $form['footer']['contact'] = array(
+  $form['footer']['contact'] = [
     '#type' => 'details',
-    '#open'         => FALSE,
+    '#open' => FALSE,
     '#title' => 'Contatos',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );   
+  ];   
   
-  $form['footer']['contact']['phone'] = array(
+  $form['footer']['contact']['phone'] = [
     '#type' => 'details',
-    '#open'         => FALSE,
+    '#open' => FALSE,
     '#title' => 'Telefone',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );     
+  ];     
 
-  $form['footer']['contact']['phone']['phone'] = array(
-      '#type' => 'text_format',
-      '#title' => 'Default',
-      '#default_value' => theme_get_setting('phone')['value'],
-      '#format' => theme_get_setting('phone')['format'],      
-      // '#default_value' => theme_get_setting('phone')
-  ); 
+  $form['footer']['contact']['phone']['phone'] = [
+    '#type' => 'text_format',
+    '#title' => 'Default',
+    '#default_value' => theme_get_setting('phone')['value'],
+    '#format' => theme_get_setting('phone')['format'],
+    // '#default_value' => theme_get_setting('phone')
+  ]; 
   
-  $form['footer']['contact']['phone']['phone_en'] = array(
-      '#type' => 'text_format',
-      '#title' => 'EN',
-      '#default_value' => theme_get_setting('phone_en')['value'],
-      '#format' => theme_get_setting('phone_en')['format'],         
-      // '#default_value' => theme_get_setting('phone_en')
-  );   
+  $form['footer']['contact']['phone']['phone_en'] = [
+    '#type' => 'text_format',
+    '#title' => 'EN',
+    '#default_value' => theme_get_setting('phone_en')['value'],
+    '#format' => theme_get_setting('phone_en')['format'],
+    // '#default_value' => theme_get_setting('phone_en')
+  ];   
 
   $form['footer']['contact']['talk'] = array(
     '#type' => 'details',
@@ -411,25 +411,25 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
     '#collapsed' => FALSE,
   );     
 
-  $form['footer']['contact']['talk']['talk'] = array(
-      '#type' => 'textarea',
-      '#title' => 'Default',
-      '#default_value' => theme_get_setting('talk')
-  ); 
+  $form['footer']['contact']['talk']['talk'] = [
+    '#type' => 'textarea',
+    '#title' => 'Default',
+    '#default_value' => theme_get_setting('talk')
+  ]; 
   
-  $form['footer']['contact']['talk']['talk_en'] = array(
-      '#type' => 'textarea',
-      '#title' => 'EN',
-      '#default_value' => theme_get_setting('talk_en')
-  );     
+  $form['footer']['contact']['talk']['talk_en'] = [
+    '#type' => 'textarea',
+    '#title' => 'EN',
+    '#default_value' => theme_get_setting('talk_en')
+  ];     
 
-  $form['footer']['contact']['talk']['label'] = array(
+  $form['footer']['contact']['talk']['label'] = [
     '#type' => 'details',
-    '#open'         => FALSE,
+    '#open' => FALSE,
     '#title' => 'Link',
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );    
+  ];    
 
   $form['footer']['contact']['talk']['label']['talk_label'] = array(
       '#type' => 'textarea',
@@ -500,7 +500,29 @@ function sys_twig_extensions_form_system_theme_settings_alter(&$form, FormStateI
       '#upload_location' => 'public://',
       '#title' => 'Imagem',
       '#default_value' => theme_get_setting('talk_to_clara_img'),
+  );        
+
+  $form['error'] = array(
+    '#type' => 'details',
+    '#open'         => FALSE,
+    '#title' => 'Error Page',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
   );     
+  
+  $form['error']['error_page'] = array(
+    '#type' => 'text_format',
+    '#title' => 'Default',
+    '#default_value' => theme_get_setting('error_page')['value'],
+    '#format' => theme_get_setting('error_page')['format'],         
+  );  
+  
+  $form['error']['error_page_en'] = array(
+    '#type' => 'text_format',
+    '#title' => 'EN',
+    '#default_value' => theme_get_setting('error_page_en')['value'],
+    '#format' => theme_get_setting('error_page_en')['format'],         
+  );    
   
   $form['#validate'][] = 'sys_twig_extensions_form_system_theme_settings_validate';
   $form['#submit'][] = 'sys_twig_extensions_form_system_theme_settings_submit';  

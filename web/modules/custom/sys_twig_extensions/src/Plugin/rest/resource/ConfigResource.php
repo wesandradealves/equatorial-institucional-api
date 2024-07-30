@@ -41,6 +41,10 @@ class ConfigResource extends ResourceBase {
           'en' => theme_get_setting('copyright_en'),
           'pt_br' => theme_get_setting('copyright')
         ],
+        'error_page' => [
+          'en' => theme_get_setting('error_page_en'),
+          'pt_br' => theme_get_setting('error_page'),
+        ],
         'site_name' => \Drupal::config('system.site')->get('name'),
         'basePath' => \Drupal::request()->getSchemeAndHttpHost(),
         'logo' => \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
