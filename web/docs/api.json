@@ -584,6 +584,28 @@
           }
         }
       }
+    },
+    "/api/csv/": {
+      "get": {
+        "summary": "CSV",
+        "description": "CSV",
+        "operationId": "csv",
+        "parameters": [
+          {
+            "name": "csv",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "http://institucional-drupal.ddev.site:5353/sites/default/files/2024-07/crash_catalonia.csv"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
     }
   },
   "tags": []
