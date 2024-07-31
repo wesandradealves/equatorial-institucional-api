@@ -35,7 +35,6 @@ RUN echo "log_errors = On" >> /usr/local/etc/php/php.ini
 RUN echo "error_log = /var/log/php_errors.log" >> /usr/local/etc/php/php.ini
 
 RUN cd .. && composer install
-
-# RUN cd .. && drush cim -y && drush cr && drush updb && drush cex -y
+#  && drush cr && drush updb && drush cex -y
 
 EXPOSE 80
