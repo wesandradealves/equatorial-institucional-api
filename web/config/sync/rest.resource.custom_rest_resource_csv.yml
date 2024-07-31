@@ -1,0 +1,19 @@
+uuid: 9bda43eb-161c-4dff-8df8-11161175ae70
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - sys_twig_extensions
+    - user
+id: custom_rest_resource_csv
+plugin_id: custom_rest_resource_csv
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

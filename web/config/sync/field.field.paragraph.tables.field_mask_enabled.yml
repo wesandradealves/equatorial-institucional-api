@@ -1,0 +1,21 @@
+uuid: 061494de-b8c6-48f6-8ff7-3e6e019c8f8f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mask_enabled
+    - paragraphs.paragraphs_type.tables
+id: paragraph.tables.field_mask_enabled
+field_name: field_mask_enabled
+entity_type: paragraph
+bundle: tables
+label: 'Habilitar Máscara'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

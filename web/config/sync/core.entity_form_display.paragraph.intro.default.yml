@@ -5,13 +5,19 @@ dependencies:
   config:
     - field.field.paragraph.intro.field_cta_label
     - field.field.paragraph.intro.field_cta_url
+    - field.field.paragraph.intro.field_detail_color
+    - field.field.paragraph.intro.field_detail_position
     - field.field.paragraph.intro.field_imagem
+    - field.field.paragraph.intro.field_layout_intro
     - field.field.paragraph.intro.field_texto
     - field.field.paragraph.intro.field_title
     - field.field.paragraph.intro.field_titulo
+    - field.field.paragraph.intro.field_video_title
+    - field.field.paragraph.intro.field_video_url
     - image.style.thumbnail
     - paragraphs.paragraphs_type.intro
   module:
+    - color_pickr
     - field_group
     - image
     - text
@@ -24,7 +30,7 @@ third_party_settings:
       label: CTA
       region: content
       parent_name: ''
-      weight: 1
+      weight: 5
       format_type: details
       format_settings:
         classes: ''
@@ -33,6 +39,39 @@ third_party_settings:
         open: false
         description: ''
         required_fields: false
+    group_video:
+      children:
+        - field_video_url
+        - field_video_title
+      label: Vídeo
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_estilos:
+      children:
+        - field_layout_intro
+        - field_detail_position
+        - field_detail_color
+      label: Estilos
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.intro.default
 targetEntityType: paragraph
 bundle: intro
@@ -54,17 +93,37 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_detail_color:
+    type: color_pickr_default
+    weight: 3
+    region: content
+    settings:
+      theme: classic
+      hide_description: false
+    third_party_settings: {  }
+  field_detail_position:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_imagem:
     type: image_image
-    weight: 3
+    weight: 7
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_layout_intro:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_texto:
     type: text_textarea
-    weight: 2
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -72,10 +131,26 @@ content:
     third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 0
+    weight: 4
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_title:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_url:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
 hidden:

@@ -1,0 +1,21 @@
+uuid: 4bb3f1b6-5b21-4ad8-b508-d570ec86944d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_numbers
+    - paragraphs.paragraphs_type.texto_numerado
+id: paragraph.texto_numerado.field_enable_numbers
+field_name: field_enable_numbers
+entity_type: paragraph
+bundle: texto_numerado
+label: 'Habilitar Numeros'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

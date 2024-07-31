@@ -1,0 +1,27 @@
+uuid: fcdd0779-c4c0-4384-93ee-d052dc0922df
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocos_lista_de_texto.field_texto_curto
+    - paragraphs.paragraphs_type.blocos_lista_de_texto
+  module:
+    - text
+id: paragraph.blocos_lista_de_texto.default
+targetEntityType: paragraph
+bundle: blocos_lista_de_texto
+mode: default
+content:
+  field_texto_curto:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

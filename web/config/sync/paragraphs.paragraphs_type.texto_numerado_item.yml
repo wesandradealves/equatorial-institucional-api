@@ -1,0 +1,10 @@
+uuid: 092cd422-a818-4a4f-bc36-6d7099a37417
+langcode: pt-br
+status: true
+dependencies: {  }
+id: texto_numerado_item
+label: 'Texto Numerado - Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

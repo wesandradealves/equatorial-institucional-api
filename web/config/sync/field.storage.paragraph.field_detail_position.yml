@@ -1,0 +1,33 @@
+uuid: 417239e5-6e90-4784-b1aa-546f1804f980
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_detail_position
+field_name: field_detail_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: Default
+    -
+      value: bottom
+      label: Baixo
+    -
+      value: left
+      label: Esquerda
+    -
+      value: right
+      label: Direita
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: b9d09cd6-8f65-4b27-a8a7-4dd68544c0a9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - color_pickr
+    - paragraphs
+id: paragraph.field_detail_color
+field_name: field_detail_color
+entity_type: paragraph
+type: color_pickr_code
+settings: {  }
+module: color_pickr
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

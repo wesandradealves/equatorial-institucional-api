@@ -1,0 +1,33 @@
+uuid: 1ea52309-d11f-4611-9003-afb274f2c655
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list.field_list_item
+    - field.field.paragraph.list.field_title
+    - paragraphs.paragraphs_type.list
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.list.default
+targetEntityType: paragraph
+bundle: list
+mode: default
+content:
+  field_list_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

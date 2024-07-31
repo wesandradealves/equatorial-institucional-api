@@ -1,0 +1,23 @@
+uuid: 6aecb779-39d4-42b6-ab51-fa6c27c959a6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.faq
+  module:
+    - options
+id: paragraph.faq.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: faq
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: home
+default_value_callback: ''
+settings: {  }
+field_type: list_string

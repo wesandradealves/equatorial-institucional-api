@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.iniciativas.body
     - field.field.node.iniciativas.field_categoria
     - field.field.node.iniciativas.field_image
-    - field.field.node.iniciativas.field_title
     - image.style.medium
     - node.type.iniciativas
   module:

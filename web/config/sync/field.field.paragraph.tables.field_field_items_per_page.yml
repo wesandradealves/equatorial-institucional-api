@@ -1,0 +1,21 @@
+uuid: af422064-310a-4a7f-a75f-838c1f5c586b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_items_per_page
+    - paragraphs.paragraphs_type.tables
+id: paragraph.tables.field_field_items_per_page
+field_name: field_field_items_per_page
+entity_type: paragraph
+bundle: tables
+label: 'Items por página'
+description: 'Inserir quantidades separadas por virgula. (ex: 3, 5, 9)'
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: string

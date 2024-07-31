@@ -1,0 +1,18 @@
+uuid: b735aee6-b66c-4819-b386-6984e99eeb2c
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_mask_enabled
+field_name: field_mask_enabled
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

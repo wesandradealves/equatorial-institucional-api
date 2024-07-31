@@ -1,0 +1,42 @@
+uuid: 937890b8-d640-478b-9514-fa063158c7c3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro_list.field_layout_intro_list
+    - field.field.paragraph.intro_list.field_list_item
+    - field.field.paragraph.intro_list.field_title
+    - paragraphs.paragraphs_type.intro_list
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.intro_list.default
+targetEntityType: paragraph
+bundle: intro_list
+mode: default
+content:
+  field_layout_intro_list:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_list_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

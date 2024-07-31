@@ -7,9 +7,15 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.block_cards
+    - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.galeria
     - paragraphs.paragraphs_type.intro
+    - paragraphs.paragraphs_type.intro_list
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
+    - paragraphs.paragraphs_type.tables
+    - paragraphs.paragraphs_type.texto_numerado
   module:
     - entity_reference_revisions
 id: node.page.field_conteudo
@@ -30,7 +36,13 @@ settings:
       intro: intro
       galeria: galeria
       block_cards: block_cards
+      faq: faq
       simple_content_block: simple_content_block
+      intro_list: intro_list
+      lista_de_texto: lista_de_texto
+      texto_numerado: texto_numerado
+      list: list
+      tables: tables
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -42,6 +54,15 @@ settings:
       block_cards_item:
         weight: 10
         enabled: false
+      blocos_lista_de_texto:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 16
+        enabled: true
+      faq_item:
+        weight: 17
+        enabled: false
       galeria:
         weight: -8
         enabled: true
@@ -51,10 +72,31 @@ settings:
       intro:
         weight: -9
         enabled: true
+      intro_list:
+        weight: 17
+        enabled: true
+      intro_list_item:
+        weight: 18
+        enabled: false
+      list:
+        weight: 30
+        enabled: true
+      lista_de_texto:
+        weight: 18
+        enabled: true
       servicos:
         weight: -11
         enabled: false
       simple_content_block:
         weight: 16
         enabled: true
+      tables:
+        weight: 34
+        enabled: true
+      texto_numerado:
+        weight: 22
+        enabled: true
+      texto_numerado_item:
+        weight: 34
+        enabled: false
 field_type: entity_reference_revisions

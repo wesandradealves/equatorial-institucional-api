@@ -1,0 +1,23 @@
+uuid: adc868e8-d214-4db2-aae5-b843805a813a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_no_background
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.field_no_background
+field_name: field_no_background
+entity_type: paragraph
+bundle: faq
+label: 'Sem fundo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean
