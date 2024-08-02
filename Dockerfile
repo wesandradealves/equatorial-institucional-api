@@ -19,7 +19,8 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN cd .. && rm -rf composer.* vendor && cd web && mv core/ modules/ profiles/ themes/ composer.json drush/ sites/ DOCKER.md db libraries readme Dockerfile  docker-compose.yml load.environment.php scripts README.md phpunit.xml.dist ../ && cd web && cp -r * ../ && cd .. && rm -rf web
+RUN cd .. && rm -rf composer.* vendor && \
+    cd web && mv composer.json drush/ DOCKER.md db readme Dockerfile  docker-compose.yml load.environment.php scripts README.md phpunit.xml.dist ../ && cd web && cp -r * ../ && cd .. && rm -rf web
 
 RUN chown -R www-data:www-data /var/www/html/sites/default/ && \
     chmod -R 755 /var/www/html/sites/default/  && \
