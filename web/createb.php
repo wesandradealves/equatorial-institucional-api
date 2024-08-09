@@ -13,18 +13,6 @@ try {
     // Script SQL de criação de tabela e índices
     $sql = "
 
-CREATE TABLE IF NOT EXISTS locales_location (
-	lid bigserial NOT NULL,
-	sid int8 NOT NULL,
-	\"type\" varchar(50) DEFAULT ''::character varying NOT NULL,
-	\"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
-	\"version\" varchar(20) DEFAULT 'none'::character varying NOT NULL,
-	CONSTRAINT idx_28383_primary PRIMARY KEY (lid)
-);
-CREATE INDEX idx_28383_string_type ON locales_location USING btree (sid, type);
-CREATE INDEX idx_28383_type_name ON locales_location USING btree (type, name);
-
-
 CREATE TABLE locales_source (
 	lid bigserial NOT NULL,
 	\"source\" bytea NOT NULL,
