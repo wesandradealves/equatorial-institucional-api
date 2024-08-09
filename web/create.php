@@ -2399,6 +2399,17 @@ CREATE TABLE IF NOT EXISTS webform_submission_data (
 );
 CREATE INDEX idx_29663_sid_webform_id ON webform_submission_data USING btree (sid, webform_id);
 CREATE INDEX idx_29663_webform_id ON webform_submission_data USING btree (webform_id);
+
+CREATE TABLE IF NOT EXISTS db.locales_location (
+	lid bigserial NOT NULL,
+	sid int8 NOT NULL,
+	\"type\" varchar(50) DEFAULT ''::character varying NOT NULL,
+	\"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
+	\"version\" varchar(20) DEFAULT 'none'::character varying NOT NULL,
+	CONSTRAINT idx_28383_primary PRIMARY KEY (lid)
+);
+CREATE INDEX idx_28383_string_type ON db.locales_location USING btree (sid, type);
+CREATE INDEX idx_28383_type_name ON db.locales_location USING btree (type, name);
     ";
 
     // Executar o script SQL
