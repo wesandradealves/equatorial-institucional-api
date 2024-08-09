@@ -869,7 +869,7 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
       'prefix' => '',
       'host' => $_ENV['POSTGRES_HOST'],
       'port' => $_ENV['POSTGRES_PORT'],
-      // 'schema' => 'db',
+      'schema' => 'db',
       'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
       'driver' => 'pgsql',
       'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
