@@ -15,7 +15,7 @@ try {
 
 
 
-CREATE TABLE block_content__field_atalho_clara (
+CREATE TABLE IF NOT EXISTS block_content__field_atalho_clara (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -35,7 +35,7 @@ CREATE INDEX idx_28013_revision_id ON block_content__field_atalho_clara USING bt
 
 
 
-CREATE TABLE block_content__field_cta_label (
+CREATE TABLE IF NOT EXISTS block_content__field_cta_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -50,7 +50,7 @@ CREATE INDEX idx_28024_revision_id ON block_content__field_cta_label USING btree
 
 
 
-CREATE TABLE block_content__field_cta_url (
+CREATE TABLE IF NOT EXISTS block_content__field_cta_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -65,7 +65,7 @@ CREATE INDEX idx_28030_revision_id ON block_content__field_cta_url USING btree (
 
 
 
-CREATE TABLE block_content__field_imagem (
+CREATE TABLE IF NOT EXISTS block_content__field_imagem (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -85,7 +85,7 @@ CREATE INDEX idx_28036_revision_id ON block_content__field_imagem USING btree (r
 
 
 
-CREATE TABLE block_content__field_servicos (
+CREATE TABLE IF NOT EXISTS block_content__field_servicos (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -103,7 +103,7 @@ CREATE INDEX idx_28047_revision_id ON block_content__field_servicos USING btree 
 
 
 
-CREATE TABLE block_content__field_texto (
+CREATE TABLE IF NOT EXISTS block_content__field_texto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -120,7 +120,7 @@ CREATE INDEX idx_28053_revision_id ON block_content__field_texto USING btree (re
 
 
 
-CREATE TABLE block_content__field_titulo (
+CREATE TABLE IF NOT EXISTS block_content__field_titulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -138,7 +138,7 @@ CREATE INDEX idx_28063_revision_id ON block_content__field_titulo USING btree (r
 
 
 
-CREATE TABLE block_content_revision__field_atalho_clara (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_atalho_clara (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -158,7 +158,7 @@ CREATE INDEX idx_27943_revision_id ON block_content_revision__field_atalho_clara
 
 
 
-CREATE TABLE block_content_revision__field_cta_label (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_cta_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -173,7 +173,7 @@ CREATE INDEX idx_27954_revision_id ON block_content_revision__field_cta_label US
 
 
 
-CREATE TABLE block_content_revision__field_cta_url (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_cta_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -188,7 +188,7 @@ CREATE INDEX idx_27960_revision_id ON block_content_revision__field_cta_url USIN
 
 
 
-CREATE TABLE block_content_revision__field_imagem (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_imagem (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -208,7 +208,7 @@ CREATE INDEX idx_27966_revision_id ON block_content_revision__field_imagem USING
 
 
 
-CREATE TABLE block_content_revision__field_servicos (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_servicos (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -226,7 +226,7 @@ CREATE INDEX idx_27977_revision_id ON block_content_revision__field_servicos USI
 
 
 
-CREATE TABLE block_content_revision__field_texto (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_texto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -243,7 +243,7 @@ CREATE INDEX idx_27983_revision_id ON block_content_revision__field_texto USING 
 
 
 
-CREATE TABLE block_content_revision__field_titulo (
+CREATE TABLE IF NOT EXISTS block_content_revision__field_titulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -260,7 +260,7 @@ CREATE INDEX idx_27993_revision_id ON block_content_revision__field_titulo USING
 
 
 
-CREATE TABLE cache_access_policy (
+CREATE TABLE IF NOT EXISTS cache_access_policy (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -275,7 +275,7 @@ CREATE INDEX idx_28078_expire ON cache_access_policy USING btree (expire);
 
 
 
-CREATE TABLE cache_bootstrap (
+CREATE TABLE IF NOT EXISTS cache_bootstrap (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -290,7 +290,7 @@ CREATE INDEX idx_28088_expire ON cache_bootstrap USING btree (expire);
 
 
 
-CREATE TABLE cache_config (
+CREATE TABLE IF NOT EXISTS cache_config (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -307,7 +307,7 @@ CREATE INDEX idx_28098_expire ON cache_config USING btree (expire);
 
 
 
-CREATE TABLE cache_data (
+CREATE TABLE IF NOT EXISTS cache_data (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -322,7 +322,7 @@ CREATE INDEX idx_28118_expire ON cache_data USING btree (expire);
 
 
 
-CREATE TABLE cache_default (
+CREATE TABLE IF NOT EXISTS cache_default (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -337,7 +337,7 @@ CREATE INDEX idx_28128_expire ON cache_default USING btree (expire);
 
 
 
-CREATE TABLE cache_discovery (
+CREATE TABLE IF NOT EXISTS cache_discovery (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -352,7 +352,7 @@ CREATE INDEX idx_28138_expire ON cache_discovery USING btree (expire);
 
 
 
-CREATE TABLE cache_discovery_migration (
+CREATE TABLE IF NOT EXISTS cache_discovery_migration (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -367,7 +367,7 @@ CREATE INDEX idx_28148_expire ON cache_discovery_migration USING btree (expire);
 
 
 
-CREATE TABLE cache_dynamic_page_cache (
+CREATE TABLE IF NOT EXISTS cache_dynamic_page_cache (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -382,7 +382,7 @@ CREATE INDEX idx_28158_expire ON cache_dynamic_page_cache USING btree (expire);
 
 
 
-CREATE TABLE cache_entity (
+CREATE TABLE IF NOT EXISTS cache_entity (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -397,7 +397,7 @@ CREATE INDEX idx_28168_expire ON cache_entity USING btree (expire);
 
 
 
-CREATE TABLE cache_jsonapi_normalizations (
+CREATE TABLE IF NOT EXISTS cache_jsonapi_normalizations (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -412,7 +412,7 @@ CREATE INDEX idx_28178_expire ON cache_jsonapi_normalizations USING btree (expir
 
 
 
-CREATE TABLE cache_menu (
+CREATE TABLE IF NOT EXISTS cache_menu (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -427,7 +427,7 @@ CREATE INDEX idx_28188_expire ON cache_menu USING btree (expire);
 
 
 
-CREATE TABLE cache_migrate (
+CREATE TABLE IF NOT EXISTS cache_migrate (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -442,7 +442,7 @@ CREATE INDEX idx_28198_expire ON cache_migrate USING btree (expire);
 
 
 
-CREATE TABLE cache_page (
+CREATE TABLE IF NOT EXISTS cache_page (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -457,7 +457,7 @@ CREATE INDEX idx_28208_expire ON cache_page USING btree (expire);
 
 
 
-CREATE TABLE cache_render (
+CREATE TABLE IF NOT EXISTS cache_render (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -472,7 +472,7 @@ CREATE INDEX idx_28218_expire ON cache_render USING btree (expire);
 
 
 
-CREATE TABLE cache_rest (
+CREATE TABLE IF NOT EXISTS cache_rest (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -487,7 +487,7 @@ CREATE INDEX idx_28228_expire ON cache_rest USING btree (expire);
 
 
 
-CREATE TABLE cache_toolbar (
+CREATE TABLE IF NOT EXISTS cache_toolbar (
         cid varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
         expire int8 DEFAULT '0'::bigint NOT NULL,
@@ -502,7 +502,7 @@ CREATE INDEX idx_28238_expire ON cache_toolbar USING btree (expire);
 
 
 
-CREATE TABLE cachetags (
+CREATE TABLE IF NOT EXISTS cachetags (
         tag varchar(255) DEFAULT ''::character varying NOT NULL,
         invalidations int8 DEFAULT '0'::bigint NOT NULL,
         CONSTRAINT idx_28073_primary PRIMARY KEY (tag)
@@ -513,7 +513,7 @@ CREATE TABLE cachetags (
 
 
 
-CREATE TABLE config_export (
+CREATE TABLE IF NOT EXISTS config_export (
         collection varchar(255) DEFAULT ''::character varying NOT NULL,
         \"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
@@ -522,7 +522,7 @@ CREATE TABLE config_export (
 
 
 
-CREATE TABLE config_import (
+CREATE TABLE IF NOT EXISTS config_import (
         collection varchar(255) DEFAULT ''::character varying NOT NULL,
         \"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
@@ -531,7 +531,7 @@ CREATE TABLE config_import (
 
 
 
-CREATE TABLE config_snapshot (
+CREATE TABLE IF NOT EXISTS config_snapshot (
         collection varchar(255) DEFAULT ''::character varying NOT NULL,
         \"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
         \"data\" bytea NULL,
@@ -541,7 +541,7 @@ CREATE TABLE config_snapshot (
 
 
 
-CREATE TABLE flood (
+CREATE TABLE IF NOT EXISTS flood (
         fid bigserial NOT NULL,
         \"event\" varchar(64) DEFAULT ''::character varying NOT NULL,
         identifier varchar(128) DEFAULT ''::character varying NOT NULL,
@@ -556,7 +556,7 @@ CREATE INDEX idx_28338_purge ON flood USING btree (expiration);
 
 
 
-CREATE TABLE key_value_expire (
+CREATE TABLE IF NOT EXISTS key_value_expire (
         collection varchar(128) DEFAULT ''::character varying NOT NULL,
         \"name\" varchar(128) DEFAULT ''::character varying NOT NULL,
         value bytea NOT NULL,
@@ -570,7 +570,7 @@ CREATE INDEX idx_28372_expire ON key_value_expire USING btree (expire);
 
 
 
-CREATE TABLE media (
+CREATE TABLE IF NOT EXISTS media (
         mid bigserial NOT NULL,
         vid int8 NULL,
         bundle varchar(32) NOT NULL,
@@ -584,7 +584,7 @@ CREATE UNIQUE INDEX idx_28425_media_field__uuid__value ON media USING btree (uui
 
 
 
-CREATE TABLE media__field_media_audio_file (
+CREATE TABLE IF NOT EXISTS media__field_media_audio_file (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -602,7 +602,7 @@ CREATE INDEX idx_28514_revision_id ON media__field_media_audio_file USING btree 
 
 
 
-CREATE TABLE media__field_media_document (
+CREATE TABLE IF NOT EXISTS media__field_media_document (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -620,7 +620,7 @@ CREATE INDEX idx_28524_revision_id ON media__field_media_document USING btree (r
 
 
 
-CREATE TABLE media__field_media_image (
+CREATE TABLE IF NOT EXISTS media__field_media_image (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -640,7 +640,7 @@ CREATE INDEX idx_28534_revision_id ON media__field_media_image USING btree (revi
 
 
 
-CREATE TABLE media__field_media_oembed_video (
+CREATE TABLE IF NOT EXISTS media__field_media_oembed_video (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -655,7 +655,7 @@ CREATE INDEX idx_28545_revision_id ON media__field_media_oembed_video USING btre
 
 
 
-CREATE TABLE media__field_media_svg (
+CREATE TABLE IF NOT EXISTS media__field_media_svg (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -673,7 +673,7 @@ CREATE INDEX idx_28551_revision_id ON media__field_media_svg USING btree (revisi
 
 
 
-CREATE TABLE media__field_media_video_file (
+CREATE TABLE IF NOT EXISTS media__field_media_video_file (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -691,7 +691,7 @@ CREATE INDEX idx_28562_revision_id ON media__field_media_video_file USING btree 
 
 
 
-CREATE TABLE media_field_data (
+CREATE TABLE IF NOT EXISTS media_field_data (
         mid int8 NOT NULL,
         vid int8 NOT NULL,
         bundle varchar(32) NOT NULL,
@@ -719,7 +719,7 @@ CREATE INDEX idx_28429_media_field__uid__target_id ON media_field_data USING btr
 
 
 
-CREATE TABLE media_field_revision (
+CREATE TABLE IF NOT EXISTS media_field_revision (
         mid int8 NOT NULL,
         vid int8 NOT NULL,
         langcode varchar(12) NOT NULL,
@@ -743,7 +743,7 @@ CREATE INDEX idx_28438_media_field__uid__target_id ON media_field_revision USING
 
 
 
-CREATE TABLE media_revision (
+CREATE TABLE IF NOT EXISTS media_revision (
         mid int8 NOT NULL,
         vid bigserial NOT NULL,
         langcode varchar(12) NOT NULL,
@@ -758,7 +758,7 @@ CREATE INDEX idx_28449_media_field__revision_user__target_id ON media_revision U
 
 
 
-CREATE TABLE media_revision__field_media_audio_file (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_audio_file (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -776,7 +776,7 @@ CREATE INDEX idx_28456_revision_id ON media_revision__field_media_audio_file USI
 
 
 
-CREATE TABLE media_revision__field_media_document (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_document (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -794,7 +794,7 @@ CREATE INDEX idx_28466_revision_id ON media_revision__field_media_document USING
 
 
 
-CREATE TABLE media_revision__field_media_image (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_image (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -814,7 +814,7 @@ CREATE INDEX idx_28476_revision_id ON media_revision__field_media_image USING bt
 
 
 
-CREATE TABLE media_revision__field_media_oembed_video (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_oembed_video (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -829,7 +829,7 @@ CREATE INDEX idx_28487_revision_id ON media_revision__field_media_oembed_video U
 
 
 
-CREATE TABLE media_revision__field_media_svg (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_svg (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -847,7 +847,7 @@ CREATE INDEX idx_28493_revision_id ON media_revision__field_media_svg USING btre
 
 
 
-CREATE TABLE media_revision__field_media_video_file (
+CREATE TABLE IF NOT EXISTS media_revision__field_media_video_file (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -867,7 +867,7 @@ CREATE INDEX idx_28504_revision_id ON media_revision__field_media_video_file USI
 
 
 
-CREATE TABLE migrate_map_my_wordpress_attachments (
+CREATE TABLE IF NOT EXISTS migrate_map_my_wordpress_attachments (
         source_ids_hash varchar(64) NOT NULL,
         sourceid1 int8 NOT NULL,
         destid1 int8 NULL,
@@ -881,7 +881,7 @@ CREATE INDEX idx_28641_source ON migrate_map_my_wordpress_attachments USING btre
 
 
 
-CREATE TABLE migrate_map_my_wordpress_categories (
+CREATE TABLE IF NOT EXISTS migrate_map_my_wordpress_categories (
         source_ids_hash varchar(64) NOT NULL,
         sourceid1 varchar(255) NOT NULL,
         destid1 int8 NULL,
@@ -895,7 +895,7 @@ CREATE INDEX idx_28651_source ON migrate_map_my_wordpress_categories USING btree
 
 
 
-CREATE TABLE migrate_map_my_wordpress_content_post (
+CREATE TABLE IF NOT EXISTS migrate_map_my_wordpress_content_post (
         source_ids_hash varchar(64) NOT NULL,
         sourceid1 int8 NOT NULL,
         destid1 int8 NULL,
@@ -909,7 +909,7 @@ CREATE INDEX idx_28661_source ON migrate_map_my_wordpress_content_post USING btr
 
 
 
-CREATE TABLE migrate_map_my_wordpress_tags (
+CREATE TABLE IF NOT EXISTS migrate_map_my_wordpress_tags (
         source_ids_hash varchar(64) NOT NULL,
         sourceid1 varchar(255) NOT NULL,
         destid1 int8 NULL,
@@ -923,7 +923,7 @@ CREATE INDEX idx_28671_source ON migrate_map_my_wordpress_tags USING btree (sour
 
 
 
-CREATE TABLE migrate_message_my_wordpress_attachments (
+CREATE TABLE IF NOT EXISTS migrate_message_my_wordpress_attachments (
         msgid bigserial NOT NULL,
         source_ids_hash varchar(64) NOT NULL,
         \"level\" int8 DEFAULT '1'::bigint NOT NULL,
@@ -934,7 +934,7 @@ CREATE INDEX idx_28683_source_ids_hash ON migrate_message_my_wordpress_attachmen
 
 
 
-CREATE TABLE migrate_message_my_wordpress_categories (
+CREATE TABLE IF NOT EXISTS migrate_message_my_wordpress_categories (
         msgid bigserial NOT NULL,
         source_ids_hash varchar(64) NOT NULL,
         \"level\" int8 DEFAULT '1'::bigint NOT NULL,
@@ -945,7 +945,7 @@ CREATE INDEX idx_28693_source_ids_hash ON migrate_message_my_wordpress_categorie
 
 
 
-CREATE TABLE migrate_message_my_wordpress_content_post (
+CREATE TABLE IF NOT EXISTS migrate_message_my_wordpress_content_post (
         msgid bigserial NOT NULL,
         source_ids_hash varchar(64) NOT NULL,
         \"level\" int8 DEFAULT '1'::bigint NOT NULL,
@@ -956,7 +956,7 @@ CREATE INDEX idx_28703_source_ids_hash ON migrate_message_my_wordpress_content_p
 
 
 
-CREATE TABLE migrate_message_my_wordpress_tags (
+CREATE TABLE IF NOT EXISTS migrate_message_my_wordpress_tags (
         msgid bigserial NOT NULL,
         source_ids_hash varchar(64) NOT NULL,
         \"level\" int8 DEFAULT '1'::bigint NOT NULL,
@@ -969,7 +969,7 @@ CREATE INDEX idx_28713_source_ids_hash ON migrate_message_my_wordpress_tags USIN
 
 
 
-CREATE TABLE node__field_categoria (
+CREATE TABLE IF NOT EXISTS node__field_categoria (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -985,7 +985,7 @@ CREATE INDEX idx_28854_revision_id ON node__field_categoria USING btree (revisio
 
 
 
-CREATE TABLE node__field_conteudo (
+CREATE TABLE IF NOT EXISTS node__field_conteudo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1005,7 +1005,7 @@ CREATE INDEX idx_28860_revision_id ON node__field_conteudo USING btree (revision
 
 
 
-CREATE TABLE node__field_thumbnail (
+CREATE TABLE IF NOT EXISTS node__field_thumbnail (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1025,7 +1025,7 @@ CREATE INDEX idx_28883_revision_id ON node__field_thumbnail USING btree (revisio
 
 
 
-CREATE TABLE node__field_title (
+CREATE TABLE IF NOT EXISTS node__field_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1042,7 +1042,7 @@ CREATE INDEX idx_28894_revision_id ON node__field_title USING btree (revision_id
 
 
 
-CREATE TABLE node__field_url (
+CREATE TABLE IF NOT EXISTS node__field_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1057,7 +1057,7 @@ CREATE INDEX idx_28904_revision_id ON node__field_url USING btree (revision_id);
 
 
 
-CREATE TABLE node__field_video (
+CREATE TABLE IF NOT EXISTS node__field_video (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1077,7 +1077,7 @@ CREATE INDEX idx_28910_revision_id ON node__field_video USING btree (revision_id
 
 
 
-CREATE TABLE node_revision__field_categoria (
+CREATE TABLE IF NOT EXISTS node_revision__field_categoria (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1093,7 +1093,7 @@ CREATE INDEX idx_28771_revision_id ON node_revision__field_categoria USING btree
 
 
 
-CREATE TABLE node_revision__field_conteudo (
+CREATE TABLE IF NOT EXISTS node_revision__field_conteudo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1114,7 +1114,7 @@ CREATE INDEX idx_28777_revision_id ON node_revision__field_conteudo USING btree 
 
 
 
-CREATE TABLE node_revision__field_thumbnail (
+CREATE TABLE IF NOT EXISTS node_revision__field_thumbnail (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1134,7 +1134,7 @@ CREATE INDEX idx_28800_revision_id ON node_revision__field_thumbnail USING btree
 
 
 
-CREATE TABLE node_revision__field_title (
+CREATE TABLE IF NOT EXISTS node_revision__field_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1151,7 +1151,7 @@ CREATE INDEX idx_28811_revision_id ON node_revision__field_title USING btree (re
 
 
 
-CREATE TABLE node_revision__field_url (
+CREATE TABLE IF NOT EXISTS node_revision__field_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1166,7 +1166,7 @@ CREATE INDEX idx_28821_revision_id ON node_revision__field_url USING btree (revi
 
 
 
-CREATE TABLE node_revision__field_video (
+CREATE TABLE IF NOT EXISTS node_revision__field_video (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1184,7 +1184,7 @@ CREATE INDEX idx_28827_revision_id ON node_revision__field_video USING btree (re
 
 
 
-CREATE TABLE paragraph__field_body (
+CREATE TABLE IF NOT EXISTS paragraph__field_body (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1201,7 +1201,7 @@ CREATE INDEX idx_29186_revision_id ON paragraph__field_body USING btree (revisio
 
 
 
-CREATE TABLE paragraph__field_card (
+CREATE TABLE IF NOT EXISTS paragraph__field_card (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1219,7 +1219,7 @@ CREATE INDEX idx_29196_revision_id ON paragraph__field_card USING btree (revisio
 
 
 
-CREATE TABLE paragraph__field_content_type (
+CREATE TABLE IF NOT EXISTS paragraph__field_content_type (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1235,7 +1235,7 @@ CREATE INDEX idx_29202_revision_id ON paragraph__field_content_type USING btree 
 
 
 
-CREATE TABLE paragraph__field_conteudo_texto_curto (
+CREATE TABLE IF NOT EXISTS paragraph__field_conteudo_texto_curto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1253,7 +1253,7 @@ CREATE INDEX idx_29208_revision_id ON paragraph__field_conteudo_texto_curto USIN
 
 
 
-CREATE TABLE paragraph__field_csv (
+CREATE TABLE IF NOT EXISTS paragraph__field_csv (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1272,7 +1272,7 @@ CREATE INDEX idx_29214_revision_id ON paragraph__field_csv USING btree (revision
 
 
 
-CREATE TABLE paragraph__field_cta_label (
+CREATE TABLE IF NOT EXISTS paragraph__field_cta_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1287,7 +1287,7 @@ CREATE INDEX idx_29224_revision_id ON paragraph__field_cta_label USING btree (re
 
 
 
-CREATE TABLE paragraph__field_cta_url (
+CREATE TABLE IF NOT EXISTS paragraph__field_cta_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1302,7 +1302,7 @@ CREATE INDEX idx_29230_revision_id ON paragraph__field_cta_url USING btree (revi
 
 
 
-CREATE TABLE paragraph__field_detail_color (
+CREATE TABLE IF NOT EXISTS paragraph__field_detail_color (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1317,7 +1317,7 @@ CREATE INDEX idx_29236_revision_id ON paragraph__field_detail_color USING btree 
 
 
 
-CREATE TABLE paragraph__field_detail_position (
+CREATE TABLE IF NOT EXISTS paragraph__field_detail_position (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1333,7 +1333,7 @@ CREATE INDEX idx_29243_revision_id ON paragraph__field_detail_position USING btr
 
 
 
-CREATE TABLE paragraph__field_enable_filter (
+CREATE TABLE IF NOT EXISTS paragraph__field_enable_filter (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1348,7 +1348,7 @@ CREATE INDEX idx_29249_revision_id ON paragraph__field_enable_filter USING btree
 
 
 
-CREATE TABLE paragraph__field_enable_numbers (
+CREATE TABLE IF NOT EXISTS paragraph__field_enable_numbers (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1363,7 +1363,7 @@ CREATE INDEX idx_29255_revision_id ON paragraph__field_enable_numbers USING btre
 
 
 
-CREATE TABLE paragraph__field_field_items_per_page (
+CREATE TABLE IF NOT EXISTS paragraph__field_field_items_per_page (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1378,7 +1378,7 @@ CREATE INDEX idx_29261_revision_id ON paragraph__field_field_items_per_page USIN
 
 
 
-CREATE TABLE paragraph__field_filter_key (
+CREATE TABLE IF NOT EXISTS paragraph__field_filter_key (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1393,7 +1393,7 @@ CREATE INDEX idx_29267_revision_id ON paragraph__field_filter_key USING btree (r
 
 
 
-CREATE TABLE paragraph__field_galeria (
+CREATE TABLE IF NOT EXISTS paragraph__field_galeria (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1411,7 +1411,7 @@ CREATE INDEX idx_29273_revision_id ON paragraph__field_galeria USING btree (revi
 
 
 
-CREATE TABLE paragraph__field_icone (
+CREATE TABLE IF NOT EXISTS paragraph__field_icone (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1429,7 +1429,7 @@ CREATE INDEX idx_29279_revision_id ON paragraph__field_icone USING btree (revisi
 
 
 
-CREATE TABLE paragraph__field_imagem (
+CREATE TABLE IF NOT EXISTS paragraph__field_imagem (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1449,7 +1449,7 @@ CREATE INDEX idx_29290_revision_id ON paragraph__field_imagem USING btree (revis
 
 
 
-CREATE TABLE paragraph__field_key (
+CREATE TABLE IF NOT EXISTS paragraph__field_key (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1464,7 +1464,7 @@ CREATE INDEX idx_29301_revision_id ON paragraph__field_key USING btree (revision
 
 
 
-CREATE TABLE paragraph__field_key_label (
+CREATE TABLE IF NOT EXISTS paragraph__field_key_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1479,7 +1479,7 @@ CREATE INDEX idx_29310_revision_id ON paragraph__field_key_label USING btree (re
 
 
 
-CREATE TABLE paragraph__field_layout (
+CREATE TABLE IF NOT EXISTS paragraph__field_layout (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1495,7 +1495,7 @@ CREATE INDEX idx_29316_revision_id ON paragraph__field_layout USING btree (revis
 
 
 
-CREATE TABLE paragraph__field_layout_intro (
+CREATE TABLE IF NOT EXISTS paragraph__field_layout_intro (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1511,7 +1511,7 @@ CREATE INDEX idx_29322_revision_id ON paragraph__field_layout_intro USING btree 
 
 
 
-CREATE TABLE paragraph__field_layout_intro_list (
+CREATE TABLE IF NOT EXISTS paragraph__field_layout_intro_list (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1527,7 +1527,7 @@ CREATE INDEX idx_29328_revision_id ON paragraph__field_layout_intro_list USING b
 
 
 
-CREATE TABLE paragraph__field_layout_texto_enumerado (
+CREATE TABLE IF NOT EXISTS paragraph__field_layout_texto_enumerado (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1543,7 +1543,7 @@ CREATE INDEX idx_29334_revision_id ON paragraph__field_layout_texto_enumerado US
 
 
 
-CREATE TABLE paragraph__field_link (
+CREATE TABLE IF NOT EXISTS paragraph__field_link (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1558,7 +1558,7 @@ CREATE INDEX idx_29340_revision_id ON paragraph__field_link USING btree (revisio
 
 
 
-CREATE TABLE paragraph__field_list_item (
+CREATE TABLE IF NOT EXISTS paragraph__field_list_item (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1576,7 +1576,7 @@ CREATE INDEX idx_29346_revision_id ON paragraph__field_list_item USING btree (re
 
 
 
-CREATE TABLE paragraph__field_mask_enabled (
+CREATE TABLE IF NOT EXISTS paragraph__field_mask_enabled (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1591,7 +1591,7 @@ CREATE INDEX idx_29352_revision_id ON paragraph__field_mask_enabled USING btree 
 
 
 
-CREATE TABLE paragraph__field_no_background (
+CREATE TABLE IF NOT EXISTS paragraph__field_no_background (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1606,7 +1606,7 @@ CREATE INDEX idx_29358_revision_id ON paragraph__field_no_background USING btree
 
 
 
-CREATE TABLE paragraph__field_subtitulo (
+CREATE TABLE IF NOT EXISTS paragraph__field_subtitulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1623,7 +1623,7 @@ CREATE INDEX idx_29364_revision_id ON paragraph__field_subtitulo USING btree (re
 
 
 
-CREATE TABLE paragraph__field_texto (
+CREATE TABLE IF NOT EXISTS paragraph__field_texto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1640,7 +1640,7 @@ CREATE INDEX idx_29374_revision_id ON paragraph__field_texto USING btree (revisi
 
 
 
-CREATE TABLE paragraph__field_texto_curto (
+CREATE TABLE IF NOT EXISTS paragraph__field_texto_curto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1658,7 +1658,7 @@ CREATE INDEX idx_29384_revision_id ON paragraph__field_texto_curto USING btree (
 
 
 
-CREATE TABLE paragraph__field_title (
+CREATE TABLE IF NOT EXISTS paragraph__field_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1675,7 +1675,7 @@ CREATE INDEX idx_29394_revision_id ON paragraph__field_title USING btree (revisi
 
 
 
-CREATE TABLE paragraph__field_titulo (
+CREATE TABLE IF NOT EXISTS paragraph__field_titulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1690,7 +1690,7 @@ CREATE INDEX idx_29404_revision_id ON paragraph__field_titulo USING btree (revis
 
 
 
-CREATE TABLE paragraph__field_video_title (
+CREATE TABLE IF NOT EXISTS paragraph__field_video_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1705,7 +1705,7 @@ CREATE INDEX idx_29410_revision_id ON paragraph__field_video_title USING btree (
 
 
 
-CREATE TABLE paragraph__field_video_url (
+CREATE TABLE IF NOT EXISTS paragraph__field_video_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1720,7 +1720,7 @@ CREATE INDEX idx_29416_revision_id ON paragraph__field_video_url USING btree (re
 
 
 
-CREATE TABLE paragraph_revision__field_body (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_body (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1737,7 +1737,7 @@ CREATE INDEX idx_28950_revision_id ON paragraph_revision__field_body USING btree
 
 
 
-CREATE TABLE paragraph_revision__field_card (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_card (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1755,7 +1755,7 @@ CREATE INDEX idx_28960_revision_id ON paragraph_revision__field_card USING btree
 
 
 
-CREATE TABLE paragraph_revision__field_content_type (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_content_type (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1771,7 +1771,7 @@ CREATE INDEX idx_28966_revision_id ON paragraph_revision__field_content_type USI
 
 
 
-CREATE TABLE paragraph_revision__field_conteudo_texto_curto (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_conteudo_texto_curto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1789,7 +1789,7 @@ CREATE INDEX idx_28972_revision_id ON paragraph_revision__field_conteudo_texto_c
 
 
 
-CREATE TABLE paragraph_revision__field_csv (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_csv (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1808,7 +1808,7 @@ CREATE INDEX idx_28978_revision_id ON paragraph_revision__field_csv USING btree 
 
 
 
-CREATE TABLE paragraph_revision__field_cta_label (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_cta_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1823,7 +1823,7 @@ CREATE INDEX idx_28988_revision_id ON paragraph_revision__field_cta_label USING 
 
 
 
-CREATE TABLE paragraph_revision__field_cta_url (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_cta_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1838,7 +1838,7 @@ CREATE INDEX idx_28994_revision_id ON paragraph_revision__field_cta_url USING bt
 
 
 
-CREATE TABLE paragraph_revision__field_detail_color (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_detail_color (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1853,7 +1853,7 @@ CREATE INDEX idx_29000_revision_id ON paragraph_revision__field_detail_color USI
 
 
 
-CREATE TABLE paragraph_revision__field_detail_position (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_detail_position (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1869,7 +1869,7 @@ CREATE INDEX idx_29007_revision_id ON paragraph_revision__field_detail_position 
 
 
 
-CREATE TABLE paragraph_revision__field_enable_filter (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_enable_filter (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1884,7 +1884,7 @@ CREATE INDEX idx_29013_revision_id ON paragraph_revision__field_enable_filter US
 
 
 
-CREATE TABLE paragraph_revision__field_enable_numbers (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_enable_numbers (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1899,7 +1899,7 @@ CREATE INDEX idx_29019_revision_id ON paragraph_revision__field_enable_numbers U
 
 
 
-CREATE TABLE paragraph_revision__field_field_items_per_page (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_field_items_per_page (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1914,7 +1914,7 @@ CREATE INDEX idx_29025_revision_id ON paragraph_revision__field_field_items_per_
 
 
 
-CREATE TABLE paragraph_revision__field_filter_key (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_filter_key (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1929,7 +1929,7 @@ CREATE INDEX idx_29031_revision_id ON paragraph_revision__field_filter_key USING
 
 
 
-CREATE TABLE paragraph_revision__field_galeria (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_galeria (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1947,7 +1947,7 @@ CREATE INDEX idx_29037_revision_id ON paragraph_revision__field_galeria USING bt
 
 
 
-CREATE TABLE paragraph_revision__field_icone (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_icone (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1965,7 +1965,7 @@ CREATE INDEX idx_29043_revision_id ON paragraph_revision__field_icone USING btre
 
 
 
-CREATE TABLE paragraph_revision__field_imagem (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_imagem (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -1985,7 +1985,7 @@ CREATE INDEX idx_29054_revision_id ON paragraph_revision__field_imagem USING btr
 
 
 
-CREATE TABLE paragraph_revision__field_key (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_key (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2000,7 +2000,7 @@ CREATE INDEX idx_29065_revision_id ON paragraph_revision__field_key USING btree 
 
 
 
-CREATE TABLE paragraph_revision__field_key_label (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_key_label (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2015,7 +2015,7 @@ CREATE INDEX idx_29074_revision_id ON paragraph_revision__field_key_label USING 
 
 
 
-CREATE TABLE paragraph_revision__field_layout (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_layout (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2031,7 +2031,7 @@ CREATE INDEX idx_29080_revision_id ON paragraph_revision__field_layout USING btr
 
 
 
-CREATE TABLE paragraph_revision__field_layout_intro (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_layout_intro (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2047,7 +2047,7 @@ CREATE INDEX idx_29086_revision_id ON paragraph_revision__field_layout_intro USI
 
 
 
-CREATE TABLE paragraph_revision__field_layout_intro_list (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_layout_intro_list (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2063,7 +2063,7 @@ CREATE INDEX idx_29092_revision_id ON paragraph_revision__field_layout_intro_lis
 
 
 
-CREATE TABLE paragraph_revision__field_layout_texto_enumerado (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_layout_texto_enumerado (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2079,7 +2079,7 @@ CREATE INDEX idx_29098_revision_id ON paragraph_revision__field_layout_texto_enu
 
 
 
-CREATE TABLE paragraph_revision__field_link (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_link (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2094,7 +2094,7 @@ CREATE INDEX idx_29104_revision_id ON paragraph_revision__field_link USING btree
 
 
 
-CREATE TABLE paragraph_revision__field_list_item (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_list_item (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2112,7 +2112,7 @@ CREATE INDEX idx_29110_revision_id ON paragraph_revision__field_list_item USING 
 
 
 
-CREATE TABLE paragraph_revision__field_mask_enabled (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_mask_enabled (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2127,7 +2127,7 @@ CREATE INDEX idx_29116_revision_id ON paragraph_revision__field_mask_enabled USI
 
 
 
-CREATE TABLE paragraph_revision__field_no_background (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_no_background (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2142,7 +2142,7 @@ CREATE INDEX idx_29122_revision_id ON paragraph_revision__field_no_background US
 
 
 
-CREATE TABLE paragraph_revision__field_subtitulo (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_subtitulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2159,7 +2159,7 @@ CREATE INDEX idx_29128_revision_id ON paragraph_revision__field_subtitulo USING 
 
 
 
-CREATE TABLE paragraph_revision__field_texto (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_texto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2176,7 +2176,7 @@ CREATE INDEX idx_29138_revision_id ON paragraph_revision__field_texto USING btre
 
 
 
-CREATE TABLE paragraph_revision__field_texto_curto (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_texto_curto (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2194,7 +2194,7 @@ CREATE INDEX idx_29148_revision_id ON paragraph_revision__field_texto_curto USIN
 
 
 
-CREATE TABLE paragraph_revision__field_title (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2211,7 +2211,7 @@ CREATE INDEX idx_29158_revision_id ON paragraph_revision__field_title USING btre
 
 
 
-CREATE TABLE paragraph_revision__field_titulo (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_titulo (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2226,7 +2226,7 @@ CREATE INDEX idx_29168_revision_id ON paragraph_revision__field_titulo USING btr
 
 
 
-CREATE TABLE paragraph_revision__field_video_title (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_video_title (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2241,7 +2241,7 @@ CREATE INDEX idx_29174_revision_id ON paragraph_revision__field_video_title USIN
 
 
 
-CREATE TABLE paragraph_revision__field_video_url (
+CREATE TABLE IF NOT EXISTS paragraph_revision__field_video_url (
         bundle varchar(128) DEFAULT ''::character varying NOT NULL,
         deleted int2 DEFAULT '0'::smallint NOT NULL,
         entity_id int8 NOT NULL,
@@ -2256,7 +2256,7 @@ CREATE INDEX idx_29180_revision_id ON paragraph_revision__field_video_url USING 
 
 
 
-CREATE TABLE paragraphs_item (
+CREATE TABLE IF NOT EXISTS paragraphs_item (
         id bigserial NOT NULL,
         revision_id int8 NULL,
         \"type\" varchar(32) NOT NULL,
@@ -2270,7 +2270,7 @@ CREATE UNIQUE INDEX idx_28922_paragraph_field__uuid__value ON paragraphs_item US
 
 
 
-CREATE TABLE paragraphs_item_field_data (
+CREATE TABLE IF NOT EXISTS paragraphs_item_field_data (
         id int8 NOT NULL,
         revision_id int8 NOT NULL,
         \"type\" varchar(32) NOT NULL,
@@ -2293,7 +2293,7 @@ CREATE INDEX idx_28926_paragraphs__parent_fields ON paragraphs_item_field_data U
 
 
 
-CREATE TABLE paragraphs_item_revision (
+CREATE TABLE IF NOT EXISTS paragraphs_item_revision (
         id int8 NOT NULL,
         revision_id bigserial NOT NULL,
         langcode varchar(12) NOT NULL,
@@ -2304,7 +2304,7 @@ CREATE INDEX idx_28937_paragraph__id ON paragraphs_item_revision USING btree (id
 
 
 
-CREATE TABLE paragraphs_item_revision_field_data (
+CREATE TABLE IF NOT EXISTS paragraphs_item_revision_field_data (
         id int8 NOT NULL,
         revision_id int8 NOT NULL,
         langcode varchar(12) NOT NULL,
@@ -2326,7 +2326,7 @@ CREATE INDEX idx_28941_paragraphs__parent_fields ON paragraphs_item_revision_fie
 
 
 
-CREATE TABLE semaphore (
+CREATE TABLE IF NOT EXISTS semaphore (
         \"name\" varchar(255) DEFAULT ''::character varying NOT NULL,
         value varchar(255) DEFAULT ''::character varying NOT NULL,
         expire float8 NOT NULL,
@@ -2340,7 +2340,7 @@ CREATE INDEX idx_29486_value ON semaphore USING btree (value);
 
 
 
-CREATE TABLE views_url_alias (
+CREATE TABLE IF NOT EXISTS views_url_alias (
         entity_type varchar(32) DEFAULT 'node'::character varying NOT NULL,
         entity_id int8 DEFAULT '0'::bigint NOT NULL,
         langcode varchar(12) DEFAULT ''::character varying NOT NULL,
@@ -2351,7 +2351,7 @@ CREATE TABLE views_url_alias (
 
 
 
-CREATE TABLE webform (
+CREATE TABLE IF NOT EXISTS webform (
         webform_id varchar(32) NOT NULL,
         next_serial int8 DEFAULT '1'::bigint NOT NULL,
         CONSTRAINT idx_29644_primary PRIMARY KEY (webform_id, next_serial)
@@ -2359,7 +2359,7 @@ CREATE TABLE webform (
 
 
 
-CREATE TABLE webform_submission (
+CREATE TABLE IF NOT EXISTS webform_submission (
         sid bigserial NOT NULL,
         webform_id varchar(32) NOT NULL,
         \"uuid\" varchar(128) NOT NULL,
@@ -2388,7 +2388,7 @@ CREATE INDEX idx_29650_webform_submission_field__webform_id__target_id ON webfor
 
 
 
-CREATE TABLE webform_submission_data (
+CREATE TABLE IF NOT EXISTS webform_submission_data (
         webform_id varchar(32) NOT NULL,
         sid int8 NOT NULL,
         \"name\" varchar(128) NOT NULL,
