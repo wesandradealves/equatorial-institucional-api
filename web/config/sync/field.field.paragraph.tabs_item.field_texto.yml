@@ -1,0 +1,24 @@
+uuid: fbb9cf86-0843-4bb6-b3f6-aa99f9cd6286
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.tabs_item
+  module:
+    - text
+id: paragraph.tabs_item.field_texto
+field_name: field_texto
+entity_type: paragraph
+bundle: tabs_item
+label: Texto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

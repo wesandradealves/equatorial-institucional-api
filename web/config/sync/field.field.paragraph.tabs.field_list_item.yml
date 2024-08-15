@@ -1,0 +1,88 @@
+uuid: 9af657a3-2623-4c6b-a53c-51bb4467e5a0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item
+    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.tabs_item
+  module:
+    - entity_reference_revisions
+id: paragraph.tabs.field_list_item
+field_name: field_list_item
+entity_type: paragraph
+bundle: tabs
+label: Item
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tabs_item: tabs_item
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 21
+        enabled: false
+      block_cards:
+        weight: 22
+        enabled: false
+      block_cards_item:
+        weight: 23
+        enabled: false
+      blocos_lista_de_texto:
+        weight: 24
+        enabled: false
+      faq:
+        weight: 25
+        enabled: false
+      faq_item:
+        weight: 26
+        enabled: false
+      galeria:
+        weight: 27
+        enabled: false
+      galeria_item:
+        weight: 28
+        enabled: false
+      intro:
+        weight: 29
+        enabled: false
+      intro_list:
+        weight: 30
+        enabled: false
+      intro_list_item:
+        weight: 31
+        enabled: false
+      list:
+        weight: 32
+        enabled: false
+      lista_de_texto:
+        weight: 33
+        enabled: false
+      servicos:
+        weight: 34
+        enabled: false
+      simple_content_block:
+        weight: 35
+        enabled: false
+      tables:
+        weight: 36
+        enabled: false
+      tabs:
+        weight: 37
+        enabled: false
+      tabs_item:
+        weight: 38
+        enabled: true
+      texto_numerado:
+        weight: 39
+        enabled: false
+      texto_numerado_item:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

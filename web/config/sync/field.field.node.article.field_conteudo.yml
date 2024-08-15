@@ -7,7 +7,6 @@ dependencies:
     - node.type.article
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.block_cards
-    - paragraphs.paragraphs_type.content_filter_carousel
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.galeria
     - paragraphs.paragraphs_type.intro
@@ -42,7 +41,6 @@ settings:
       intro_list: intro_list
       lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
-      content_filter_carousel: content_filter_carousel
       list: list
       tables: tables
     negate: 0

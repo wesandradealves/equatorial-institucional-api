@@ -7,7 +7,6 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.block_cards
-    - paragraphs.paragraphs_type.content_filter_carousel
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.galeria
     - paragraphs.paragraphs_type.intro
@@ -16,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
     - paragraphs.paragraphs_type.tables
+    - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.texto_numerado
   module:
     - entity_reference_revisions
@@ -42,9 +42,9 @@ settings:
       intro_list: intro_list
       lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
-      content_filter_carousel: content_filter_carousel
       list: list
       tables: tables
+      tabs: tabs
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -59,9 +59,6 @@ settings:
       blocos_lista_de_texto:
         weight: 14
         enabled: false
-      content_filter_carousel:
-        weight: 24
-        enabled: true
       faq:
         weight: 16
         enabled: true
@@ -98,6 +95,12 @@ settings:
       tables:
         weight: 34
         enabled: true
+      tabs:
+        weight: 37
+        enabled: true
+      tabs_item:
+        weight: 38
+        enabled: false
       texto_numerado:
         weight: 22
         enabled: true

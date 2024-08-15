@@ -1,17 +1,17 @@
-uuid: 03d0f00b-d8d4-490e-87be-c5a415238886
+uuid: 4a86fe1b-0a41-4764-b374-a7e9d6d2441c
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
     - filter.format.full_html
-    - paragraphs.paragraphs_type.content_filter_carousel
+    - paragraphs.paragraphs_type.tabs
   module:
     - text
-id: paragraph.content_filter_carousel.field_title
+id: paragraph.tabs.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: content_filter_carousel
+bundle: tabs
 label: Titulo
 description: ''
 required: false

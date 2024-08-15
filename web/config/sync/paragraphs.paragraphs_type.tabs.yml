@@ -1,9 +1,9 @@
-uuid: 964c2116-1526-4494-98e9-676f3b7e8e03
+uuid: d79c2f94-5c70-49ad-a71b-813f2fe19a08
 langcode: pt-br
 status: true
 dependencies: {  }
-id: content_filter_carousel
-label: 'Carrossel de conteúdo com filtro'
+id: tabs
+label: Tabs
 icon_uuid: null
 icon_default: null
 description: ''
