@@ -1,0 +1,58 @@
+uuid: 20e5e9d0-32ae-4640-aac3-75713804f60c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_filter_carousel.field_content_type
+    - field.field.paragraph.content_filter_carousel.field_enable_filter
+    - field.field.paragraph.content_filter_carousel.field_title
+    - paragraphs.paragraphs_type.content_filter_carousel
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_estilos:
+      children:
+        - field_enable_filter
+      label: Estilos
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.content_filter_carousel.default
+targetEntityType: paragraph
+bundle: content_filter_carousel
+mode: default
+content:
+  field_content_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enable_filter:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

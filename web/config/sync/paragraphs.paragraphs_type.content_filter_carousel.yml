@@ -1,0 +1,10 @@
+uuid: 964c2116-1526-4494-98e9-676f3b7e8e03
+langcode: pt-br
+status: true
+dependencies: {  }
+id: content_filter_carousel
+label: 'Carrossel de conteúdo com filtro'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

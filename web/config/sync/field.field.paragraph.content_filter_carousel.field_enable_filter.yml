@@ -1,0 +1,21 @@
+uuid: b7598332-b05f-4ec8-b5ed-7893430094e2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_filter
+    - paragraphs.paragraphs_type.content_filter_carousel
+id: paragraph.content_filter_carousel.field_enable_filter
+field_name: field_enable_filter
+entity_type: paragraph
+bundle: content_filter_carousel
+label: 'Habilitar Filtro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean
