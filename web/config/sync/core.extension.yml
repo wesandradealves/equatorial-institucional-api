@@ -12,6 +12,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  block_field: 0
   breakpoint: 0
   ckeditor5: 0
   ckeditor5_font: 0
@@ -21,7 +22,6 @@ module:
   conditional_fields: 0
   config: 0
   contact: 0
-  content_entity_clone: 0
   contextual: 0
   csv_field: 0
   csv_serialization: 0
@@ -38,7 +38,6 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
-  filefield_to_mediafield: 0
   filter: 0
   help: 0
   history: 0

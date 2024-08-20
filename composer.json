@@ -25,6 +25,7 @@
         "drupal/better_exposed_filters": "^6.0",
         "drupal/better_social_sharing_buttons": "^4.0",
         "drupal/blocache": "2.0",
+        "drupal/block_field": "^1.0@RC",
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/ckeditor5_font": "1.x-dev@dev",
         "drupal/color_pickr": "^1.1",

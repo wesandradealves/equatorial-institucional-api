@@ -1,0 +1,36 @@
+uuid: 680ee2a7-54ea-46c8-ae2a-8ada1fe6a7f7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocks.field_block
+    - field.field.paragraph.blocks.field_title
+    - paragraphs.paragraphs_type.blocks
+  module:
+    - block_field
+    - text
+id: paragraph.blocks.default
+targetEntityType: paragraph
+bundle: blocks
+mode: default
+content:
+  field_block:
+    type: block_field_default
+    weight: 1
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
