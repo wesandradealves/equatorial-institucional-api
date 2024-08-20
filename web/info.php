@@ -1,6 +1,5 @@
 <?php
 
-
 $variables = [
     'POSTGRES_HOST',
     'POSTGRES_DB',
