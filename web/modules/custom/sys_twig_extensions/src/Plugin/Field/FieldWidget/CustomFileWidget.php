@@ -64,9 +64,10 @@ class CustomFileWidget extends WidgetBase {
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {    
+    
     $pid = $items[$delta]->getParent()->getParent()->getEntity()->id();
 
-    if($this->getParagraphMedia($pid)) {
+    if($pid && $this->getParagraphMedia($pid)) {
       $media = $this->getParagraphMedia($pid);
     }
 
