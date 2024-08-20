@@ -1,4 +1,4 @@
-uuid: 7f5fe232-9703-4bb7-b928-004362746c2c
+uuid: 5dcff4fa-84f0-4304-99ec-f75c23568e15
 langcode: pt-br
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_thumbnail
     - paragraphs.paragraphs_type.tabs_item
   module:
-    - file
+    - sys_twig_extensions
 id: paragraph.tabs_item.field_thumbnail
 field_name: field_thumbnail
 entity_type: paragraph
@@ -17,11 +17,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  handler: 'default:views_csv_source_file_entity_selection'
-  handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png jpg jpeg'
-  max_filesize: ''
-  description_field: false
-field_type: file
+settings: {  }
+field_type: custom_file

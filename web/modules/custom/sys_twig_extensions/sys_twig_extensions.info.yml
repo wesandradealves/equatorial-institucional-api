@@ -9,3 +9,7 @@ version: '1.0'
 datestamp: 1630242476
 dependencies:
   - sys_twig_extensions:sys_twig_extensions
+  - drupal:file
+  - drupal:image
+  - drupal:media
+  - drupal:paragraphs

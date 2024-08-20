@@ -1,0 +1,13 @@
+uuid: ca13be86-e33c-4a35-890a-a5a7f13c29fa
+langcode: pt-br
+status: true
+dependencies: {  }
+id: thumbnail
+label: Thumbnail
+description: ''
+source: image
+queue_thumbnail_downloads: true
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

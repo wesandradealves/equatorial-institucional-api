@@ -1,9 +1,8 @@
-uuid: 856bd54f-6010-4dcb-a943-9bab6d112dfb
+uuid: 7cf61117-6d93-457b-906e-b03fa692a3b5
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.tabs_item.field_imagem
     - field.field.paragraph.tabs_item.field_subtitulo
     - field.field.paragraph.tabs_item.field_texto
     - field.field.paragraph.tabs_item.field_thumbnail
@@ -12,21 +11,12 @@ dependencies:
     - paragraphs.paragraphs_type.tabs_item
   module:
     - file
-    - image
     - text
 id: paragraph.tabs_item.default
 targetEntityType: paragraph
 bundle: tabs_item
 mode: default
 content:
-  field_imagem:
-    type: image_url
-    label: hidden
-    settings:
-      image_style: ''
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_subtitulo:
     type: text_default
     label: hidden
@@ -39,21 +29,22 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_thumbnail:
-    type: file_url_plain
-    label: hidden
-    settings: {  }
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
   field_title:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_titulo:
     type: string
@@ -61,6 +52,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
 hidden: {  }

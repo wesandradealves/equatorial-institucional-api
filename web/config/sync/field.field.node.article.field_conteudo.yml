@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.intro
     - paragraphs.paragraphs_type.intro_list
     - paragraphs.paragraphs_type.list
-    - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
     - paragraphs.paragraphs_type.tables
     - paragraphs.paragraphs_type.texto_numerado
@@ -39,7 +38,6 @@ settings:
       faq: faq
       simple_content_block: simple_content_block
       intro_list: intro_list
-      lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
       list: list
       tables: tables

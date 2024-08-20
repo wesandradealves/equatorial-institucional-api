@@ -1,0 +1,11 @@
+uuid: 5b875967-b9a0-445e-8bd0-8209ab4b127e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - media.type.thumbnail
+id: media.thumbnail
+target_entity_type_id: media
+target_bundle: thumbnail
+default_langcode: site_default
+language_alterable: false

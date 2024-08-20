@@ -1,4 +1,4 @@
-uuid: 9af657a3-2623-4c6b-a53c-51bb4467e5a0
+uuid: a4917c8d-58b4-4cfd-8641-5f7065435027
 langcode: pt-br
 status: true
 dependencies:
@@ -26,63 +26,57 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       banner:
-        weight: 21
+        weight: 11
         enabled: false
       block_cards:
-        weight: 22
+        weight: 12
         enabled: false
       block_cards_item:
-        weight: 23
-        enabled: false
-      blocos_lista_de_texto:
-        weight: 24
+        weight: 13
         enabled: false
       faq:
-        weight: 25
+        weight: 16
         enabled: false
       faq_item:
-        weight: 26
+        weight: 17
         enabled: false
       galeria:
-        weight: 27
+        weight: 14
         enabled: false
       galeria_item:
-        weight: 28
+        weight: 15
         enabled: false
       intro:
-        weight: 29
+        weight: 16
         enabled: false
       intro_list:
-        weight: 30
+        weight: 17
         enabled: false
       intro_list_item:
-        weight: 31
+        weight: 18
         enabled: false
       list:
-        weight: 32
-        enabled: false
-      lista_de_texto:
-        weight: 33
+        weight: 30
         enabled: false
       servicos:
-        weight: 34
+        weight: 19
         enabled: false
       simple_content_block:
-        weight: 35
+        weight: 20
         enabled: false
       tables:
-        weight: 36
+        weight: 32
         enabled: false
       tabs:
-        weight: 37
+        weight: 33
         enabled: false
       tabs_item:
-        weight: 38
+        weight: 34
         enabled: true
       texto_numerado:
-        weight: 39
+        weight: 34
         enabled: false
       texto_numerado_item:
-        weight: 40
+        weight: 36
         enabled: false
 field_type: entity_reference_revisions
