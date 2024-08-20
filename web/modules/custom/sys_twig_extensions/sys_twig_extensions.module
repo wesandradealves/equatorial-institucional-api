@@ -67,8 +67,10 @@ function sys_twig_extensions_preprocess_page(&$variables) {
 
   if(theme_get_setting('home_bg')) {
     $bg = theme_get_setting('home_bg');
-    $bg = \Drupal\file\Entity\File::load(reset($bg));
-    $variables['home_bg'] = $bg->createFileUrl();
+    $bg = File::load(reset($bg));
+    if($bg) {
+      $variables['home_bg'] = $bg->createFileUrl();
+    }
   }
 
   $user = \Drupal::routeMatch()->getParameter('user');
@@ -597,4 +599,21 @@ function sys_twig_extensions_form_system_theme_settings_submit(&$form, FormState
       $talk_to_clara_img->setPermanent();
       $talk_to_clara_img->save();      
   }      
+}
+
+function sys_twig_extensions_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // Loop through all form elements.
+  foreach ($form as $key => &$element) {
+    // Check if the element is a managed_file field widget.
+    if (is_array($element) && isset($element['#type']) && $element['#type'] == 'managed_file') {
+      // Disable the AJAX upload.
+      if (isset($element['#process']) && is_array($element['#process'])) {
+        foreach ($element['#process'] as $index => $process_function) {
+          if ($process_function == 'file_managed_file_process') {
+            unset($element['#process'][$index]);
+          }
+        }
+      }
+    }
+  }
 }

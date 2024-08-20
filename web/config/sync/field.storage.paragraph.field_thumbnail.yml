@@ -1,16 +1,16 @@
-uuid: 1ac8db73-1fe9-4771-917c-4a5f774e91de
+uuid: a12284c9-0319-4407-ad4e-edb22eee4f3f
 langcode: pt-br
 status: true
 dependencies:
   module:
     - paragraphs
-    - text
-id: paragraph.field_texto_curto
-field_name: field_texto_curto
+    - sys_twig_extensions
+id: paragraph.field_thumbnail
+field_name: field_thumbnail
 entity_type: paragraph
-type: text_with_summary
+type: custom_file
 settings: {  }
-module: text
+module: sys_twig_extensions
 locked: false
 cardinality: 1
 translatable: true

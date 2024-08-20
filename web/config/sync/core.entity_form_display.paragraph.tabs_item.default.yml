@@ -1,0 +1,81 @@
+uuid: 772d8d5b-be9e-40e5-abbc-5f630fe597b3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_item.field_subtitulo
+    - field.field.paragraph.tabs_item.field_texto
+    - field.field.paragraph.tabs_item.field_thumbnail
+    - field.field.paragraph.tabs_item.field_title
+    - field.field.paragraph.tabs_item.field_titulo
+    - paragraphs.paragraphs_type.tabs_item
+  module:
+    - field_group
+    - sys_twig_extensions
+    - text
+third_party_settings:
+  field_group:
+    group_conteudo:
+      children:
+        - field_thumbnail
+        - field_subtitulo
+        - field_title
+        - field_texto
+      label: Conteúdo
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+id: paragraph.tabs_item.default
+targetEntityType: paragraph
+bundle: tabs_item
+mode: default
+content:
+  field_subtitulo:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_texto:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_thumbnail:
+    type: custom_file_widget
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_titulo:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

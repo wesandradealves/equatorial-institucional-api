@@ -32,7 +32,9 @@ class ConfigResource extends ResourceBase {
     if(theme_get_setting('home_bg')) {
       $bg = theme_get_setting('home_bg');
       $bg = \Drupal\file\Entity\File::load(reset($bg));
-      $bg = $bg->createFileUrl();
+      if($bg) {
+        $bg = $bg->createFileUrl();
+      }
     }
 
     return (new ResourceResponse([
@@ -47,9 +49,9 @@ class ConfigResource extends ResourceBase {
         ],
         'site_name' => \Drupal::config('system.site')->get('name'),
         'basePath' => \Drupal::request()->getSchemeAndHttpHost(),
-        'logo' => \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')),
+        'logo' => theme_get_setting('logo.url') ? \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url')) : null,
         'location_screen_bg' => isset($bg) ? \Drupal::request()->getSchemeAndHttpHost().$bg : null,
-        'favico' => \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url'))
+        'favico' => theme_get_setting('favicon.url') ? \Drupal::request()->getSchemeAndHttpHost().\Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('favicon.url')) : null
       ] 
     ]))->addCacheableDependency([
       '#cache' => [
