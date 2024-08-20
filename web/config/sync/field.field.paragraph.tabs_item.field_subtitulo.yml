@@ -1,0 +1,24 @@
+uuid: 42a1fa6f-c677-404f-813f-22e9ac92bf25
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitulo
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.tabs_item
+  module:
+    - text
+id: paragraph.tabs_item.field_subtitulo
+field_name: field_subtitulo
+entity_type: paragraph
+bundle: tabs_item
+label: Subtitulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

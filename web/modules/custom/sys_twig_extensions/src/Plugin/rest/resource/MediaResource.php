@@ -7,20 +7,21 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Drupal\media\Entity\Media;
 
 /**
  * Provides a resource for clients subscription to updates.
  *
  * @RestResource(
- *   id = "custom_rest_resource_page",
- *   label = @Translation("Pages Endpoint"),
+ *   id = "custom_rest_resource_media",
+ *   label = @Translation("Media Endpoint"),
  *   uri_paths = {
- *     "canonical" = "/api/page",
- *     "create" = "/api/page"
+ *     "canonical" = "/api/media",
+ *     "create" = "/api/media"
  *   }
  * )
  */
-class PageResource extends ResourceBase {
+class MediaResource extends ResourceBase {
 
   /**
    * Returns an array of permissions.
@@ -30,7 +31,7 @@ class PageResource extends ResourceBase {
   }
 
   /**
-   * Handles GET requests for the PageResource.
+   * Handles GET requests for the MediaResource.
    *
    * @param string $id
    *   The node ID from the path.
@@ -42,16 +43,15 @@ class PageResource extends ResourceBase {
    */
   public function get(Request $request) {
     // Retrieve the 'alias' query parameter.
-    $alias = $request->query->get('alias');
-
-    // Convert the alias to an internal path.
-    $path = \Drupal::service('path_alias.manager')->getPathByAlias($alias);
-    $params = Url::fromUri("internal:$path")->getRouteParameters();
-    $entity_type = key($params);
-    $node = \Drupal::entityTypeManager()->getStorage($entity_type)->load($params[$entity_type]);
+    $fid = $request->query->get('fid');
+    $file = \Drupal\file\Entity\File::load($fid);
+    
+    if($file) {
+      $file = $file->createFileUrl();
+    }    
 
     // Return the node data with cacheable dependencies.
-    return (new ResourceResponse($node))->addCacheableDependency([
+    return (new ResourceResponse($file))->addCacheableDependency([
       '#cache' => [
         'max-age' => 0,
       ],

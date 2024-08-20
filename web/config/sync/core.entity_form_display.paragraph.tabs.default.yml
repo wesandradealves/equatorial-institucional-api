@@ -1,20 +1,22 @@
-uuid: 111679e0-810c-4598-984a-862dd4bf95ff
+uuid: 7c0d248b-3512-40d6-b824-4d66746ab353
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.lista_de_texto.field_conteudo_texto_curto
-    - paragraphs.paragraphs_type.lista_de_texto
+    - field.field.paragraph.tabs.field_list_item
+    - field.field.paragraph.tabs.field_title
+    - paragraphs.paragraphs_type.tabs
   module:
     - paragraphs
-id: paragraph.lista_de_texto.default
+    - text
+id: paragraph.tabs.default
 targetEntityType: paragraph
-bundle: lista_de_texto
+bundle: tabs
 mode: default
 content:
-  field_conteudo_texto_curto:
+  field_list_item:
     type: paragraphs
-    weight: 0
+    weight: 4
     region: content
     settings:
       title: Paragraph
@@ -29,6 +31,14 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true

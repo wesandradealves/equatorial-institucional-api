@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Drupal API - Equatorial Institucional",
-    "version": "1.0.2 beta",
+    "version": "1.0.1 beta",
     "contact": {},
     "description": "API para consumo de dados do Drupal"
   },
@@ -22,6 +22,120 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login",
+        "description": "Login",
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "drupal-developer"
+                  },
+                  "pass": {
+                    "type": "string",
+                    "example": "admin"
+                  }
+                }
+              },
+              "examples": {
+                "Login": {
+                  "value": {
+                    "name": "drupal-developer",
+                    "pass": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "summary": "Logout",
+        "description": "Logout",
+        "operationId": "logout",
+        "parameters": [
+          {
+            "name": "_format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "json"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "example": "{{token}}"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "drupal-developer"
+                  },
+                  "pass": {
+                    "type": "string",
+                    "example": "admin"
+                  }
+                }
+              },
+              "examples": {
+                "Logout": {
+                  "value": {
+                    "name": "drupal-developer",
+                    "pass": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": ""

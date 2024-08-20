@@ -1,16 +1,16 @@
-uuid: 1ac8db73-1fe9-4771-917c-4a5f774e91de
+uuid: 23aa6424-da58-4c5c-bd58-84a9a850f3a8
 langcode: pt-br
 status: true
 dependencies:
   module:
+    - block_field
     - paragraphs
-    - text
-id: paragraph.field_texto_curto
-field_name: field_texto_curto
+id: paragraph.field_block
+field_name: field_block
 entity_type: paragraph
-type: text_with_summary
+type: block_field
 settings: {  }
-module: text
+module: block_field
 locked: false
 cardinality: 1
 translatable: true

@@ -32,19 +32,31 @@ class FooterResource extends ResourceBase {
    */
   public function get() {
 
-    if(theme_get_setting('app_store_img')) {
-        $app_store_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('app_store_img')[0])->getFileUri();
-        $app_store_img = \Drupal::service('file_url_generator')->generateAbsoluteString($app_store_img);
+    if(theme_get_setting('app_store_img') && theme_get_setting('app_store_img')[0]) {
+        if(\Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('app_store_img')[0])) {
+          $app_store_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('app_store_img')[0])->getFileUri();
+          if($app_store_img) {
+            $app_store_img = \Drupal::service('file_url_generator')->generateAbsoluteString($app_store_img);
+          }
+        }
     }
 
-    if(theme_get_setting('google_play_img')) {
-        $google_play_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('google_play_img')[0])->getFileUri();
-        $google_play_img = \Drupal::service('file_url_generator')->generateAbsoluteString($google_play_img);
+    if(theme_get_setting('google_play_img') && theme_get_setting('google_play_img')[0]) {
+        if(\Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('google_play_img')[0])) {
+          $google_play_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('google_play_img')[0])->getFileUri();
+          if($google_play_img) {
+            $google_play_img = \Drupal::service('file_url_generator')->generateAbsoluteString($google_play_img);
+          }
+        }
     }
     
-    if(theme_get_setting('talk_to_clara_img')) {
-        $talk_to_clara_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('talk_to_clara_img')[0])->getFileUri();
-        $talk_to_clara_img = \Drupal::service('file_url_generator')->generateAbsoluteString($talk_to_clara_img);
+    if(theme_get_setting('talk_to_clara_img') && theme_get_setting('talk_to_clara_img')[0]) {
+        if(\Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('talk_to_clara_img')[0])) {
+          $talk_to_clara_img = \Drupal::entityTypeManager()->getStorage('file')->load(theme_get_setting('talk_to_clara_img')[0])->getFileUri();
+          if($talk_to_clara_img) {
+            $talk_to_clara_img = \Drupal::service('file_url_generator')->generateAbsoluteString($talk_to_clara_img);
+          }
+        }
     }    
 
     return (new ResourceResponse([

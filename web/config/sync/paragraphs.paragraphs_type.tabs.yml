@@ -1,9 +1,9 @@
-uuid: 6835b14d-d644-41f6-ae6a-97349c13b09f
+uuid: 54863f46-9e1c-4a94-b5d3-30eaccf0df71
 langcode: pt-br
 status: true
 dependencies: {  }
-id: blocos_lista_de_texto
-label: 'Blocos Lista de texto'
+id: tabs
+label: Tabs
 icon_uuid: null
 icon_default: null
 description: ''

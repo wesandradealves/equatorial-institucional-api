@@ -1,0 +1,19 @@
+uuid: a12284c9-0319-4407-ad4e-edb22eee4f3f
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - sys_twig_extensions
+id: paragraph.field_thumbnail
+field_name: field_thumbnail
+entity_type: paragraph
+type: custom_file
+settings: {  }
+module: sys_twig_extensions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

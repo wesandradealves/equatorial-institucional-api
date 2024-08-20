@@ -1,0 +1,57 @@
+uuid: 7cf61117-6d93-457b-906e-b03fa692a3b5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_item.field_subtitulo
+    - field.field.paragraph.tabs_item.field_texto
+    - field.field.paragraph.tabs_item.field_thumbnail
+    - field.field.paragraph.tabs_item.field_title
+    - field.field.paragraph.tabs_item.field_titulo
+    - paragraphs.paragraphs_type.tabs_item
+  module:
+    - file
+    - text
+id: paragraph.tabs_item.default
+targetEntityType: paragraph
+bundle: tabs_item
+mode: default
+content:
+  field_subtitulo:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_thumbnail:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_titulo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

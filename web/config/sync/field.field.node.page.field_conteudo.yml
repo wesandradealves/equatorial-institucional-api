@@ -12,9 +12,9 @@ dependencies:
     - paragraphs.paragraphs_type.intro
     - paragraphs.paragraphs_type.intro_list
     - paragraphs.paragraphs_type.list
-    - paragraphs.paragraphs_type.lista_de_texto
     - paragraphs.paragraphs_type.simple_content_block
     - paragraphs.paragraphs_type.tables
+    - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.texto_numerado
   module:
     - entity_reference_revisions
@@ -39,9 +39,9 @@ settings:
       faq: faq
       simple_content_block: simple_content_block
       intro_list: intro_list
-      lista_de_texto: lista_de_texto
       texto_numerado: texto_numerado
       list: list
+      tabs: tabs
       tables: tables
     negate: 0
     target_bundles_drag_drop:
@@ -53,9 +53,6 @@ settings:
         enabled: true
       block_cards_item:
         weight: 10
-        enabled: false
-      blocos_lista_de_texto:
-        weight: 14
         enabled: false
       faq:
         weight: 16
@@ -81,9 +78,6 @@ settings:
       list:
         weight: 30
         enabled: true
-      lista_de_texto:
-        weight: 18
-        enabled: true
       servicos:
         weight: -11
         enabled: false
@@ -93,6 +87,12 @@ settings:
       tables:
         weight: 34
         enabled: true
+      tabs:
+        weight: 33
+        enabled: true
+      tabs_item:
+        weight: 34
+        enabled: false
       texto_numerado:
         weight: 22
         enabled: true

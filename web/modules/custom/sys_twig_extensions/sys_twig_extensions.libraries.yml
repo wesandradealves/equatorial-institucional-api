@@ -1,4 +1,6 @@
 admin:
+  js:
+    js/scripts.js: {}
   css:
     theme:
       css/admin.css: {}
