@@ -11,6 +11,7 @@ RUN apt-get update -y && apt-get install -y \
     sendmail
 
 RUN docker-php-ext-install mysqli pgsql pdo_pgsql
+
 RUN apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /var/www/html/*
@@ -36,6 +37,13 @@ RUN echo "log_errors = On" >> /usr/local/etc/php/php.ini
 RUN echo "error_log = /var/log/php_errors.log" >> /usr/local/etc/php/php.ini
 
 RUN cd .. && composer install
-#  && drush cr && drush updb && drush cex -y
+
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Dar permissão de execução ao script de inicialização
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Definir o script de inicialização como o ponto de entrada
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 EXPOSE 80
