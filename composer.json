@@ -136,7 +136,7 @@
             },
             "drupal/openapi_jsonapi": {
                 "3185778: TypeError: Cannot read property 'anyOf' of undefined": "https://www.drupal.org/files/issues/2020-12-21/add_required_keyword_8.x_2.x-3185778-5.patch"
-            }
+            }   
         },
         "installer-paths": {
             "web/core": [
