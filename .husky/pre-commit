@@ -1,0 +1,12 @@
+KEYWORD="atualizar-versao"
+
+COMMIT_MSG=$(git log -1 --pretty=%B)
+ echo  "$COMMIT_MSG"
+if echo "$COMMIT_MSG" | grep -q "$KEYWORD"; then
+  echo "Atualizando versão... "
+  npm run update-version
+
+  git add composer.json
+else
+  echo "Palavra '$KEYWORD' não encontrada na mensagem do commit. Nenhuma ação necessária. "
+fi

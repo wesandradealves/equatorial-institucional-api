@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "husky": "^9.1.5"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "update-version": "node update-version.js"
+  },
+  "husky": {
+    "hooks": {}
+  }
+}
