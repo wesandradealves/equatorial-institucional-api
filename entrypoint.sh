@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Executar comandos Drush
-drush cr
-drush updb -y
+drush cim -y
 drush cex -y
+drush updb -y
 drush cr
