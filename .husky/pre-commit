@@ -3,7 +3,7 @@ KEYWORD="atualizar-versao"
 COMMIT_MSG=$(git log -1 --pretty=%B)
  echo  "$COMMIT_MSG"
 if echo "$COMMIT_MSG" | grep -q "$KEYWORD"; then
-  echo "Atualizando versão... "
+  echo "Atualizando versão..."
   npm run update-version
 
   git add composer.json
