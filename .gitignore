@@ -46,3 +46,6 @@ docker-compose.override.yml
 .DS_Store
 
 .git/
+
+/node_modules
+package-lock.json
