@@ -1,0 +1,19 @@
+uuid: 46189667-8af4-427d-8e43-6c20209a9997
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_label
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.field_cta_label
+field_name: field_cta_label
+entity_type: paragraph
+bundle: faq
+label: 'CTA Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

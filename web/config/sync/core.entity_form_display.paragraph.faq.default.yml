@@ -3,6 +3,8 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.paragraph.faq.field_cta_label
+    - field.field.paragraph.faq.field_cta_url
     - field.field.paragraph.faq.field_layout
     - field.field.paragraph.faq.field_list_item
     - field.field.paragraph.faq.field_no_background
@@ -30,11 +32,43 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+    group_cta:
+      children:
+        - field_cta_label
+        - field_cta_url
+      label: CTA
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
 mode: default
 content:
+  field_cta_label:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_url:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_layout:
     type: options_select
     weight: 2
@@ -43,7 +77,7 @@ content:
     third_party_settings: {  }
   field_list_item:
     type: paragraphs
-    weight: 4
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -68,7 +102,7 @@ content:
     third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 3
+    weight: 1
     region: content
     settings:
       rows: 5
