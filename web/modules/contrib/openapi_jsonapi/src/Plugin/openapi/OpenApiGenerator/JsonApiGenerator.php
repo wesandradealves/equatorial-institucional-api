@@ -563,6 +563,7 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
+        'items' => [],
       ];
       $parameters[] = [
         'name' => 'sort',
@@ -576,6 +577,7 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
+        'items' => [],
       ];
       $parameters[] = [
         'name' => 'page',
@@ -589,6 +591,7 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
+        'items' => [],
       ];
       $parameters[] = [
         'name' => 'include',

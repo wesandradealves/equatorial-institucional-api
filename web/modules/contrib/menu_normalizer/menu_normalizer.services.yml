@@ -2,10 +2,8 @@ services:
   menu_normalizer.normalizer.menu_link_tree:
     class: Drupal\menu_normalizer\Normalizer\MenuLinkTreeNormalizer
     tags:
-      -
-        name: normalizer
+      - { name: normalizer }
   menu_normalizer.normalizer.menu_link:
     class: Drupal\menu_normalizer\Normalizer\MenuLinkNormalizer
     tags:
-      -
-        name: normalizer
+      - { name: normalizer }

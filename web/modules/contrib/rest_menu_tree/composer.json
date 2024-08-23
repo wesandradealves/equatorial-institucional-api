@@ -14,8 +14,8 @@
         }
     ],
     "require": {
-        "drupal/core": "^9 || ^10",
-        "drupal/menu_normalizer": "^2.0"
+        "drupal/menu_normalizer": "^2.0",
+        "drupal/core": "^9 || ^10 || ^11"
     },
     "require-dev": {
         "drupal/coder": "^8.3",

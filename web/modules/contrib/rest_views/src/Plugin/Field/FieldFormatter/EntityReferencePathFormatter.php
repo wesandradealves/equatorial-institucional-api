@@ -28,8 +28,9 @@ class EntityReferencePathFormatter extends EntityReferenceFormatterBase {
 
     foreach ($this->getEntitiesToView($items, $langcode) as $delta => $entity) {
 
+      $absolute = $this->getSetting('absolute') ?? FALSE;
       /** @var \Drupal\Core\Url $url */
-      $url = $entity->toUrl();
+      $url = $entity->toUrl(NULL, ['absolute' => $absolute]);
       $elements[$delta] = [
         '#type' => 'data',
         '#data' => SerializedData::create($url->toString()),
@@ -46,21 +47,36 @@ class EntityReferencePathFormatter extends EntityReferenceFormatterBase {
    * {@inheritdoc}
    */
   public static function defaultSettings(): array {
-    return [];
+    $settings = parent::defaultSettings();
+
+    $settings['absolute'] = FALSE;
+    return $settings;
   }
 
   /**
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $formState): array {
-    return [];
+    $form = parent::settingsForm($form, $formState);
+
+    $form['absolute'] = [
+      '#title' => $this->t('Output an absolute path'),
+      '#type' => 'checkbox',
+      '#default_value' => $this->getSetting('absolute'),
+    ];
+    return $form;
   }
 
   /**
    * {@inheritdoc}
    */
   public function settingsSummary(): array {
-    return [];
+    $summary = parent::settingsSummary();
+
+    if ($this->getSetting('absolute')) {
+      $summary[] = $this->t('Outputs an absolute path');
+    }
+    return $summary;
   }
 
 }

@@ -3,3 +3,6 @@ services:
     class: Drupal\sys_twig_extensions\ApplyPrefix
     tags:
       - { name: twig.extension }
+  sys_twig_extensions.sys_twig_extensions_tree_manipulators:
+      class: Drupal\sys_twig_extensions\Menu\MenuLinkTreeManipulators
+      arguments: ['@entity_type.manager']

@@ -2,10 +2,11 @@
 
 namespace Drupal\menu_normalizer\Normalizer;
 
+use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\serialization\Normalizer\NormalizerBase;
 
 /**
- * MenuLinkTreeElement Normalizer.
+ * MenuLinkTreeElement normalizer.
  */
 class MenuLinkTreeNormalizer extends NormalizerBase {
 
@@ -14,12 +15,13 @@ class MenuLinkTreeNormalizer extends NormalizerBase {
    *
    * @var string
    */
-  protected $supportedInterfaceOrClass = 'Drupal\Core\Menu\MenuLinkTreeElement';
+  protected $supportedInterfaceOrClass = MenuLinkTreeElement::class;
 
   /**
    * {@inheritdoc}
    */
   public function normalize($object, $format = NULL, array $context = []) {
+    /** @var \Drupal\Core\Menu\MenuLinkTreeElement $object */
     return [
       'link' => $this->serializer->normalize($object->link, $format, $context),
       'has_children' => $object->hasChildren,

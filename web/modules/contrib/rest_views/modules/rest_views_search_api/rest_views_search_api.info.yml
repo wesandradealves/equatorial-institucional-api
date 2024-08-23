@@ -7,7 +7,7 @@ dependencies:
   - rest_views:rest_views
   - search_api:search_api
 
-# Information added by Drupal.org packaging script on 2024-07-17
-version: '3.1.0'
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '3.1.1'
 project: 'rest_views'
-datestamp: 1721233140
+datestamp: 1722394207

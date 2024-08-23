@@ -2,10 +2,11 @@
 
 namespace Drupal\menu_normalizer\Normalizer;
 
+use Drupal\Core\Menu\MenuLinkInterface;
 use Drupal\serialization\Normalizer\NormalizerBase;
 
 /**
- * MenuLinkTreeElement Normalizer.
+ * MenuLinkInterface normalizer.
  */
 class MenuLinkNormalizer extends NormalizerBase {
 
@@ -14,14 +15,15 @@ class MenuLinkNormalizer extends NormalizerBase {
    *
    * @var string
    */
-  protected $supportedInterfaceOrClass = 'Drupal\Core\Menu\MenuLinkInterface';
+  protected $supportedInterfaceOrClass = MenuLinkInterface::class;
 
   /**
    * {@inheritdoc}
    */
   public function normalize($object, $format = NULL, array $context = []) {
-
+    /** @var \Drupal\Core\Menu\MenuLinkInterface $object */
     return [
+      'id' => $object->getPluginId(),
       'weight' => $object->getWeight(),
       'title' => $object->getTitle(),
       'description' => $object->getDescription(),

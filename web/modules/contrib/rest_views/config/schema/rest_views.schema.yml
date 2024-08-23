@@ -21,3 +21,11 @@ field.formatter.settings.entity_reference_export:
 views.field.field_export:
   type: views.field.field
   label: 'Entity field (serializable)'
+
+field.formatter.settings.entity_path:
+  type: mapping
+  label: 'Entity path formatter settings'
+  mapping:
+    absolute:
+      type: boolean
+      label: 'Output an absolute path'

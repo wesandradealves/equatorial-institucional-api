@@ -78,7 +78,9 @@ class MenuTreeResource extends ResourceBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Responds to GET requests.
+   *
+   * Returns a menu tree for the provided menu.
    */
   public function get(MenuInterface $menu) {
     $params = new MenuTreeParameters();
