@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:ignoreFile
+
 namespace Drupal\openapi_jsonapi\Plugin\openapi\OpenApiGenerator;
 
 use Drupal\Component\Utility\NestedArray;
@@ -46,7 +48,7 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
    *
    * @var string
    */
-  static $DEFINITION_SEPARATOR = '--';
+  public static string $DEFINITION_SEPARATOR = '--';
 
   /**
    * List of parameters hat should be filtered out on JSON API Routes.
@@ -208,6 +210,7 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
    *   The url prefix used for all jsonapi resource endpoints.
    */
   public function getJsonApiBase() {
+    // @phpstan-ignore-next-line as its used on purpose.
     return \Drupal::getContainer()->getParameter('jsonapi.base_path');
   }
 
@@ -560,7 +563,6 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
-        'items' => [],
       ];
       $parameters[] = [
         'name' => 'sort',
@@ -574,7 +576,6 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
-        'items' => [],
       ];
       $parameters[] = [
         'name' => 'page',
@@ -588,7 +589,6 @@ class JsonApiGenerator extends OpenApiGeneratorBase {
             )->toString(),
           ]
         ),
-        'items' => [],
       ];
       $parameters[] = [
         'name' => 'include',

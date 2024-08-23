@@ -1,9 +1,9 @@
 _core:
   default_config_hash: LqXuXXQCTd1NWw7dGLef0PCi3_aEEWQuogAblo4hHaE
 hotlink: false
-origin: ''
+origin: 'http://maranhao-drupal-institucional-drupal-ma-dev.apps.ocpdevqa.equatorial.corp'
 origin_dir: sites/default/files
 proxy_headers: ''
 use_imagecache_root: false
-verify: false
+verify: true
 excluded_extensions: ''
