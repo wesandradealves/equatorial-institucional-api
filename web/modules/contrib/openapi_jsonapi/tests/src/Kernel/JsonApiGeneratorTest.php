@@ -23,6 +23,7 @@ final class JsonApiGeneratorTest extends KernelTestBase {
     'text',
     'taxonomy',
     'serialization',
+    'file',
     'jsonapi',
     'schemata',
     'schemata_json_schema',

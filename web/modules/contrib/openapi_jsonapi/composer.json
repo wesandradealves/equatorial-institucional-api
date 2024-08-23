@@ -3,8 +3,8 @@
     "description": "OpenAPI support for the JSON:API module.",
     "type": "drupal-module",
     "require": {
-        "drupal/openapi": "^2",
-        "drupal/schemata": "^1"
+        "drupal/openapi": "^2.2",
+        "drupal/schemata": "^1.0"
     },
     "minimum-stability": "dev",
     "license": "GPL-2.0-or-later",

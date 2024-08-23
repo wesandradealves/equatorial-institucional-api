@@ -158,20 +158,17 @@ class RestUIController implements ContainerInjectionInterface {
           : FALSE;
         $create_uri_path = $new_create_uri_path ?: $old_create_uri_path;
 
-        $available_methods = [];
-        if (class_exists($resource['class'])) {
-          $available_methods = array_intersect(array_map('strtoupper', get_class_methods($resource['class'])), [
-            'HEAD',
-            'GET',
-            'POST',
-            'PUT',
-            'DELETE',
-            'TRACE',
-            'OPTIONS',
-            'CONNECT',
-            'PATCH',
-          ]);
-        }
+        $available_methods = array_intersect(array_map('strtoupper', get_class_methods($resource['class'])), [
+          'HEAD',
+          'GET',
+          'POST',
+          'PUT',
+          'DELETE',
+          'TRACE',
+          'OPTIONS',
+          'CONNECT',
+          'PATCH',
+        ]);
 
         // @todo Remove this when https://www.drupal.org/node/2300677 is fixed.
         $is_config_entity = isset($resource['serialization_class']) && is_subclass_of($resource['serialization_class'], ConfigEntityInterface::class, TRUE);

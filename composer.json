@@ -124,6 +124,11 @@
       }
     },
     "enable-patching": true,
+    "patches": {
+      "drupal/rest_menu_items": {
+        "#3039979": "https://www.drupal.org/files/issues/2022-11-16/3039979-menu-items-extras-18.patch"
+      }
+    },    
     "installer-paths": {
       "web/core": [
         "type:drupal-core"

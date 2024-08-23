@@ -6,8 +6,11 @@ use Drupal\Core\Cache\CacheableResponseInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Menu\MenuLinkInterface;
+use Drupal\field\FieldConfigInterface;
+use Drupal\file\Entity\File;
 use Drupal\path_alias\AliasManagerInterface;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -58,6 +61,20 @@ class RestMenuItemsResource extends ResourceBase {
   protected $moduleHandler;
 
   /**
+   * MenuLinkContent Entity storage.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $menuLinkContentStorage;
+
+  /**
+   * The file URL generator.
+   *
+   * @var \Drupal\Core\File\FileUrlGeneratorInterface
+   */
+  protected $fileUrlGenerator;
+
+  /**
    * A list of menu items.
    *
    * @var array
@@ -81,13 +98,15 @@ class RestMenuItemsResource extends ResourceBase {
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, AliasManagerInterface $alias_manager, ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, ModuleHandlerInterface $moduleHandler) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, AliasManagerInterface $alias_manager, ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, ModuleHandlerInterface $moduleHandler, FileUrlGeneratorInterface $file_url_generator) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->aliasManager = $alias_manager;
     $this->configFactory = $config_factory;
     $this->entityTypeManager = $entityTypeManager;
     $this->moduleHandler = $moduleHandler;
+    $this->menuLinkContentStorage = $entityTypeManager->getStorage('menu_link_content');
+    $this->fileUrlGenerator = $file_url_generator;
   }
 
   /**
@@ -95,7 +114,7 @@ class RestMenuItemsResource extends ResourceBase {
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static($configuration, $plugin_id, $plugin_definition, $container->getParameter('serializer.formats'), $container->get('logger.factory')
-      ->get('rest'), $container->get('path_alias.manager'), $container->get('config.factory'), $container->get('entity_type.manager'), $container->get('module_handler'));
+      ->get('rest'), $container->get('path_alias.manager'), $container->get('config.factory'), $container->get('entity_type.manager'), $container->get('module_handler'), $container->get('file_url_generator'));
   }
 
   /**
@@ -211,6 +230,8 @@ class RestMenuItemsResource extends ResourceBase {
           $this->getElementValue($newValue, $valueKey, $org_link, $url);
         }
       }
+
+      $this->checkContentFields($org_link, $newValue);
 
       if (!empty($item_value['below'])) {
         $newValue['below'] = [];
@@ -432,6 +453,56 @@ class RestMenuItemsResource extends ResourceBase {
     $options = $link->getOptions();
     if (!empty($options) && isset($options['fragment'])) {
       $value .= '#' . $options['fragment'];
+    }
+  }
+
+  /**
+   * Check if there are any additional fields added to MenuLink.
+   *
+   * @param \Drupal\Core\Menu\MenuLinkInterface $menu_link
+   * @param array $newValue
+   */
+  protected function checkContentFields(MenuLinkInterface $menu_link, array &$newValue) {
+    $plugin_definition = $menu_link->getPluginDefinition();
+    if (!empty($plugin_definition['metadata'])) {
+      $id = $plugin_definition['metadata']['entity_id'];
+      $menu_link_content = $this->menuLinkContentStorage->load($id);
+
+      if ($menu_link_content) {
+        $field_definitions = $menu_link_content->getFieldDefinitions();
+
+        foreach ($field_definitions as $field_definition) {
+          // Ignore BaseFields.
+          if ($field_definition instanceof FieldConfigInterface) {
+            $field_name = $field_definition->getName();
+            if (
+              $field_definition->getType() == 'entity_reference' ||
+              $field_definition->getType() == 'entity_reference_revisions'
+              || $field_definition->getSetting('target_type') == 'taxonomy_term') {
+              $field_value = $menu_link_content->get($field_name)->entity;
+            }
+            elseif ($field_definition->getType() == 'image') {
+              $image_urls = [];
+              foreach ($menu_link_content->get($field_name)->getValue() as $fids){
+                $file = File::load($fids['target_id']);
+                $image_urls[]['value'] = Url::fromUri($this->fileUrlGenerator->generateAbsoluteString($file->getFileUri()))->toString();
+              }
+              $field_value = $image_urls;
+            }
+            else {
+              $field_value = $menu_link_content->get($field_name)->getValue();
+            }
+            // @todo: add proper normalizing.
+            // @todo: render the values of the fields, as simply the referenced
+            //  entity ID doesn't do much for the client using the endpoint.
+            $normalized_value = NULL;
+            if (!empty($field_value)) {
+              $normalized_value = $field_value;
+            }
+            $newValue[$field_name] = $normalized_value;
+          }
+        }
+      }
     }
   }
 

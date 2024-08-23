@@ -19,7 +19,7 @@ final class RequestTestJsonapi extends RequestTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'field',
     'filter',
     'text',
