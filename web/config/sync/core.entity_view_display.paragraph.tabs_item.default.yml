@@ -1,8 +1,9 @@
-uuid: 7cf61117-6d93-457b-906e-b03fa692a3b5
+uuid: 688fc28d-eb9d-426b-b772-8f130b7e1c5e
 langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tabs_item.field_imagem
     - field.field.paragraph.tabs_item.field_subtitulo
     - field.field.paragraph.tabs_item.field_texto
     - field.field.paragraph.tabs_item.field_thumbnail
@@ -11,12 +12,21 @@ dependencies:
     - paragraphs.paragraphs_type.tabs_item
   module:
     - file
+    - image
     - text
 id: paragraph.tabs_item.default
 targetEntityType: paragraph
 bundle: tabs_item
 mode: default
 content:
+  field_imagem:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_subtitulo:
     type: text_default
     label: hidden

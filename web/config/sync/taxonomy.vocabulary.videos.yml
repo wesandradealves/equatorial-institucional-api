@@ -1,9 +1,0 @@
-uuid: 0a3d2266-5aa3-4301-bc92-5819f8f954e8
-langcode: pt-br
-status: true
-dependencies: {  }
-name: Vídeos
-vid: videos
-description: null
-weight: 0
-new_revision: false

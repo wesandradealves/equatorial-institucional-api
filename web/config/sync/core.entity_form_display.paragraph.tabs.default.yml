@@ -1,9 +1,10 @@
-uuid: 7c0d248b-3512-40d6-b824-4d66746ab353
+uuid: 7daf1f75-6408-427c-a496-125b624bc164
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.field.paragraph.tabs.field_list_item
+    - field.field.paragraph.tabs.field_tab
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
   module:
@@ -17,6 +18,24 @@ content:
   field_list_item:
     type: paragraphs
     weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_tab:
+    type: paragraphs
+    weight: 5
     region: content
     settings:
       title: Paragraph
