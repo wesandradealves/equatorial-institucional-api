@@ -2,7 +2,7 @@
   "name": "equatorial/base-drupal-project",
   "description": "Project template for Drupal projects with a relocated document root, 1.0",
   "type": "project",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.drupal.org/project/drupal",
   "support": {
@@ -128,7 +128,7 @@
       "drupal/rest_menu_items": {
         "#3039979": "https://www.drupal.org/files/issues/2022-11-16/3039979-menu-items-extras-18.patch"
       }
-    },    
+    },
     "installer-paths": {
       "web/core": [
         "type:drupal-core"
