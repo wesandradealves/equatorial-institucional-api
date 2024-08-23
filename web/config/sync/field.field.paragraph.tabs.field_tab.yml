@@ -1,18 +1,18 @@
-uuid: 262a98ac-2ada-4e69-acb8-212cc4e3a89a
+uuid: c6b15b9f-f56d-4bd8-934e-084f71af1845
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_list_item
+    - field.storage.paragraph.field_tab
     - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.tabs_item
   module:
     - entity_reference_revisions
-id: paragraph.tabs.field_list_item
-field_name: field_list_item
+id: paragraph.tabs.field_tab
+field_name: field_tab
 entity_type: paragraph
 bundle: tabs
-label: Item
+label: Tab
 description: ''
 required: false
 translatable: false
@@ -26,43 +26,43 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       banner:
-        weight: 11
-        enabled: false
-      block_cards:
-        weight: 12
-        enabled: false
-      block_cards_item:
-        weight: 13
-        enabled: false
-      faq:
-        weight: 16
-        enabled: false
-      faq_item:
-        weight: 17
-        enabled: false
-      galeria:
-        weight: 14
-        enabled: false
-      galeria_item:
-        weight: 15
-        enabled: false
-      intro:
-        weight: 16
-        enabled: false
-      intro_list:
-        weight: 17
-        enabled: false
-      intro_list_item:
-        weight: 18
-        enabled: false
-      list:
-        weight: 30
-        enabled: false
-      servicos:
         weight: 19
         enabled: false
-      simple_content_block:
+      block_cards:
         weight: 20
+        enabled: false
+      block_cards_item:
+        weight: 21
+        enabled: false
+      faq:
+        weight: 22
+        enabled: false
+      faq_item:
+        weight: 23
+        enabled: false
+      galeria:
+        weight: 24
+        enabled: false
+      galeria_item:
+        weight: 25
+        enabled: false
+      intro:
+        weight: 26
+        enabled: false
+      intro_list:
+        weight: 27
+        enabled: false
+      intro_list_item:
+        weight: 28
+        enabled: false
+      list:
+        weight: 29
+        enabled: false
+      servicos:
+        weight: 30
+        enabled: false
+      simple_content_block:
+        weight: 31
         enabled: false
       tables:
         weight: 32
@@ -74,7 +74,7 @@ settings:
         weight: 34
         enabled: true
       texto_numerado:
-        weight: 34
+        weight: 35
         enabled: false
       texto_numerado_item:
         weight: 36

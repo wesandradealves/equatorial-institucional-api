@@ -1,9 +1,10 @@
-uuid: d999c67b-eb4e-4cbd-b824-d9061082ae5c
+uuid: f140b1d8-2390-49ba-977d-70250ffbab2c
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.field.paragraph.tabs.field_list_item
+    - field.field.paragraph.tabs.field_tab
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
   module:
@@ -22,6 +23,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_tab:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_title:
     type: text_default

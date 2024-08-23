@@ -1,14 +1,12 @@
-uuid: 9b401d30-c28e-40a9-8fca-8837db4ea8a8
+uuid: df5f08cf-8855-4ecb-80b7-67da770e514d
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.field.paragraph.blocks.field_block
-    - field.field.paragraph.blocks.field_title
     - paragraphs.paragraphs_type.blocks
   module:
     - block_field
-    - text
 id: paragraph.blocks.default
 targetEntityType: paragraph
 bundle: blocks
@@ -16,14 +14,7 @@ mode: default
 content:
   field_block:
     type: block_field
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_title:
-    type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0

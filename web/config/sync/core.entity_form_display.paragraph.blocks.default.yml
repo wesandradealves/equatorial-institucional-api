@@ -1,10 +1,9 @@
-uuid: 680ee2a7-54ea-46c8-ae2a-8ada1fe6a7f7
+uuid: 2765e188-4ea4-495f-bfed-31dd6de3b43f
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.field.paragraph.blocks.field_block
-    - field.field.paragraph.blocks.field_title
     - paragraphs.paragraphs_type.blocks
   module:
     - block_field
@@ -24,5 +23,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_title: true
   status: true

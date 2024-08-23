@@ -40,8 +40,8 @@ settings:
       faq: faq
       simple_content_block: simple_content_block
       intro_list: intro_list
-      blocks: blocks
       texto_numerado: texto_numerado
+      blocks: blocks
       list: list
       tabs: tabs
       tables: tables
@@ -57,7 +57,7 @@ settings:
         weight: 10
         enabled: false
       blocks:
-        weight: 21
+        weight: 23
         enabled: true
       faq:
         weight: 16
