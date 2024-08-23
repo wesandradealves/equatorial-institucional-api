@@ -1,0 +1,29 @@
+uuid: b73360ee-105b-4f69-8336-4ce29a3b0941
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_icone
+    - system.menu.main
+  module:
+    - file
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icone:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
