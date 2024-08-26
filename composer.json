@@ -2,7 +2,7 @@
   "name": "equatorial/base-drupal-project",
   "description": "Project template for Drupal projects with a relocated document root, 1.0",
   "type": "project",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.drupal.org/project/drupal",
   "support": {
