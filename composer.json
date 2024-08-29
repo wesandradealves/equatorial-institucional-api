@@ -68,6 +68,7 @@
     "drupal/paragraphs": "^1.16",
     "drupal/pathauto": "^1.12",
     "drupal/quick_node_clone": "^1.17",
+    "drupal/reassign_user_content": "^1.0",
     "drupal/redirect_after_login": "^3.0",
     "drupal/rest_absolute_urls": "^1.0@beta",
     "drupal/rest_api_authentication": "^2.0",
