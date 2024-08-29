@@ -95,8 +95,7 @@ youtube: 'https://youtube.com/'
 linkedin: 'https://linkedin.com/'
 app_label: 'Baixe nosso app'
 app_label_en: 'Download our app'
-google_play_img:
-  - '1431'
+google_play_img: {  }
 google_play_url: 'http://institucional-drupal.ddev.site/'
 app_store_img:
   - '1432'

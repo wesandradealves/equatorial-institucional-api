@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: yxbwbjDDN6kR4I5T3yvDgt8E83eGlcypO03AsIh21Cg
+binary_path: pngquant
+minimum_quality: '50'
+maximum_quality: '60'
+timeout: '10'

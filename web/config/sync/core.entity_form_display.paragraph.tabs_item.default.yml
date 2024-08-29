@@ -3,32 +3,47 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.tabs_item.field_imagem
+    - field.field.paragraph.tabs_item.field_cta_label
+    - field.field.paragraph.tabs_item.field_cta_url
     - field.field.paragraph.tabs_item.field_subtitulo
     - field.field.paragraph.tabs_item.field_texto
     - field.field.paragraph.tabs_item.field_thumbnail
     - field.field.paragraph.tabs_item.field_title
     - field.field.paragraph.tabs_item.field_titulo
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.tabs_item
   module:
     - field_group
-    - image
     - sys_twig_extensions
     - text
 third_party_settings:
   field_group:
     group_conteudo:
       children:
-        - field_imagem
         - field_thumbnail
         - field_subtitulo
         - field_title
         - field_texto
+        - group_c
       label: Conteúdo
       region: content
       parent_name: ''
       weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_c:
+      children:
+        - field_cta_label
+        - field_cta_url
+      label: CTA
+      region: content
+      parent_name: group_conteudo
+      weight: 9
       format_type: details
       format_settings:
         classes: ''
@@ -42,13 +57,21 @@ targetEntityType: paragraph
 bundle: tabs_item
 mode: default
 content:
-  field_imagem:
-    type: image_image
-    weight: 4
+  field_cta_label:
+    type: string_textfield
+    weight: 5
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_url:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_subtitulo:
     type: text_textarea

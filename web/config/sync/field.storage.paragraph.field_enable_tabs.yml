@@ -1,16 +1,15 @@
-uuid: ba19d789-0f46-488c-818f-bde50dbd40ee
+uuid: 0d886973-f0ac-490d-8aff-bb11b88179e9
 langcode: pt-br
 status: true
 dependencies:
   module:
-    - block_field
     - paragraphs
-id: paragraph.field_block
-field_name: field_block
+id: paragraph.field_enable_tabs
+field_name: field_enable_tabs
 entity_type: paragraph
-type: block_field
+type: boolean
 settings: {  }
-module: block_field
+module: core
 locked: false
 cardinality: 1
 translatable: true

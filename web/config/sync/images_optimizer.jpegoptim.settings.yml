@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: qpadxqAWR-ektmm0Smb9xB71Ql9EG85b5X9SHueEuEU
+binary_path: jpegoptim
+quality: '60'
+timeout: '10'

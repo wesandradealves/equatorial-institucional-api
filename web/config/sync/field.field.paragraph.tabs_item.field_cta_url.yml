@@ -1,0 +1,19 @@
+uuid: 56dc0893-654f-43c5-8a7e-a82b4a60a453
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_url
+    - paragraphs.paragraphs_type.tabs_item
+id: paragraph.tabs_item.field_cta_url
+field_name: field_cta_url
+entity_type: paragraph
+bundle: tabs_item
+label: 'CTA URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -6,7 +6,7 @@ dependencies:
   - drupal:menu_link_content
 configure: menu_link_attributes.config
 
-# Information added by Drupal.org packaging script on 2024-08-19
-version: '8.x-1.4'
+# Information added by Drupal.org packaging script on 2024-08-28
+version: '8.x-1.5'
 project: 'menu_link_attributes'
-datestamp: 1724060901
+datestamp: 1724848808

@@ -111,10 +111,17 @@ function menu_link_attributes_form_menu_link_content_form_alter(array &$form, Fo
       '#default_value' => $menu_link_options[$attributes_key][$attribute_formatted] ?? ($info['default_value'] ?? ''),
     ];
 
-    // Fill options if select list.
-    if ($type == 'select') {
+    // Fill options for types that use it.
+    if (in_array($type, ['select', 'checkboxes', 'radios'], TRUE)) {
       $form['options']['attributes'][$attribute]['#empty_option'] = t('- Select -');
       $form['options']['attributes'][$attribute]['#options'] = $info['options'];
+    }
+
+    // Handle multivalue types.
+    if (in_array($type, ['checkboxes'], TRUE) && is_scalar($form['options']['attributes'][$attribute]['#default_value'])) {
+      // Reverse what \Drupal\Core\Template\AttributeArray::__toString() does.
+      $array = array_filter(explode(' ', $form['options']['attributes'][$attribute]['#default_value']));
+      $form['options']['attributes'][$attribute]['#default_value'] = $array;
     }
 
     // Fill options if type is "managed_file".

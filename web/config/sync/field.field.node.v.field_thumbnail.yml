@@ -1,24 +1,24 @@
-uuid: 4c69dacb-1be0-4122-9ee5-6fe9990b59e2
+uuid: 58c672da-3fcd-46c9-a9dc-ed9e8ef10b76
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_imagem
-    - paragraphs.paragraphs_type.tabs_item
+    - field.storage.node.field_thumbnail
+    - node.type.v
   module:
     - image
-id: paragraph.tabs_item.field_imagem
-field_name: field_imagem
-entity_type: paragraph
-bundle: tabs_item
-label: Imagem
+id: node.v.field_thumbnail
+field_name: field_thumbnail
+entity_type: node
+bundle: v
+label: Thumbnail
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:views_csv_source_file_entity_selection'
+  handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg webp'
@@ -26,7 +26,7 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:

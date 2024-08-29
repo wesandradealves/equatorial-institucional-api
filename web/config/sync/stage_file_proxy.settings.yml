@@ -5,5 +5,5 @@ origin: 'http://maranhao-drupal-institucional-drupal-ma-dev.apps.ocpdevqa.equato
 origin_dir: sites/default/files
 proxy_headers: ''
 use_imagecache_root: false
-verify: true
+verify: false
 excluded_extensions: ''

@@ -3,7 +3,8 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.tabs_item.field_imagem
+    - field.field.paragraph.tabs_item.field_cta_label
+    - field.field.paragraph.tabs_item.field_cta_url
     - field.field.paragraph.tabs_item.field_subtitulo
     - field.field.paragraph.tabs_item.field_texto
     - field.field.paragraph.tabs_item.field_thumbnail
@@ -12,18 +13,25 @@ dependencies:
     - paragraphs.paragraphs_type.tabs_item
   module:
     - file
-    - image
     - text
 id: paragraph.tabs_item.default
 targetEntityType: paragraph
 bundle: tabs_item
 mode: default
 content:
-  field_imagem:
-    type: image_url
+  field_cta_label:
+    type: string
     label: hidden
     settings:
-      image_style: ''
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 3
     region: content

@@ -1,0 +1,11 @@
+uuid: 8a8df9c5-b094-49c9-972f-8fe709e7cc8b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.videos
+id: taxonomy_term.videos
+target_entity_type_id: taxonomy_term
+target_bundle: videos
+default_langcode: site_default
+language_alterable: false

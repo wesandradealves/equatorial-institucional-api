@@ -3,39 +3,47 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tabs.field_enable_tabs
     - field.field.paragraph.tabs.field_list_item
-    - field.field.paragraph.tabs.field_tab
+    - field.field.paragraph.tabs.field_texto
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_estilos:
+      children:
+        - field_enable_tabs
+      label: Estilos
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
 id: paragraph.tabs.default
 targetEntityType: paragraph
 bundle: tabs
 mode: default
 content:
-  field_list_item:
-    type: paragraphs
+  field_enable_tabs:
+    type: boolean_checkbox
     weight: 4
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      display_label: true
     third_party_settings: {  }
-  field_tab:
+  field_list_item:
     type: paragraphs
-    weight: 5
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -51,9 +59,17 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_texto:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_title:
     type: text_textarea
-    weight: 0
+    weight: 1
     region: content
     settings:
       rows: 5

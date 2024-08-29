@@ -3,8 +3,9 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tabs.field_enable_tabs
     - field.field.paragraph.tabs.field_list_item
-    - field.field.paragraph.tabs.field_tab
+    - field.field.paragraph.tabs.field_texto
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
   module:
@@ -15,6 +16,16 @@ targetEntityType: paragraph
 bundle: tabs
 mode: default
 content:
+  field_enable_tabs:
+    type: boolean
+    label: above
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_list_item:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -24,14 +35,12 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_tab:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_title:
     type: text_default
