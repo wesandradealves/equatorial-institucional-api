@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - filter.format.basic_html
     - filter.format.webform_default
     - rest.resource.menu_tree
     - rest.resource.rest_menu_item
@@ -53,7 +52,6 @@ permissions:
   - 'revert any basic block content revisions'
   - 'search content'
   - 'skip comment approval'
-  - 'use text format basic_html'
   - 'use text format webform_default'
   - 'view any basic block content history'
   - 'view media'

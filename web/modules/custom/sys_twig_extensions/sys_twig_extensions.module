@@ -73,11 +73,11 @@ function sys_twig_extensions_preprocess_page(&$variables) {
     }
   }
 
-  $user = \Drupal::routeMatch()->getParameter('user');
-  if ($user instanceof \Drupal\user\UserInterface) {
-    (new RedirectResponse('/'))->send();
-    exit();    
-  }  
+  // $user = \Drupal::routeMatch()->getParameter('user');
+  // if ($user instanceof \Drupal\user\UserInterface) {
+  //   (new RedirectResponse('/'))->send();
+  //   exit();    
+  // }  
 }
 
 function sys_twig_extensions_preprocess_block__block_copyright(&$variables)

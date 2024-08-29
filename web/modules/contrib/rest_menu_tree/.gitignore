@@ -1,9 +1,0 @@
-# IDE files.
-.idea
-
-# macOS files.
-.DS_Store
-
-# Composer files.
-composer.lock
-/vendor/

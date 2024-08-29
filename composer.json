@@ -28,6 +28,7 @@
     "drupal/blocache": "2.0",
     "drupal/block_field": "^1.0@RC",
     "drupal/bootstrap_barrio": "^5.5",
+    "drupal/cancel_account": "^2.0",
     "drupal/ckeditor5_font": "1.x-dev@dev",
     "drupal/color_pickr": "^1.1",
     "drupal/conditional_fields": "^4.0@alpha",
@@ -68,6 +69,7 @@
     "drupal/paragraphs": "^1.16",
     "drupal/pathauto": "^1.12",
     "drupal/quick_node_clone": "^1.17",
+    "drupal/r4032login": "^2.2",
     "drupal/reassign_user_content": "^1.0",
     "drupal/redirect_after_login": "^3.0",
     "drupal/rest_absolute_urls": "^1.0@beta",
@@ -134,6 +136,7 @@
         "3350333 - TypeError: array_filter(): Argument #1 ($array) must be of type array": "https://www.drupal.org/files/issues/2023-04-21/3350333-5.patch"
       },
       "drupal/core": {
+        "Unable to cancel a user account if it has more then 10 content": "https://www.drupal.org/files/issues/2022-09-29/3216584-Unable-to-cancel-a-user-account-if-it-has-mo_1.patch",
         "User can't reference unpublished content even when they have access to it": "https://www.drupal.org/files/issues/2024-04-16/2845144-95.patch"
       },
       "drupal/restui": {

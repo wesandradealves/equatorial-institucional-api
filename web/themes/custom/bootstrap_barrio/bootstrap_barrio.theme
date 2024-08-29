@@ -974,3 +974,37 @@ function _get_color($color, $colors) {
   }
   return $color;
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bootstrap_barrio_suggestions_page_alter(array &$suggestions, array $variables) {
+  
+  /**
+   * 4xx template suggestion.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 401:
+        // Unauthorized Access.
+        $error = 401;
+        break;
+
+      case 403:
+        // Access Denied.
+        $error = 403;
+        break;
+
+      case 404:
+        // Page Not Found.
+        $error = 404;
+        break;
+      default:
+        break;
+    }
+  }
+  if (isset($error)) {
+    $suggestions[] = 'page__' . $error;
+  }
+}

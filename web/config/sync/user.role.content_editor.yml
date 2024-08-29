@@ -5,6 +5,9 @@ dependencies:
   config:
     - block_content.type.banner
     - block_content.type.basic
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -28,6 +31,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - filter
     - media
     - node
     - path
@@ -157,6 +161,9 @@ permissions:
   - 'revert all revisions'
   - 'update any media'
   - 'update media'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
   - 'view all revisions'
   - 'view media'
   - 'view own unpublished content'

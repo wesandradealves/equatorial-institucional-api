@@ -1,9 +1,0 @@
-name: Suggestion
-description: Auto-complete search suggestions.
-type: module
-configure: suggestion.admin
-core_version_requirement: ^9.3 || ^10
-# Information added by Drupal.org packaging script on 2023-06-26
-version: '4.1.0'
-project: 'suggestion'
-datestamp: 1687815841

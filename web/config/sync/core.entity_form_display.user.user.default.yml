@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - image
+    - path
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -16,24 +15,19 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
-    region: content
-  contact:
-    weight: 5
-    region: content
-  language:
     weight: 0
     region: content
-  timezone:
-    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
     region: content
-  user_picture:
-    type: image_image
-    weight: -1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+    settings: {  }
     third_party_settings: {  }
 hidden:
+  contact: true
   langcode: true
+  language: true
+  timezone: true
+  user_picture: true
